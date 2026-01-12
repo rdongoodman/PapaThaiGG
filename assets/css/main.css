@@ -172,3 +172,46 @@ ul.actions {
     .command-center { flex-direction: column; }
     .button, .tactical-btn { width: 100%; text-align: center; }
 }
+
+/* --- MOBILE & LAYOUT EMERGENCY FIX --- */
+
+/* 1. GLOBAL SAFETY: Prevent horizontal scrolling completely */
+html, body {
+    overflow-x: hidden !important; /* Cuts off anything sticking out */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. FIX THE FOOTER (The layout breaker) */
+/* This forces the social links to wrap into multiple lines on small screens */
+.icons {
+    display: flex !important;
+    flex-wrap: wrap !important; /* CRITICAL: Allows items to drop to next line */
+    justify-content: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.icons li {
+    margin: 5px 10px !important; /* Adds breathing room when wrapped */
+}
+
+/* 3. FIX THE BUTTONS (Make them stack like an App) */
+/* Only applies to screens smaller than 736px (Phones) */
+@media screen and (max-width: 736px) {
+    .command-center {
+        display: flex !important;
+        flex-direction: column !important; /* Stack Top-to-Bottom */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 20px !important; /* Keep away from edges */
+    }
+
+    .tactical-btn {
+        width: 100% !important; /* Full width for easy thumb tapping */
+        margin: 8px 0 !important; /* Spacing between buttons */
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+}
