@@ -184,31 +184,39 @@ html, body {
     
     .col-6, .col-4 { flex: 0 0 100%; }
     
-    /* NEW: Bring the text DOWN so "Hi" isn't cut off */
+    /* Text Drop Zone */
     #header .inner {
-        transform: translateY(0) !important; /* Stop lifting it up */
-        padding-top: 60px !important; /* Push it down a little bit */
+        transform: translateY(0) !important;
+        padding-top: 60px !important;
     }
     
     #header h1 { font-size: 2em; }
 
-    /* Stack the buttons */
+    /* THE FIX: Strict Flex Column */
     .command-center {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: center !important; /* This creates the perfect center line */
         width: 100% !important;
-        padding: 0 20px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 15px !important; /* Consistent spacing between buttons */
     }
 
-    /* Slim & Center Buttons */
+    /* THE FIX: Zero out side margins so they can't shift right */
     .tactical-btn {
-        width: 70% !important;
-        max-width: 300px !important;
-        margin: 10px auto !important;
-        padding: 12px 0 !important;
-        font-size: 1.1em !important;
         display: block !important;
+        width: 80% !important; /* Slightly wider for better thumb reach */
+        max-width: 320px !important;
+        
+        /* CRITICAL: Remove 'auto' and force 0 on sides. 
+           Flexbox 'align-items: center' (above) will handle the centering now. */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important; 
+        margin-bottom: 0 !important;
+        
+        text-align: center !important;
         box-sizing: border-box !important;
     }
 }
