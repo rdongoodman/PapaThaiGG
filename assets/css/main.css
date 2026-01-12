@@ -185,3 +185,52 @@ ul.actions {
     list-style: none !important;
     padding-left: 0 !important;
 }
+
+/* PAPATHAIGG TACTICAL HUD STYLES */
+
+/* Make the button container wider to fit 3 buttons */
+.command-center {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Tactical Button Style: Boxy, no round corners */
+.tactical-btn {
+    border-radius: 2px !important; /* Sharp corners */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #ffffff;
+    font-weight: 800;
+    min-width: 180px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Primary "Live" Button - Green Glow */
+.tactical-btn.primary {
+    background-color: transparent !important;
+    border-color: #00ff00 !important; /* Toxic Green Border */
+    color: #00ff00 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.tactical-btn.primary:hover {
+    background-color: #00ff00 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+}
+
+/* Standard Tactical Button Hover */
+.tactical-btn:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Social Icons Adjustment */
+.icons.major {
+    margin-top: 20px;
+}
+.icons.major li {
+    padding: 0 10px;
+}
