@@ -2,13 +2,13 @@
 body { 
     font-family: Arial, sans-serif; 
     margin: 0; 
-    color: #444; 
-    background: #fff; 
+    color: #c0c0c0; /* Silver text for Dark Mode */
+    background: #121212; /* Deep Ops Black */
     line-height: 1.5; 
 }
 
-h1, h2, h3 { 
-    color: #222; 
+h1, h2, h3, h4, h5, h6, strong { 
+    color: #ffffff; /* Pure white headers */
     font-family: 'Alfa Slab One', cursive; /* Tactical/Blocky Font */
     letter-spacing: 1px;
     font-weight: 400; 
@@ -19,7 +19,7 @@ h1, h2, h3 {
 .row { display: flex; flex-wrap: wrap; }
 .col-6 { flex: 0 0 50%; padding: 1em; box-sizing: border-box; }
 .col-4 { flex: 0 0 33.33%; padding: 1em; box-sizing: border-box; }
-.image.fit img { width: 100%; border-radius: 4px; } /* Slightly squared images */
+.image.fit img { width: 100%; border-radius: 4px; } 
 
 /* --- Header Section --- */
 #header {
@@ -34,10 +34,10 @@ h1, h2, h3 {
     background-position: center;
     background-attachment: fixed;
     color: #fff;
-    padding-bottom: 25vh; /* Moves content up */
+    padding-bottom: 25vh; /* Moves content up on PC */
 }
 
-/* Lifts the text block higher */
+/* Lifts the text block higher on PC */
 #header .inner {
     transform: translateY(-20vh);
 }
@@ -55,28 +55,10 @@ h1, h2, h3 {
     background: linear-gradient(to right, #4dfbfb, #ffe66d) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
-    
-    /* These make the text see-through so the gradient shows */
     color: transparent !important;
     -webkit-text-fill-color: transparent !important;
-    
-    /* Remove the text-shadow from the parent so it doesn't block the gradient */
     text-shadow: none !important;
-    
-    /* Add a Drop Shadow to the gradient shape itself */
     filter: drop-shadow(4px 4px 0px #000000);
-}
-
-#header h1 strong {
-    /* Left-to-Right Cyan/Gold Gradient */
-    background: linear-gradient(to right, #4dfbfb, #ffe66d);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    
-    /* Drop Shadow for contrast */
-    filter: drop-shadow(3px 3px 0px #000);
 }
 
 /* Subtitle Styling (Heavy Contrast) */
@@ -94,7 +76,7 @@ h1, h2, h3 {
     margin-bottom: 3em;
 }
 
-/* --- TACTICAL BUTTON STYLES (Applies to all buttons) --- */
+/* --- TACTICAL BUTTON STYLES --- */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -104,9 +86,9 @@ input[type="button"],
     padding: 15px 30px;
     margin: 0.5em;
     
-    /* Tactical Look: Square corners, dark bg */
+    /* Tactical Look */
     border-radius: 0.2rem; 
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.9) !important; /* Darker bg for contrast against sun */
     border: 2px solid rgba(255, 255, 255, 0.8);
     
     /* Text Styling */
@@ -132,9 +114,9 @@ input[type="submit"]:hover,
     transform: translateY(2px);
 }
 
-/* Specific "Primary" Button (e.g. Watch Live) */
+/* Specific "Primary" Button (Watch Live) */
 .tactical-btn.primary {
-    border-color: #00ff00; /* Green Border */
+    border-color: #00ff00; 
     color: #00ff00 !important;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
 }
@@ -160,76 +142,73 @@ ul.actions {
 }
 
 /* --- Footer --- */
-#footer { background: #f4f4f4; padding: 2em; text-align: center; }
+#footer { background: #121212; padding: 2em; text-align: center; } /* Dark Footer */
 .icons { list-style: none; padding: 0; display: flex; justify-content: center; margin-top: 20px;}
 .icons li { margin: 0 10px; font-size: 1.5em; }
 .copyright { font-size: 0.8em; color: #888; }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 736px) {
-    .col-6, .col-4 { flex: 0 0 100%; }
-    #header h1 { font-size: 2em; }
-    .command-center { flex-direction: column; }
-    .button, .tactical-btn { width: 100%; text-align: center; }
+
+/* --- TACTICAL DARK MODE PATCH --- */
+/* Fix the Loadout Boxes */
+#loadout div[style*="background"] {
+    background: rgba(255, 255, 255, 0.05) !important; 
+    border-color: #444 !important;
+}
+
+/* Keep The Beast Gold */
+#loadout div[style*="border: 2px solid #ffe66d"] {
+    border-color: #ffe66d !important;
 }
 
 /* --- MOBILE & LAYOUT EMERGENCY FIX --- */
 
-/* 1. GLOBAL SAFETY: Prevent horizontal scrolling completely */
+/* 1. GLOBAL SAFETY */
 html, body {
-    overflow-x: hidden !important; /* Cuts off anything sticking out */
+    overflow-x: hidden !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* 2. FIX THE FOOTER (The layout breaker) */
-/* This forces the social links to wrap into multiple lines on small screens */
+/* 2. FIX THE FOOTER */
 .icons {
     display: flex !important;
-    flex-wrap: wrap !important; /* CRITICAL: Allows items to drop to next line */
+    flex-wrap: wrap !important;
     justify-content: center !important;
     width: 100% !important;
-    box-sizing: border-box !important;
 }
+.icons li { margin: 5px 10px !important; }
 
-.icons li {
-    margin: 5px 10px !important; /* Adds breathing room when wrapped */
-}
-
-/* 3. FIX THE BUTTONS (Make them stack like an App) */
-/* Only applies to screens smaller than 736px (Phones) */
+/* 3. MOBILE TWEAKS (Phone Screen) */
 @media screen and (max-width: 736px) {
-    .command-center {
-        display: flex !important;
-        flex-direction: column !important; /* Stack Top-to-Bottom */
-        align-items: center !important;
-        width: 100% !important;
-        padding: 0 20px !important; /* Keep away from edges */
+    
+    .col-6, .col-4 { flex: 0 0 100%; }
+    
+    /* NEW: Bring the text DOWN so "Hi" isn't cut off */
+    #header .inner {
+        transform: translateY(0) !important; /* Stop lifting it up */
+        padding-top: 60px !important; /* Push it down a little bit */
     }
+    
+    #header h1 { font-size: 2em; }
 
-    .tactical-btn {
-        width: 100% !important; /* Full width for easy thumb tapping */
-        margin: 8px 0 !important; /* Spacing between buttons */
-        display: block !important;
-        box-sizing: border-box !important;
-    }
-}
-
-/* 3. FIX THE BUTTONS (Slimmer & Centered) */
-@media screen and (max-width: 736px) {
+    /* Stack the buttons */
     .command-center {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* Centers the stack */
+        align-items: center !important;
         width: 100% !important;
+        padding: 0 20px !important;
     }
 
+    /* Slim & Center Buttons */
     .tactical-btn {
-        width: 70% !important; /* Makes them smaller (not edge-to-edge) */
-        max-width: 300px !important; /* Never gets too big */
-        margin: 10px auto !important; /* Forces perfect centering */
-        padding: 12px 0 !important; /* Slightly thinner height */
-        font-size: 1.1em !important; /* Readable but not huge */
+        width: 70% !important;
+        max-width: 300px !important;
+        margin: 10px auto !important;
+        padding: 12px 0 !important;
+        font-size: 1.1em !important;
+        display: block !important;
+        box-sizing: border-box !important;
     }
 }
