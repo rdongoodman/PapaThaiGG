@@ -215,3 +215,21 @@ html, body {
         box-sizing: border-box !important;
     }
 }
+
+/* 3. FIX THE BUTTONS (Slimmer & Centered) */
+@media screen and (max-width: 736px) {
+    .command-center {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centers the stack */
+        width: 100% !important;
+    }
+
+    .tactical-btn {
+        width: 70% !important; /* Makes them smaller (not edge-to-edge) */
+        max-width: 300px !important; /* Never gets too big */
+        margin: 10px auto !important; /* Forces perfect centering */
+        padding: 12px 0 !important; /* Slightly thinner height */
+        font-size: 1.1em !important; /* Readable but not huge */
+    }
+}
