@@ -9,8 +9,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         
         <style>
-            /* PapaThaiGG Command Center Styles */
-            
             #header .inner {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -21,11 +19,6 @@
             .command-center .tactical-btn {
                 background-color: rgba(0, 0, 0, 0.6);
                 border: 1px solid rgba(255, 255, 255, 0.3);
-                transition: all 0.3s ease;
-            }
-            .command-center .tactical-btn:hover {
-                border-color: #4dfbfb;
-                box-shadow: 0 0 10px rgba(77, 251, 251, 0.3);
             }
             .active-channel {
                 background-color: #4dfbfb !important;
@@ -38,7 +31,7 @@
             /* --- VIDEO PLAYER --- */
             .video-container {
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                padding-bottom: 56.25%;
                 height: 0;
                 overflow: hidden;
                 border: 2px solid #4dfbfb;
@@ -56,23 +49,23 @@
                 height: 100%;
             }
 
-            /* --- SLIM INFO BOX (HIGH VISIBILITY) --- */
+            /* --- UPDATED: TRANSPARENT GOLD INFO BOX --- */
             .info-box {
                 display: inline-block;
-                background-color: rgba(0, 0, 0, 0.9); /* Darker background for contrast */
+                background-color: rgba(0, 0, 0, 0.4); /* High Transparency */
                 padding: 4px 20px !important;
-                border-radius: 50px; /* Rounded "Pill" shape looks more modern */
-                border: 1px solid #ffe66d; /* Full gold border */
+                border-radius: 50px;
+                border: 1px solid rgba(255, 230, 109, 0.5); /* Semi-transparent Gold border */
                 margin-bottom: 5px;
             }
             .info-box p {
                 margin: 0 !important;
                 padding: 2px 0 !important;
-                font-size: 0.8em !important; /* Slightly larger */
-                font-weight: bold; /* Thicker text */
+                font-size: 0.8em !important;
+                font-weight: bold;
                 letter-spacing: 1px;
-                color: #ffffff !important; /* PURE WHITE TEXT */
-                text-shadow: 1px 1px 2px #000; /* Shadow for readability */
+                color: #ffe66d !important; /* SUNSET GOLD TEXT */
+                text-shadow: 2px 2px 4px #000; /* Extra shadow for mobile readability */
                 text-transform: uppercase;
             }
 
@@ -87,70 +80,41 @@
                 text-decoration: none;
                 font-size: 0.8em;
                 margin-top: 15px;
-                transition: all 0.3s ease;
-            }
-            .return-btn:hover {
-                background-color: #4dfbfb;
-                color: #000 !important;
-                border-color: #4dfbfb;
             }
         </style>
     </head>
     <body class="is-preload">
-
         <section id="header">
             <div class="inner">
                 <h1>Stream <span style="color: #4dfbfb;">Command</span> Center</h1>
-                
                 <div class="command-center">
                     <button onclick="tuneIn('youtube')" id="btn-youtube" class="tactical-btn active-channel">YouTube</button>
                     <button onclick="tuneIn('twitch')" id="btn-twitch" class="tactical-btn">Twitch</button>
                     <button onclick="tuneIn('kick')" id="btn-kick" class="tactical-btn">Kick</button>
                 </div>
-
                 <div class="video-container">
-                    <iframe 
-                        id="main-player"
-                        src="https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
+                    <iframe id="main-player" src="https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ" frameborder="0" allowfullscreen></iframe>
                 </div>
-
                 <div class="info-box">
-                    <p>
-                        <i class="icon solid fa-signal" style="color: #ffe66d;"></i> 
-                        Signal Status: If offline, check the archives or switch frequencies.
-                    </p>
+                    <p><i class="icon solid fa-signal"></i> Signal Status: If offline, check the archives or switch frequencies.</p>
                 </div>
                 <br />
-                
                 <a href="index.html" class="return-btn">&larr; Return to Base Camp</a>
             </div>
         </section>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        
         <script>
             function tuneIn(platform) {
                 var player = document.getElementById('main-player');
-                
-                // Reset buttons
                 document.getElementById('btn-youtube').classList.remove('active-channel');
                 document.getElementById('btn-twitch').classList.remove('active-channel');
                 document.getElementById('btn-kick').classList.remove('active-channel');
-
-                // Switch Logic
                 if (platform === 'youtube') {
                     player.src = "https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ";
                     document.getElementById('btn-youtube').classList.add('active-channel');
-                } 
-                else if (platform === 'twitch') {
+                } else if (platform === 'twitch') {
                     player.src = "https://player.twitch.tv/?channel=papathaigg&parent=papathaigg.com";
                     document.getElementById('btn-twitch').classList.add('active-channel');
-                }
-                else if (platform === 'kick') {
+                } else if (platform === 'kick') {
                     player.src = "https://player.kick.com/papathaigg";
                     document.getElementById('btn-kick').classList.add('active-channel');
                 }
