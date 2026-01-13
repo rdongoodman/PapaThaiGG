@@ -241,8 +241,8 @@ html, body {
     justify-content: center;
     text-align: center;
     background-color: #000;
-    /* This links to your new Pepe Tactical image */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/pic07.jpg");
+    /* Using absolute path to guarantee it loads live */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/pic07.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
