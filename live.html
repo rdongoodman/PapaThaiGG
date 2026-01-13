@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Command Center | PapaThaiGG</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css?v=7" />
+        <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        
+        <style>
+            /* Special Styling for the Command Center */
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                height: 0;
+                overflow: hidden;
+                border: 2px solid #4dfbfb; /* Papa Cyan Border */
+                border-radius: 8px;
+                background: #000;
+                box-shadow: 0 0 20px rgba(77, 251, 251, 0.2);
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .channel-btn {
+                margin: 0 10px;
+                min-width: 150px;
+            }
+            .active-channel {
+                background-color: #4dfbfb !important; /* Highlight Active Button */
+                color: #000 !important;
+                box-shadow: 0 0 15px #4dfbfb;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <section id="header">
+            <div class="inner">
+                <h1>Stream <span style="color: #4dfbfb;">Command</span> Center</h1>
+                <p>Select Frequency to Tune In</p>
+                
+                <div class="command-center">
+                    <button onclick="tuneIn('youtube')" id="btn-youtube" class="tactical-btn active-channel">YouTube</button>
+                    <button onclick="tuneIn('twitch')" id="btn-twitch" class="tactical-btn">Twitch</button>
+                    <button onclick="tuneIn('kick')" id="btn-kick" class="tactical-btn">Kick</button>
+                </div>
+                
+                <br />
+                <a href="index.html" style="border-bottom: 1px dotted #fff; color: #aaa; font-size: 0.8em;">&larr; Return to Base Camp</a>
+            </div>
+        </section>
+
+        <section id="one" class="main style1">
+            <div class="container">
+                <div class="video-container">
+                    <iframe 
+                        id="main-player"
+                        src="https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
+                    *Signal Status: If offline, check the archives or switch frequencies.
+                </p>
+            </div>
+        </section>
+
+        <section id="footer">
+            <ul class="copyright">
+                <li>&copy; PapaThaiGG</li>
+            </ul>
+        </section>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+        <script>
+            // The Logic to Switch Channels
+            function tuneIn(platform) {
+                var player = document.getElementById('main-player');
+                var buttons = document.getElementsByClassName('tactical-btn');
+                
+                // Reset buttons
+                document.getElementById('btn-youtube').classList.remove('active-channel');
+                document.getElementById('btn-twitch').classList.remove('active-channel');
+                document.getElementById('btn-kick').classList.remove('active-channel');
+
+                if (platform === 'youtube') {
+                    player.src = "https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ";
+                    document.getElementById('btn-youtube').classList.add('active-channel');
+                } 
+                else if (platform === 'twitch') {
+                    // Parent domain is required for Twitch embed
+                    player.src = "https://player.twitch.tv/?channel=papathaigg&parent=papathaigg.com";
+                    document.getElementById('btn-twitch').classList.add('active-channel');
+                }
+                else if (platform === 'kick') {
+                    player.src = "https://player.kick.com/papathaigg";
+                    document.getElementById('btn-kick').classList.add('active-channel');
+                }
+            }
+        </script>
+    </body>
+</html>
