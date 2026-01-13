@@ -11,25 +11,42 @@
         <style>
             /* PapaThaiGG Command Center Styles */
             
-            /* Make the header content fit the screen better */
             #header .inner {
                 max-width: 1200px;
                 margin: 0 auto;
-                padding-top: 2em; /* Push it down slightly */
+                padding-top: 2em;
             }
 
-            /* The Video Box */
+            /* --- BUTTON STYLES --- */
+            .command-center .tactical-btn {
+                background-color: rgba(0, 0, 0, 0.6);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: all 0.3s ease;
+            }
+            .command-center .tactical-btn:hover {
+                border-color: #4dfbfb;
+                box-shadow: 0 0 10px rgba(77, 251, 251, 0.3);
+            }
+            .active-channel {
+                background-color: #4dfbfb !important;
+                color: #000 !important;
+                box-shadow: 0 0 20px #4dfbfb;
+                font-weight: bold;
+                border: 1px solid #4dfbfb !important;
+            }
+
+            /* --- VIDEO PLAYER --- */
             .video-container {
                 position: relative;
                 padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
                 height: 0;
                 overflow: hidden;
-                border: 2px solid #4dfbfb; /* Papa Cyan Border */
+                border: 2px solid #4dfbfb;
                 border-radius: 8px;
                 background: #000;
                 box-shadow: 0 0 30px rgba(77, 251, 251, 0.3);
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 25px;
+                margin-bottom: 10px !important;
             }
             .video-container iframe {
                 position: absolute;
@@ -39,33 +56,43 @@
                 height: 100%;
             }
 
-            /* Buttons */
-            .channel-btn {
-                margin: 0 10px;
-                min-width: 150px;
+            /* --- SLIM INFO BOX (HIGH VISIBILITY) --- */
+            .info-box {
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.9); /* Darker background for contrast */
+                padding: 4px 20px !important;
+                border-radius: 50px; /* Rounded "Pill" shape looks more modern */
+                border: 1px solid #ffe66d; /* Full gold border */
+                margin-bottom: 5px;
             }
-            .active-channel {
-                background-color: #4dfbfb !important;
-                color: #000 !important;
-                box-shadow: 0 0 15px #4dfbfb;
-                font-weight: bold;
+            .info-box p {
+                margin: 0 !important;
+                padding: 2px 0 !important;
+                font-size: 0.8em !important; /* Slightly larger */
+                font-weight: bold; /* Thicker text */
+                letter-spacing: 1px;
+                color: #ffffff !important; /* PURE WHITE TEXT */
+                text-shadow: 1px 1px 2px #000; /* Shadow for readability */
+                text-transform: uppercase;
             }
 
-            /* The Return Button (High Visibility) */
+            /* --- RETURN BUTTON --- */
             .return-btn {
                 display: inline-block;
-                background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+                background-color: rgba(0, 0, 0, 0.8);
                 color: #fff !important;
-                padding: 10px 20px;
+                padding: 8px 20px;
                 border-radius: 30px;
                 border: 1px solid #555;
                 text-decoration: none;
                 font-size: 0.8em;
-                margin-top: 20px;
+                margin-top: 15px;
+                transition: all 0.3s ease;
             }
             .return-btn:hover {
                 background-color: #4dfbfb;
                 color: #000 !important;
+                border-color: #4dfbfb;
             }
         </style>
     </head>
@@ -90,9 +117,13 @@
                     </iframe>
                 </div>
 
-                <p style="font-size: 0.8em; opacity: 0.8; text-shadow: 0 2px 4px #000;">
-                    *Signal Status: If offline, check the archives or switch frequencies.
-                </p>
+                <div class="info-box">
+                    <p>
+                        <i class="icon solid fa-signal" style="color: #ffe66d;"></i> 
+                        Signal Status: If offline, check the archives or switch frequencies.
+                    </p>
+                </div>
+                <br />
                 
                 <a href="index.html" class="return-btn">&larr; Return to Base Camp</a>
             </div>
