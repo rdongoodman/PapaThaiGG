@@ -232,3 +232,19 @@ html, body {
         box-sizing: border-box !important;
     }
 }
+
+/* --- LIVE COMMAND CENTER BACKGROUND --- */
+#live-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+    /* This links to your new Pepe Tactical image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/pic07.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
