@@ -15,20 +15,22 @@
                 padding-top: 2em;
             }
 
-            /* --- UPDATED: HIGH TRANSPARENCY BUTTONS --- */
+            /* --- INACTIVE BUTTONS --- */
             .command-center .tactical-btn {
-                background-color: rgba(0, 0, 0, 0.2) !important; /* Very thin background */
+                background-color: rgba(0, 0, 0, 0.2) !important;
                 border: 1px solid rgba(255, 255, 255, 0.2) !important;
-                backdrop-filter: blur(2px); /* Slight blur to keep text readable */
+                backdrop-filter: blur(2px);
+                color: #fff !important; /* White text for inactive */
             }
             
-            /* Active Button remains solid for focus */
+            /* --- UPDATED: ACTIVE BUTTON WITH WHITE TEXT --- */
             .active-channel {
-                background-color: #4dfbfb !important;
-                color: #000 !important;
-                box-shadow: 0 0 20px #4dfbfb;
+                background-color: #ffe66d !important; /* Gold background */
+                color: #ffffff !important; /* WHITE TEXT */
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* BLACK GLOW FOR CONTRAST */
+                box-shadow: 0 0 20px #ffe66d;
                 font-weight: bold;
-                border: 1px solid #4dfbfb !important;
+                border: 1px solid #ffe66d !important;
                 opacity: 1 !important;
             }
 
@@ -53,7 +55,7 @@
                 height: 100%;
             }
 
-            /* --- TRANSPARENT GOLD INFO BOX --- */
+            /* --- INFO BOX --- */
             .info-box {
                 display: inline-block;
                 background-color: rgba(0, 0, 0, 0.4); 
