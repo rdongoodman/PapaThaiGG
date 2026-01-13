@@ -148,6 +148,18 @@ ul.actions {
 .copyright { font-size: 0.8em; color: #888; }
 
 
+/* --- NUCLEAR FOOTER LINK FIX --- */
+/* This targets every possible way the browser sees a link */
+#footer a, footer a, .icons a, .copyright a {
+    color: #FFD700 !important; /* Force Gold */
+    text-decoration: none;
+}
+
+#footer a:hover, footer a:hover {
+    color: #ffffff !important; /* Force White on hover */
+}
+
+
 /* --- TACTICAL DARK MODE PATCH --- */
 /* Fix the Loadout Boxes */
 #loadout div[style*="background"] {
