@@ -15,17 +15,21 @@
                 padding-top: 2em;
             }
 
-            /* --- BUTTON STYLES --- */
+            /* --- UPDATED: HIGH TRANSPARENCY BUTTONS --- */
             .command-center .tactical-btn {
-                background-color: rgba(0, 0, 0, 0.6);
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                background-color: rgba(0, 0, 0, 0.2) !important; /* Very thin background */
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                backdrop-filter: blur(2px); /* Slight blur to keep text readable */
             }
+            
+            /* Active Button remains solid for focus */
             .active-channel {
                 background-color: #4dfbfb !important;
                 color: #000 !important;
                 box-shadow: 0 0 20px #4dfbfb;
                 font-weight: bold;
                 border: 1px solid #4dfbfb !important;
+                opacity: 1 !important;
             }
 
             /* --- VIDEO PLAYER --- */
@@ -49,13 +53,13 @@
                 height: 100%;
             }
 
-            /* --- UPDATED: TRANSPARENT GOLD INFO BOX --- */
+            /* --- TRANSPARENT GOLD INFO BOX --- */
             .info-box {
                 display: inline-block;
-                background-color: rgba(0, 0, 0, 0.4); /* High Transparency */
+                background-color: rgba(0, 0, 0, 0.4); 
                 padding: 4px 20px !important;
                 border-radius: 50px;
-                border: 1px solid rgba(255, 230, 109, 0.5); /* Semi-transparent Gold border */
+                border: 1px solid rgba(255, 230, 109, 0.4);
                 margin-bottom: 5px;
             }
             .info-box p {
@@ -64,19 +68,19 @@
                 font-size: 0.8em !important;
                 font-weight: bold;
                 letter-spacing: 1px;
-                color: #ffe66d !important; /* SUNSET GOLD TEXT */
-                text-shadow: 2px 2px 4px #000; /* Extra shadow for mobile readability */
+                color: #ffe66d !important;
+                text-shadow: 2px 2px 4px #000;
                 text-transform: uppercase;
             }
 
             /* --- RETURN BUTTON --- */
             .return-btn {
                 display: inline-block;
-                background-color: rgba(0, 0, 0, 0.8);
+                background-color: rgba(0, 0, 0, 0.6);
                 color: #fff !important;
                 padding: 8px 20px;
                 border-radius: 30px;
-                border: 1px solid #555;
+                border: 1px solid rgba(255,255,255,0.3);
                 text-decoration: none;
                 font-size: 0.8em;
                 margin-top: 15px;
