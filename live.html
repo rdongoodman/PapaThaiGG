@@ -9,7 +9,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         
         <style>
-            /* Special Styling for the Command Center */
+            /* PapaThaiGG Command Center Styles */
+            
+            /* Make the header content fit the screen better */
+            #header .inner {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding-top: 2em; /* Push it down slightly */
+            }
+
+            /* The Video Box */
             .video-container {
                 position: relative;
                 padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -18,7 +27,9 @@
                 border: 2px solid #4dfbfb; /* Papa Cyan Border */
                 border-radius: 8px;
                 background: #000;
-                box-shadow: 0 0 20px rgba(77, 251, 251, 0.2);
+                box-shadow: 0 0 30px rgba(77, 251, 251, 0.3);
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             .video-container iframe {
                 position: absolute;
@@ -27,14 +38,34 @@
                 width: 100%;
                 height: 100%;
             }
+
+            /* Buttons */
             .channel-btn {
                 margin: 0 10px;
                 min-width: 150px;
             }
             .active-channel {
-                background-color: #4dfbfb !important; /* Highlight Active Button */
+                background-color: #4dfbfb !important;
                 color: #000 !important;
                 box-shadow: 0 0 15px #4dfbfb;
+                font-weight: bold;
+            }
+
+            /* The Return Button (High Visibility) */
+            .return-btn {
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+                color: #fff !important;
+                padding: 10px 20px;
+                border-radius: 30px;
+                border: 1px solid #555;
+                text-decoration: none;
+                font-size: 0.8em;
+                margin-top: 20px;
+            }
+            .return-btn:hover {
+                background-color: #4dfbfb;
+                color: #000 !important;
             }
         </style>
     </head>
@@ -43,21 +74,13 @@
         <section id="header">
             <div class="inner">
                 <h1>Stream <span style="color: #4dfbfb;">Command</span> Center</h1>
-                <p>Select Frequency to Tune In</p>
                 
                 <div class="command-center">
                     <button onclick="tuneIn('youtube')" id="btn-youtube" class="tactical-btn active-channel">YouTube</button>
                     <button onclick="tuneIn('twitch')" id="btn-twitch" class="tactical-btn">Twitch</button>
                     <button onclick="tuneIn('kick')" id="btn-kick" class="tactical-btn">Kick</button>
                 </div>
-                
-                <br />
-                <a href="index.html" style="border-bottom: 1px dotted #fff; color: #aaa; font-size: 0.8em;">&larr; Return to Base Camp</a>
-            </div>
-        </section>
 
-        <section id="one" class="main style1">
-            <div class="container">
                 <div class="video-container">
                     <iframe 
                         id="main-player"
@@ -66,38 +89,33 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
+
+                <p style="font-size: 0.8em; opacity: 0.8; text-shadow: 0 2px 4px #000;">
                     *Signal Status: If offline, check the archives or switch frequencies.
                 </p>
+                
+                <a href="index.html" class="return-btn">&larr; Return to Base Camp</a>
             </div>
-        </section>
-
-        <section id="footer">
-            <ul class="copyright">
-                <li>&copy; PapaThaiGG</li>
-            </ul>
         </section>
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/main.js"></script>
         
         <script>
-            // The Logic to Switch Channels
             function tuneIn(platform) {
                 var player = document.getElementById('main-player');
-                var buttons = document.getElementsByClassName('tactical-btn');
                 
                 // Reset buttons
                 document.getElementById('btn-youtube').classList.remove('active-channel');
                 document.getElementById('btn-twitch').classList.remove('active-channel');
                 document.getElementById('btn-kick').classList.remove('active-channel');
 
+                // Switch Logic
                 if (platform === 'youtube') {
                     player.src = "https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ";
                     document.getElementById('btn-youtube').classList.add('active-channel');
                 } 
                 else if (platform === 'twitch') {
-                    // Parent domain is required for Twitch embed
                     player.src = "https://player.twitch.tv/?channel=papathaigg&parent=papathaigg.com";
                     document.getElementById('btn-twitch').classList.add('active-channel');
                 }
