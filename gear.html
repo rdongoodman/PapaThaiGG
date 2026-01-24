@@ -57,12 +57,13 @@
             /* --- FIXED TACTICAL BUTTON --- */
             .tactical-btn {
                 display: block;
-                margin: 0 auto;             /* Centers the button */
+                margin: 0 auto;             /* Centers the button block */
                 width: fit-content;
+                white-space: nowrap;        /* FORCE ONE LINE (Fixes S22 wrapping) */
                 padding: 0.75em 1.5em;
-                border: 2px solid #4dfbfb;  /* Cyan Border */
-                color: #4dfbfb !important;  /* Cyan Text (High Visibility) */
-                background: transparent;    /* See-through background */
+                border: 2px solid #4dfbfb;  
+                color: #4dfbfb !important;  
+                background: transparent;    
                 border-radius: 4px;
                 font-weight: bold;
                 text-decoration: none;
@@ -71,7 +72,6 @@
                 transition: all 0.2s ease-in-out;
             }
 
-            /* Hover Effect: Turns solid Cyan with Black text */
             .tactical-btn:hover {
                 background: #4dfbfb;
                 color: #000 !important; 
