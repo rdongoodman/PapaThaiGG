@@ -6,19 +6,17 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-GE2QMECGR9');
         </script>
 
         <title>Jungle Command Center | PapaThaiGG</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=8" />
+        <link rel="stylesheet" href="assets/css/main.css?v=10" />
         <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         
         <style>
-            /* --- PAGE BACKGROUND (Night Ops Jungle) --- */
             body {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("images/pic02.jpg");
                 background-size: cover;
@@ -26,17 +24,14 @@
                 background-attachment: fixed;
             }
 
-            /* --- HEADER STYLES --- */
             .gear-header {
                 text-align: center;
                 padding: 4em 0 2em 0;
-                background: transparent;
             }
             
             .gear-header h1 {
                 font-family: 'Alfa Slab One', cursive;
                 font-size: 3.5em;
-                margin-bottom: 0.2em;
                 background: linear-gradient(to right, #4dfbfb, #ffe66d);
                 -webkit-background-clip: text;
                 background-clip: text;
@@ -45,100 +40,64 @@
                 filter: drop-shadow(2px 2px 0px #000000);
             }
 
-            .gear-header p {
-                font-family: 'Verdana', sans-serif;
-                color: #ccc;
-                font-weight: bold;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                font-size: 0.9em;
-            }
-
-            /* --- FIXED TACTICAL BUTTON --- */
+            /* --- THE CENTERED BUTTON FIX --- */
             .tactical-btn {
-                display: block;
-                margin: 0 auto;             /* Centers the button block */
-                width: fit-content;
-                white-space: nowrap;        /* FORCE ONE LINE (Fixes S22 wrapping) */
+                display: table !important; /* Forces the box to wrap text exactly */
+                margin: 0 auto !important; /* Perfectly centers the block */
+                white-space: nowrap;        /* Prevents text from breaking into 2 lines */
                 padding: 0.75em 1.5em;
-                border: 2px solid #4dfbfb;  
-                color: #4dfbfb !important;  
+                border: 2px solid #4dfbfb;
+                color: #4dfbfb !important;
                 background: transparent;    
                 border-radius: 4px;
                 font-weight: bold;
                 text-decoration: none;
                 text-transform: uppercase;
-                letter-spacing: 2px;
-                transition: all 0.2s ease-in-out;
+                letter-spacing: 1px;
             }
 
-            .tactical-btn:hover {
-                background: #4dfbfb;
-                color: #000 !important; 
-                box-shadow: 0 0 15px rgba(77, 251, 251, 0.5);
-                transform: scale(1.05);
+            @media screen and (max-width: 480px) {
+                .gear-header h1 { font-size: 2.1em; }
+                .tactical-btn {
+                    font-size: 0.8em; 
+                    padding: 0.6em 1em;
+                }
             }
 
-            /* --- LAYOUT UTILS --- */
             .video-wrapper {
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 */
+                padding-bottom: 56.25%;
                 height: 0;
                 overflow: hidden;
-                max-width: 80%;
+                max-width: 85%;
                 margin: 0 auto 3em auto;
                 border: 2px solid #4dfbfb;
                 border-radius: 8px;
-                box-shadow: 0 0 20px rgba(77, 251, 251, 0.2);
-                background: #000;
             }
             .video-wrapper iframe {
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+                top: 0; left: 0; width: 100%; height: 100%;
             }
 
-            /* --- ZOOM GALLERY --- */
+            .main-content {
+                background: rgba(18, 18, 18, 0.8);
+                padding: 2em 0;
+            }
+
             .gallery-item {
                 overflow: hidden;
                 border-radius: 4px;
                 border: 1px solid #444;
-                margin-bottom: 1em;
-                cursor: pointer;
-                position: relative;
+                margin-bottom: 2em;
             }
-            .gallery-item img {
-                width: 100%;
-                display: block;
-                transition: transform 0.4s ease;
-            }
-            .gallery-item:hover img {
-                transform: scale(1.1);
-            }
+            .gallery-item img { width: 100%; display: block; }
             .gallery-caption {
                 padding: 0.8em;
                 background: #121212;
                 color: #ffe66d;
-                font-family: 'Alfa Slab One', cursive;
-                font-size: 0.8em;
                 text-align: center;
-                border-top: 1px solid #444;
-                letter-spacing: 1px;
-            }
-
-            /* --- MOBILE TWEAKS --- */
-            @media screen and (max-width: 480px) {
-                .gear-header h1 {
-                    font-size: 2.1em;
-                }
-                .video-wrapper {
-                    max-width: 95%;
-                }
-                .gallery-item {
-                    margin-bottom: 2.5em;
-                }
+                font-size: 0.8em;
+                font-family: 'Alfa Slab One', cursive;
             }
         </style>
     </head>
@@ -159,83 +118,49 @@
             </div>
         </section>
 
-        <section class="main style1" style="background: rgba(18, 18, 18, 0.8);">
+        <section class="main-content">
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-12-medium">
-                        <h3 style="color: #4dfbfb; text-transform: uppercase;">
-                            <i class="icon solid fa-microchip"></i> Current Deployment
-                        </h3>
-                        <ul class="alt" style="border-color: #444;">
-                            <li><strong>CPU:</strong> Intel Core i9-12900KF</li>
-                            <li><strong>GPU:</strong> NVIDIA RTX 3080 Ti</li>
+                        <h3 style="color: #4dfbfb;">CURRENT DEPLOYMENT</h3>
+                        <ul class="alt">
+                            <li><strong>CPU:</strong> Intel i9-12900KF</li>
+                            <li><strong>GPU:</strong> RTX 3080 Ti</li>
                             <li><strong>RAM:</strong> 64GB DDR5</li>
-                            <li><strong>Tactical Input:</strong> Razer Tartarus V2</li>
-                            <li><strong>Keyboard:</strong> Razer BlackWidow V3 Pro</li>
-                            <li><strong>Mouse:</strong> Razer Basilisk Ultimate</li>
-                            <li><strong>Audio:</strong> Razer BlackShark V2 X</li>
                         </ul>
                     </div>
-
                     <div class="col-6 col-12-medium">
-                        <h3 style="color: #ffe66d; text-transform: uppercase;">
-                            <i class="icon solid fa-rocket"></i> The Beast (Inbound)
-                        </h3>
-                        <div style="border: 2px solid #ffe66d; padding: 20px; background: rgba(0,0,0,0.4); border-radius: 4px;">
-                            <p style="margin-bottom: 1em;"><strong>STATUS: ASSEMBLING</strong></p>
-                            <ul class="alt" style="border-color: #555;">
-                                <li><strong>CPU:</strong> AMD Ryzen 9 9950X3D (16-Core)</li>
-                                <li><strong>GPU:</strong> NVIDIA RTX 5090 (32GB GDDR7)</li>
-                                <li><strong>Mobo:</strong> Gigabyte X870E Aorus Master</li>
-                                <li><strong>RAM:</strong> 64GB G.Skill Trident Z5 DDR5-6000</li>
-                                <li><strong>Cooling:</strong> NZXT Kraken Elite 360mm AIO</li>
-                                <li><strong>Power:</strong> Seasonic PRIME TX-1600</li>
-                                <li><strong>Case:</strong> Fractal Meshify / Hyte</li>
-                            </ul>
-                        </div>
+                        <h3 style="color: #ffe66d;">THE BEAST (INBOUND)</h3>
+                        <ul class="alt">
+                            <li><strong>CPU:</strong> AMD Ryzen 9 9950X3D</li>
+                            <li><strong>GPU:</strong> RTX 5090</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="main style2" style="background: rgba(28, 28, 28, 0.9);">
+        <section class="main-content" style="background: rgba(28, 28, 28, 0.9);">
             <div class="container">
-                <header class="major">
-                    <h2>Visual Recon</h2>
-                </header>
                 <div class="row">
                     <div class="col-6 col-12-medium">
                         <div class="gallery-item">
-                            <img src="images/pic01.jpg" alt="The Pilot View">
-                            <div class="gallery-caption">Pilot View (Jungle Window)</div>
+                            <img src="images/pic01.jpg">
+                            <div class="gallery-caption">Pilot View</div>
                         </div>
                     </div>
                     <div class="col-6 col-12-medium">
                         <div class="gallery-item">
-                            <img src="images/pic02.jpg" alt="Engine Room">
-                            <div class="gallery-caption">The Engine Room (PC Internals)</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <div class="gallery-item">
-                            <img src="images/pic03.jpg" alt="Ultrawide Setup">
-                            <div class="gallery-caption">Ultrawide Monitor Array</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <div class="gallery-item">
-                            <img src="images/pic04.jpg" alt="Night Ops">
-                            <div class="gallery-caption">Night Ops (RGB Mode)</div>
+                            <img src="images/pic02.jpg">
+                            <div class="gallery-caption">Engine Room</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="footer" style="background: transparent;">
-            <ul class="copyright" style="list-style: none !important; padding: 0; margin: 0;">
-                <li>&copy; PapaThaiGG</li>
-            </ul>
+        <section id="footer" style="text-align: center; padding: 2em;">
+            <p>&copy; PapaThaiGG</p>
         </section>
 
         <script src="assets/js/jquery.min.js"></script>
