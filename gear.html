@@ -20,7 +20,6 @@
         <style>
             /* --- PAGE BACKGROUND (Night Ops Jungle) --- */
             body {
-                /* Uses pic02 (Railay) but darkens it 90% so it looks like night */
                 background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("images/pic02.jpg");
                 background-size: cover;
                 background-position: center;
@@ -31,10 +30,9 @@
             .gear-header {
                 text-align: center;
                 padding: 4em 0 2em 0;
-                background: transparent; /* Let the jungle background show through */
+                background: transparent;
             }
             
-            /* Gradient Text Effect (Matches Home Page) */
             .gear-header h1 {
                 font-family: 'Alfa Slab One', cursive;
                 font-size: 3.5em;
@@ -54,6 +52,31 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 font-size: 0.9em;
+            }
+
+            /* --- FIXED TACTICAL BUTTON --- */
+            .tactical-btn {
+                display: block;
+                margin: 0 auto;             /* Centers the button */
+                width: fit-content;
+                padding: 0.75em 1.5em;
+                border: 2px solid #4dfbfb;  /* Cyan Border */
+                color: #4dfbfb !important;  /* Cyan Text (High Visibility) */
+                background: transparent;    /* See-through background */
+                border-radius: 4px;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            /* Hover Effect: Turns solid Cyan with Black text */
+            .tactical-btn:hover {
+                background: #4dfbfb;
+                color: #000 !important; 
+                box-shadow: 0 0 15px rgba(77, 251, 251, 0.5);
+                transform: scale(1.05);
             }
 
             /* --- LAYOUT UTILS --- */
@@ -97,7 +120,7 @@
             .gallery-caption {
                 padding: 0.8em;
                 background: #121212;
-                color: #ffe66d; /* Gold Text */
+                color: #ffe66d;
                 font-family: 'Alfa Slab One', cursive;
                 font-size: 0.8em;
                 text-align: center;
@@ -105,10 +128,16 @@
                 letter-spacing: 1px;
             }
 
-            /* --- MOBILE FIX FOR TITLE --- */
+            /* --- MOBILE TWEAKS --- */
             @media screen and (max-width: 480px) {
                 .gear-header h1 {
-                    font-size: 2.1em; /* Shrinks the text on small screens */
+                    font-size: 2.1em;
+                }
+                .video-wrapper {
+                    max-width: 95%;
+                }
+                .gallery-item {
+                    margin-bottom: 2.5em;
                 }
             }
         </style>
