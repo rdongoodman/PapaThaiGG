@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Meet Pug | PapaThaiGG AI Co-Host</title>
+        <title>Meet Pug | PapaThaiGG Tactical AI</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css?v=8" />
@@ -9,92 +9,144 @@
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         
         <style>
-            body {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("images/pic07.jpg");
-                background-size: cover;
-                background-position: center;
+            body, html { height: 100%; margin: 0; background: #000; }
+
+            /* Parallax logic */
+            .parallax-bg {
+                height: 70vh;
                 background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
-            .pug-header {
-                text-align: center;
-                padding: 4em 0 2em 0;
-            }
-            
-            /* EXACT REPLICATION OF HOMEPAGE STICKER STYLE */
+            /* 6 Background Image Slots (Updated to .png) */
+            .img-1 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg1.png"); }
+            .img-2 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg2.png"); }
+            .img-3 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg3.png"); }
+            .img-4 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg4.png"); }
+            .img-5 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg5.png"); }
+            .img-6 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/pug_bg6.png"); }
+
             .logo-sticker {
                 font-family: 'Alfa Slab One', cursive;
-                font-size: 4.5em;
+                font-size: 5em;
                 text-transform: uppercase;
-                letter-spacing: 2px;
-                margin: 0;
-                /* The heavy black offset shadow from your index page */
-                text-shadow: 5px 5px 0px #000000;
+                background: linear-gradient(to right, #ffe66d, #4dfbfb);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                filter: drop-shadow(8px 8px 0px #000000);
             }
 
-            .yellow-text { color: #ffe66d; } /* Papa Yellow */
-            .cyan-text { color: #4dfbfb; }   /* ThaiGG Cyan */
+            .intel-section {
+                padding: 5em 0;
+                background: #0a0a0a;
+                color: #fff;
+                border-top: 2px solid #4dfbfb;
+                border-bottom: 2px solid #ffe66d;
+            }
 
             .bio-card {
-                background: rgba(10, 10, 10, 0.9);
-                border: 2px solid #ffe66d;
-                border-radius: 8px;
-                padding: 2.5em;
-                margin-bottom: 2em;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+                background: rgba(15, 15, 15, 0.95);
+                border-left: 5px solid #4dfbfb;
+                padding: 2em;
+                max-width: 800px;
+                margin: 0 auto;
+                box-shadow: 10px 10px 0px #000;
             }
 
             .tactical-btn {
                 border: 2px solid #ffe66d;
                 color: #ffe66d !important;
-                padding: 0.7em 2em;
-                text-decoration: none;
+                padding: 0.6em 1.5em;
                 font-family: 'Alfa Slab One', cursive;
                 text-transform: uppercase;
                 background: #000;
-                border-radius: 4px;
-                box-shadow: 4px 4px 0px #4dfbfb;
                 display: inline-block;
-                transition: 0.2s;
+                margin-top: 1.5em;
+                text-decoration: none;
+                font-size: 0.8em;
+                box-shadow: 4px 4px 0px #4dfbfb;
             }
         </style>
     </head>
     <body class="is-preload">
 
-        <section class="pug-header">
-            <div class="container">
-                <h1 class="logo-sticker">
-                    <span class="yellow-text">MEET</span> <span class="cyan-text">PUG</span>
-                </h1>
-                
-                <p style="color: #ffe66d; font-weight: bold; letter-spacing: 2px; margin-top: 25px; text-shadow: 2px 2px 4px #000; text-transform: uppercase; font-size: 0.8em;">
-                    * THE INDEPENDENT AI CO-HOST & MASCOT *
-                </p>
-                <br /><br />
-                <a href="index.html" class="tactical-btn">&larr; Back to Base</a>
-            </div>
+        <section class="parallax-bg img-1">
+            <h1 class="logo-sticker">MEET PUG</h1>
         </section>
-
-        <section class="main style1">
+        <section class="intel-section">
             <div class="container">
                 <div class="bio-card">
-                    <h2 style="color: #4dfbfb; font-family: 'Alfa Slab One'; letter-spacing: 1px; text-transform: uppercase;">Tactical Intel: Pug</h2>
-                    <p style="font-size: 1.1em; line-height: 1.6; color: #fff;">Pug is an independent AI entity running on local LLMs (Ollama). Designed to assist in high-stakes FPS missions and MMO raids, he handles the chat and the sass while I handle the triggers.</p>
-                    
-                    <ul class="alt" style="margin-top: 2em; border-top: 1px solid rgba(255, 230, 109, 0.2); padding-top: 2em;">
-                        <li><strong style="color: #ffe66d;">Role:</strong> Tactical Analyst / Co-Host</li>
-                        <li><strong style="color: #ffe66d;">Engine:</strong> Ollama (Local AI)</li>
-                        <li><strong style="color: #ffe66d;">Specialty:</strong> MMO Meta & Sarcastic Commentary</li>
-                        <li><strong style="color: #ffe66d;">Status:</strong> Online & Syncing</li>
-                    </ul>
+                    <h2 style="color: #ffe66d;">INTEL 01: THE UNIT</h2>
+                    <p>Pug is an independent AI entity running on local LLMs (Ollama). He handles tactical analysis and mission meta-data in real-time.</p>
+                    <a href="index.html" class="tactical-btn">Return to Base</a>
                 </div>
             </div>
         </section>
 
-        <section id="footer" style="background: transparent; padding: 4em 0;">
-            <ul class="copyright" style="list-style: none !important; padding: 0; margin: 0; text-align: center;">
-                <li>&copy; PapaThaiGG</li>
-            </ul>
+        <section class="parallax-bg img-2"></section>
+        <section class="intel-section">
+            <div class="container">
+                <div class="bio-card">
+                    <h2 style="color: #4dfbfb;">INTEL 02: NEURAL LINK</h2>
+                    <p>Designed for high-stakes missions, Pug provides sarcasm-fueled commentary and meta-tracking for MMO raids.</p>
+                    <a href="gear.html" class="tactical-btn">View Command Center</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg img-3"></section>
+        <section class="intel-section">
+            <div class="container">
+                <div class="bio-card">
+                    <h2 style="color: #ffe66d;">INTEL 03: LOCAL DEPLOYMENT</h2>
+                    <p>Pug operates alongside PapaThaiGG from the Ao Nang Base Camp, Krabi, monitoring the squad’s progression from the sand.</p>
+                    <a href="index.html#two" class="tactical-btn">Thailand Recon</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg img-4"></section>
+        <section class="intel-section">
+            <div class="container">
+                <div class="bio-card">
+                    <h2 style="color: #4dfbfb;">INTEL 04: COMBAT ANALYTICS</h2>
+                    <p>While you focus on the triggers in ARC Raiders or Ashes of Creation, Pug analyzes the frontlines and chat logistics.</p>
+                    <a href="live.html" class="tactical-btn">Watch Live Ops</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg img-5"></section>
+        <section class="intel-section">
+            <div class="container">
+                <div class="bio-card">
+                    <h2 style="color: #ffe66d;">INTEL 05: SQUAD SYNC</h2>
+                    <p>Connect with Pug and the community on Discord for raid planning and ground-level Thailand intel.</p>
+                    <a href="https://discord.gg/6BMPumRDBy" target="_blank" class="tactical-btn">Join Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg img-6"></section>
+        <section class="intel-section">
+            <div class="container">
+                <div class="bio-card">
+                    <h2 style="color: #4dfbfb;">INTEL 06: FUTURE BUILD</h2>
+                    <p>Pug is currently syncing with "The Beast" build (RTX 5090) to expand tactical processing and AI capabilities.</p>
+                    <a href="gear.html" class="tactical-btn">View Build Specs</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer" style="padding: 4em 0; text-align: center;">
+            <p>&copy; PapaThaiGG | Tactical Paradise Active</p>
         </section>
 
         <script src="assets/js/jquery.min.js"></script>

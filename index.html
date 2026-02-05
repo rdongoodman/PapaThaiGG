@@ -18,6 +18,39 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css?v=8" />
+        
+        <style>
+            /* Ensures all buttons are uniform size and transparent */
+            .command-center {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .tactical-btn {
+                min-width: 220px; /* Forces uniform size */
+                background-color: rgba(0, 0, 0, 0.5) !important; /* Higher transparency to see background */
+                backdrop-filter: blur(4px);
+                border: 2px solid #fff;
+                color: #fff !important;
+                padding: 15px 0;
+                display: inline-block;
+                text-decoration: none;
+                font-family: 'Alfa Slab One', cursive;
+                text-transform: uppercase;
+                border-radius: 4px;
+                transition: 0.3s;
+            }
+
+            .pug-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -30,29 +63,29 @@
                    Gaming, Travel, and the Expat Life.</p>
                 
                 <div class="command-center">
-                    <a href="live.html" class="tactical-btn primary">Watch Live</a>
+                    <a href="live.html" class="tactical-btn primary" style="border-color: #4dfbfb; color: #4dfbfb !important;">Watch Live</a>
                     <a href="https://discord.gg/6BMPumRDBy" target="_blank" class="tactical-btn">Join Discord</a>
                     <a href="gear.html" class="tactical-btn">My Loadout</a>
-                    <a href="pug.html" class="tactical-btn" style="border-color: #ffe66d; color: #ffe66d;">Meet Pug</a>
                     
-                    <br />
-                    
-                    <p style="
-                        margin-top: 15px; 
-                        font-size: 0.7em; 
-                        color: #ffe66d; 
-                        letter-spacing: 2px; 
-                        text-transform: uppercase; 
-                        font-weight: bold; 
-                        text-shadow: 1px 1px 0 #000;
-                        background-color: rgba(0, 0, 0, 0.7); 
-                        display: inline-block; 
-                        padding: 8px 15px; 
-                        border-radius: 4px; 
-                        border: 1px solid rgba(255, 230, 109, 0.3);
-                    ">
-                        *Featuring 'Pug' the independent A.I. co-host and mascot*
-                    </p>
+                    <div class="pug-container">
+                        <a href="pug.html" class="tactical-btn" style="border-color: #ffe66d; color: #ffe66d !important;">Meet Pug</a>
+                        <p style="
+                            margin-top: 10px; 
+                            font-size: 0.7em; 
+                            color: #ffe66d; 
+                            letter-spacing: 2px; 
+                            text-transform: uppercase; 
+                            font-weight: bold; 
+                            text-shadow: 1px 1px 0 #000;
+                            background-color: rgba(0, 0, 0, 0.7); 
+                            padding: 8px 15px; 
+                            border-radius: 4px; 
+                            border: 1px solid rgba(255, 230, 109, 0.3);
+                            max-width: 220px;
+                        ">
+                            The independent A.I. co-host and mascot
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
