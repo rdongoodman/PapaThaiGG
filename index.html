@@ -1,198 +1,186 @@
-<!DOCTYPE HTML>
-<html>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE2QMECGR9"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PapaThaiGG - FPS & MMOs from Paradise</title>
+    <style>
+        /* --- GLOBAL STYLES --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
 
-          gtag('config', 'G-GE2QMECGR9');
-        </script>
+        /* Background Image Setup */
+        .hero-section {
+            background-image: url('banner.jpg'); /* Ensure your image is named 'background.jpg' in an 'images' folder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content to top */
+            align-items: center;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
 
-        <title>PapaThaiGG | Gaming & Thailand Life</title>
-        
-        <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
-        
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=8" />
-        
-        <style>
-            /* Ensures all buttons are uniform size and transparent */
-            .command-center {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: 3rem;
+            margin-top: 10vh; /* Push down from top */
+            margin-bottom: 10px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .brand-name {
+            color: #00FFFF; /* Cyan color for PapaThaiGG */
+        }
+
+        p.subtitle {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 40px;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        /* --- BUTTONS --- */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .cta-button {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+            border: 2px solid #D4AF37; /* Gold border */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Courier New', Courier, monospace; /* Gaming/Tactical font style */
+            min-width: 180px; /* Minimum width to keep them looking similar on desktop */
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #D4AF37;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .cta-button.highlight {
+            color: #00FFFF; /* Cyan text for specific buttons if needed */
+        }
+
+        /* --- SPECIAL TEXT UNDER BUTTON --- */
+        .pug-description {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #D4AF37; /* Gold color */
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            max-width: 200px;
+            
+            /* OPTION B: HEAVY SHADOW FIX */
+            /* This creates a thick black outline around the text */
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 2px 2px 4px black; 
+        }
+
+        /* Wrapper for the button + text column */
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- MOBILE STYLES (Phones) --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-top: 15vh;
+                padding: 0 10px;
+            }
+
+            p.subtitle {
+                font-size: 1.1rem;
+            }
+
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically */
+                width: 80%; /* Container takes up 80% of screen width */
                 gap: 15px;
-                text-align: center;
             }
 
-            .tactical-btn {
-                min-width: 220px; /* Forces uniform size */
-                background-color: rgba(0, 0, 0, 0.5) !important; /* Higher transparency to see background */
-                backdrop-filter: blur(4px);
-                border: 2px solid #fff;
-                color: #fff !important;
-                padding: 15px 0;
-                display: inline-block;
-                text-decoration: none;
-                font-family: 'Alfa Slab One', cursive;
-                text-transform: uppercase;
-                border-radius: 4px;
-                transition: 0.3s;
+            /* FIX: FORCE UNIFORM BUTTON WIDTH */
+            .cta-button {
+                width: 100%; /* Forces button to fill the container */
+                box-sizing: border-box; /* Ensures padding doesn't break width */
+                min-width: unset; /* Remove desktop min-width */
             }
 
-            .pug-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            /* Adjust the pug text for mobile specifically */
+            .pug-description {
+                font-size: 0.9rem; /* Slightly larger on mobile for readability */
+                max-width: 100%;
             }
-        </style>
-    </head>
-    <body class="is-preload">
+        }
+    </style>
+</head>
+<body>
 
-        <section id="header">
-            <div class="inner">
-                <h1>Hi, and Sawasdee Krap.<br /> 
-                I'm <strong><span class="papa-color">Papa</span><span class="thaigg-color">ThaiGG</span></strong></h1>
-                
-                <p>FPS & MMOs from Paradise.<br />
-                   Gaming, Travel, and the Expat Life.</p>
-                
-                <div class="command-center">
-                    <a href="live.html" class="tactical-btn primary" style="border-color: #4dfbfb; color: #4dfbfb !important;">Watch Live</a>
-                    <a href="https://discord.gg/6BMPumRDBy" target="_blank" class="tactical-btn">Join Discord</a>
-                    <a href="gear.html" class="tactical-btn">My Loadout</a>
-                    
-                    <div class="pug-container">
-                        <a href="pug.html" class="tactical-btn" style="border-color: #ffe66d; color: #ffe66d !important;">Meet Pug</a>
-                        <p style="
-                            margin-top: 10px; 
-                            font-size: 0.7em; 
-                            color: #ffe66d; 
-                            letter-spacing: 2px; 
-                            text-transform: uppercase; 
-                            font-weight: bold; 
-                            text-shadow: 1px 1px 0 #000;
-                            background-color: rgba(0, 0, 0, 0.7); 
-                            padding: 8px 15px; 
-                            border-radius: 4px; 
-                            border: 1px solid rgba(255, 230, 109, 0.3);
-                            max-width: 220px;
-                        ">
-                            The independent A.I. co-host and mascot
-                        </p>
-                    </div>
+    <section class="hero-section">
+        <h1>Hi, and Sawasdee Krap.<br>I'm <span class="brand-name">PapaThaiGG</span></h1>
+        
+        <p class="subtitle">
+            FPS & MMOs from Paradise.<br>
+            Gaming, Travel, and the Expat Life.
+        </p>
+
+        <div class="button-container">
+            
+            <div class="button-wrapper">
+                <a href="#" class="cta-button highlight">WATCH LIVE</a>
+            </div>
+
+            <div class="button-wrapper">
+                <a href="#" class="cta-button">JOIN DISCORD</a>
+            </div>
+
+            <div class="button-wrapper">
+                <a href="#" class="cta-button">MY LOADOUT</a>
+            </div>
+
+            <div class="button-wrapper">
+                <a href="#" class="cta-button">MEET PUG</a>
+                <div class="pug-description">
+                    The Independent AI<br>Co-Host and Mascot
                 </div>
             </div>
-        </section>
 
-        <section id="one" class="main style1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <header class="major">
-                            <h2>My Story</h2>
-                        </header>
-                        <p>Ao Nang, Thailand is now "Base Camp." Located just 1 mile from the world-famous Railay Beach (ranked as the 9th most beautiful beach in the world), this is where the retired expat life meets high-octane gaming.<br /><br />
-                        
-                        At 55, after surviving a massive brain tumor that erased a previous career, the objective changed. The focus is now on the true passions: MMOs, FPS grinders, drone photography, and coding.<br /><br />
-                        
-                        Reaction times are rebuilding, but determination is 100%. Whether exploring the Andaman coast or grinding for loot, the squad is always welcome. Let's conquer virtual worlds and explore the real one together.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <span class="image fit"><img src="images/pic01.jpg" alt="Bio Image" /></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="two" class="main style2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <header class="major">
-                            <h2>Thailand & Asia</h2>
-                        </header>
-                        <p>This is the remote office: Phra Nang Beach, Railay. It looks like a postcard, but it is fully operational. Yes, I can deploy my 17" Gigabyte RTX 3070 laptop right here and game wirelessly from the sand.<br /><br />
-                        
-                        Beyond the views, I provide the ground-level intel needed to set up your own paradise command center—covering visas, internet reliability, cost of living, and the reality of daily life in Southeast Asia.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <span class="image fit"><img src="images/pic02.jpg" alt="Railay Beach Gaming" /></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="loadout" class="main style1">
-            <div class="container">
-                <header class="major">
-                    <h2>Current Specs</h2>
-                </header>
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <ul class="alt" style="text-align: left;">
-                            <li><strong>CPU:</strong> Intel Core i9-12900KF</li>
-                            <li><strong>GPU:</strong> NVIDIA RTX 3080 Ti</li>
-                            <li><strong>RAM:</strong> 64GB DDR5</li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <p><em>Click "My Loadout" at the top to see the full Command Center Video Tour.</em></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="three" class="main style1 special">
-            <div class="container">
-                <header class="major">
-                    <h2>Photos & Videos "Under Construction. Bear with me. I started this build 1/12/26"</h2>
-                </header>
-                <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <span class="image fit"><img src="images/pic03.jpg" alt="Pics" /></span>
-                        <h3>In-Country Intel</h3>
-                        <p>Visual recon from my latest travels. See the real Thailand, unfiltered.</p>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <span class="image fit"><img src="images/pic04.jpg" alt="Videos" /></span>
-                        <h3>Combat Footage</h3>
-                        <p>High-octane clips from the frontlines of ARC Raiders, Ashes of Creation, and more.</p>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <span class="image fit"><img src="images/pic05.jpg" alt="Forum" /></span>
-                        <h3>Base Camp</h3>
-                        <p>Join the Discord. Plan raids, share travel tips, and hang out with the squad.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="footer">
-            <ul class="icons">
-                <li><a href="https://www.twitch.tv/papathaigg" target="_blank" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
-                <li><a href="https://www.youtube.com/@PapaThaiGG" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                <li><a href="https://kick.com/papathaigg" target="_blank" class="icon solid fa-gamepad"><span class="label">Kick</span></a></li> 
-                
-                <li><a href="https://x.com/PapaThaiGG" target="_blank" class="icon brands fa-twitter"><span class="label">X</span></a></li>
-                <li><a href="https://www.tiktok.com/@papathaigaminggg" target="_blank" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
-                
-                <li><a href="https://discord.gg/6BMPumRDBy" target="_blank" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-                <li><a href="https://steamcommunity.com/id/PapaThaiGG/" target="_blank" class="icon brands fa-steam"><span class="label">Steam</span></a></li>
-                <li><a href="https://www.instagram.com/papathaigg/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="https://www.facebook.com/PapaThaiGG" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            </ul>
-            <ul class="copyright" style="list-style: none !important; padding: 0; margin: 0;">
-                <li>&copy; PapaThaiGG</li>
-            </ul>
-        </section>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+</body>
 </html>
