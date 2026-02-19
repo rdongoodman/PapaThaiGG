@@ -21,6 +21,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center; /* Added for centering context */
             }
 
             /* 6 Background Image Slots (Updated to .png) */
@@ -41,6 +42,15 @@
                 color: transparent;
                 -webkit-text-fill-color: transparent;
                 filter: drop-shadow(8px 8px 0px #000000);
+                width: 100%; /* Ensures centering across the box */
+            }
+
+            /* --- MOBILE FIX FOR HEADER TEXT --- */
+            @media screen and (max-width: 768px) {
+                .logo-sticker {
+                    font-size: 3em; /* Shrinks text to fit mobile width */
+                    filter: drop-shadow(4px 4px 0px #000000); 
+                }
             }
 
             .intel-section {
