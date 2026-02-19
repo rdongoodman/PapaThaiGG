@@ -95,6 +95,14 @@
                 border-top: 1px solid #444;
                 letter-spacing: 1px;
             }
+            /* --- MOBILE FIX FOR HEADER TEXT --- */
+            @media screen and (max-width: 768px) {
+                .gear-header h1 {
+                    font-size: 2.2em; /* Shrinks text to fit phone screens */
+                    line-height: 1.2;
+                    padding: 0 10px;  /* Adds a small buffer on the sides */
+                }
+            }
         </style>
     </head>
     <body class="is-preload">
