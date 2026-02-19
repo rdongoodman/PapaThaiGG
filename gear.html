@@ -11,7 +11,6 @@
         <style>
             /* --- PAGE BACKGROUND (Night Ops Jungle) --- */
             body {
-                /* Changed darkness from 0.9 to 0.4 to make image visible */
                 background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/pic02.jpg");
                 background-size: cover;
                 background-position: center;
@@ -22,10 +21,9 @@
             .gear-header {
                 text-align: center;
                 padding: 4em 0 2em 0;
-                background: transparent; /* Let the jungle background show through */
+                background: transparent;
             }
             
-            /* Gradient Text Effect (Matches Home Page) */
             .gear-header h1 {
                 font-family: 'Alfa Slab One', cursive;
                 font-size: 3.5em;
@@ -50,7 +48,7 @@
             /* --- LAYOUT UTILS --- */
             .video-wrapper {
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 */
+                padding-bottom: 56.25%;
                 height: 0;
                 overflow: hidden;
                 max-width: 80%;
@@ -88,14 +86,14 @@
             .gallery-caption {
                 padding: 0.8em;
                 background: #121212;
-                color: #ffe66d; /* Gold Text */
+                color: #ffe66d;
                 font-family: 'Alfa Slab One', cursive;
                 font-size: 0.8em;
                 text-align: center;
                 border-top: 1px solid #444;
                 letter-spacing: 1px;
             }
-            /* --- MOBILE FIX FOR HEADER TEXT & BUTTON --- */
+
             @media screen and (max-width: 768px) {
                 .gear-header h1 {
                     font-size: 2.2em; 
@@ -105,7 +103,7 @@
                 .gear-header .tactical-btn {
                     display: block;
                     margin: 0 auto;
-                    width: 85%; /* Gives the button width so text won't stack */
+                    width: 85%;
                     max-width: 300px;
                     text-align: center;
                 }
@@ -119,12 +117,20 @@
                 <h1>JUNGLE COMMAND CENTER</h1>
                 <p>Ao Nang, Krabi • Deployment Active</p>
                 <br />
-                <div style="display: grid; place-items: center; width: 100%; margin-top: 20px;">
+                <div style="display: flex; justify-content: center; width: 100%; margin: 20px 0 50px 0;">
                     <a href="index.html" class="tactical-btn" style="width: 280px; text-align: center;">&larr; Return to Base</a>
                 </div>
+            </div>
+        </section>
+
         <section>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
 
