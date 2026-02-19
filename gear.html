@@ -95,12 +95,19 @@
                 border-top: 1px solid #444;
                 letter-spacing: 1px;
             }
-            /* --- MOBILE FIX FOR HEADER TEXT --- */
+            /* --- MOBILE FIX FOR HEADER TEXT & BUTTON --- */
             @media screen and (max-width: 768px) {
                 .gear-header h1 {
-                    font-size: 2.2em; /* Shrinks text to fit phone screens */
+                    font-size: 2.2em; 
                     line-height: 1.2;
-                    padding: 0 10px;  /* Adds a small buffer on the sides */
+                    padding: 0 10px;  
+                }
+                .gear-header .tactical-btn {
+                    display: block;
+                    margin: 0 auto;
+                    width: 85%; /* Gives the button width so text won't stack */
+                    max-width: 300px;
+                    text-align: center;
                 }
             }
         </style>
