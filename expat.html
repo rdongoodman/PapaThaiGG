@@ -10,10 +10,12 @@
         
         <style>
             body {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/pic09.jpg");
+                /* Changed to a relative path "./" which is more reliable for live web servers */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/pic09.jpg");
                 background-size: cover;
                 background-position: center;
                 background-attachment: fixed;
+                background-color: #000; /* Fallback color for live deployment */
             }
 
             .intel-header {
@@ -64,7 +66,6 @@
             .tvc-text { flex: 1; min-width: 250px; }
             .tvc-qr { width: 150px; border: 4px solid #fff; border-radius: 4px; }
 
-            /* New Case Study Card */
             .case-study {
                 background: rgba(77, 251, 251, 0.1);
                 border: 2px dashed #4dfbfb;
@@ -73,9 +74,28 @@
                 border-radius: 8px;
             }
 
+            /* Mobile Table Readability Overrides */
             @media screen and (max-width: 768px) {
                 .intel-header h1 { font-size: 2em; }
                 .tvc-card { justify-content: center; text-align: center; }
+                
+                .table-wrapper {
+                    background-color: rgba(0, 0, 0, 0.9) !important; 
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(77, 251, 251, 0.3);
+                    overflow-x: auto;
+                }
+
+                table tbody tr td, table thead tr th {
+                    font-size: 0.85em !important;
+                    padding: 10px 5px !important;
+                }
+
+                table tfoot tr td {
+                    font-size: 0.9em !important;
+                    background: rgba(77, 251, 251, 0.1);
+                }
             }
         </style>
     </head>
