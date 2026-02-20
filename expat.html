@@ -10,12 +10,12 @@
         
         <style>
             body {
-                /* Changed to a relative path "./" which is more reliable for live web servers */
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/pic09.jpg");
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-                background-color: #000; /* Fallback color for live deployment */
+                /* Removed the ./ and added !important to ensure it loads live */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/pic09.jpg") !important;
+                background-size: cover !important;
+                background-position: center !important;
+                background-attachment: fixed !important;
+                background-color: #000 !important;
             }
 
             .intel-header {
@@ -74,7 +74,6 @@
                 border-radius: 8px;
             }
 
-            /* Mobile Table Readability Overrides */
             @media screen and (max-width: 768px) {
                 .intel-header h1 { font-size: 2em; }
                 .tvc-card { justify-content: center; text-align: center; }
