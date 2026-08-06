@@ -17,7 +17,7 @@
         
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=9" />
+        <link rel="stylesheet" href="assets/css/main.css?v=10" />
         
         <style>
             /* Ensures all buttons are uniform size and transparent */
@@ -31,24 +31,34 @@
             }
 
             .tactical-btn {
-                min-width: 220px; /* Forces uniform size */
-                background-color: rgba(0, 0, 0, 0.5) !important; /* Higher transparency to see background */
+                width: 240px; /* Same box size for every hero button */
+                min-width: 240px;
+                box-sizing: border-box;
+                background-color: rgba(0, 0, 0, 0.5) !important;
                 backdrop-filter: blur(4px);
                 border: 2px solid #fff;
                 color: #fff !important;
-                padding: 15px 0;
+                /* Side padding so labels are not flush to the edges */
+                padding: 15px 28px;
                 display: inline-block;
                 text-decoration: none;
                 font-family: 'Alfa Slab One', cursive;
                 text-transform: uppercase;
                 border-radius: 4px;
                 transition: 0.3s;
+                text-align: center;
             }
 
             .pug-container {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 240px;
+            }
+
+            .pug-container .tactical-btn {
+                width: 100%;
+                min-width: 0;
             }
 
             /* Mobile: captions live in CSS (main.css); keep this block for cache-clear clarity */

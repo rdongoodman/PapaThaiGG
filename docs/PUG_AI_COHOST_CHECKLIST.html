@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pug AI Co-Host Checklist — PapaThaiGG</title>
+<style>
+  @page { margin: 0.65in; }
+  body { font-family: Georgia, "Times New Roman", serif; color: #111; line-height: 1.35; font-size: 11pt; }
+  h1 { font-size: 18pt; margin: 0 0 6px; }
+  h2 { font-size: 13pt; margin: 18px 0 8px; border-bottom: 1px solid #333; padding-bottom: 3px; }
+  .meta { color: #333; font-size: 10pt; margin-bottom: 14px; }
+  ul { margin: 6px 0 10px 18px; padding: 0; }
+  li { margin: 3px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 12px; font-size: 10pt; }
+  th, td { border: 1px solid #444; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #eee; }
+  .box { border: 1px solid #333; padding: 10px 12px; margin: 10px 0 14px; background: #f7f7f7; }
+  .check { list-style: none; margin-left: 0; }
+  .check li { margin: 4px 0; }
+  .check li::before { content: "☐ "; }
+  .small { font-size: 9.5pt; color: #333; }
+</style>
+</head>
+<body>
+  <h1>Pug — Independent AI Co-Host &amp; Mascot Checklist</h1>
+  <div class="meta">
+    <strong>Project:</strong> PapaThaiGG.com / Pug &nbsp;|&nbsp;
+    <strong>Updated:</strong> August 6, 2026<br />
+    Local independent AI co-host: 3D avatar on stream, reacts to chat &amp; in-game moments, takes commands, talks or types back.
+  </div>
+
+  <h2>Vision (Sal’s)</h2>
+  <ul>
+    <li>Pug is an <strong>independent AI co-host and mascot</strong>, not a passive overlay.</li>
+    <li><strong>Body:</strong> 3D avatar (current shell + optional second Warudo avatar).</li>
+    <li><strong>Brain:</strong> Local LLM via Ollama on the streaming PC.</li>
+    <li><strong>Personality:</strong> Sarcastic, tactical, Thailand Base Camp energy.</li>
+    <li><strong>Listen:</strong> Chat + voice commands from Sal.</li>
+    <li><strong>Speak / type:</strong> TTS and/or on-stream chat replies.</li>
+    <li><strong>React to the game:</strong> e.g. get shot → Pug freaks out / comments.</li>
+    <li><strong>Website:</strong> papathaigg.com “Meet Pug” tells the story.</li>
+  </ul>
+
+  <h2>Recommended stack</h2>
+  <table>
+    <tr><th>Layer</th><th>Recommendation</th><th>Notes</th></tr>
+    <tr><td>Brain</td><td>Ollama + Llama 3.1 8B or Qwen2.5</td><td>Dolphin optional; strong system prompt often enough</td></tr>
+    <tr><td>Mouth</td><td>Warudo + TTS</td><td>Lip-sync later</td></tr>
+    <tr><td>Chat ears</td><td>Chat bridge → Ollama → TTS / typed reply</td><td>Twitch first</td></tr>
+    <tr><td>Voice ears</td><td>PTT / wake word → STT → Ollama</td><td>After chat works</td></tr>
+    <tr><td>Game reactions</td><td>Streamer.bot / hotkeys first</td><td>Deep game hooks = later</td></tr>
+    <tr><td>Control</td><td>Mute / panic button</td><td>Always have a kill switch</td></tr>
+  </table>
+  <p class="small"><strong>Build order:</strong> Chat reactions → Voice commands → Game-event reactions.</p>
+
+  <h2>Phase 0 — Prep</h2>
+  <ul class="check">
+    <li>Confirm GPU/VRAM budget for Ollama + game + Warudo</li>
+    <li>Install / update Ollama; pull base model (+ optional Dolphin)</li>
+    <li>Write Pug system prompt (tone, short replies, stream rules)</li>
+    <li>Choose primary chat platform; Warudo project ready</li>
+    <li>Decide if a second Warudo-optimized avatar is needed</li>
+  </ul>
+
+  <h2>Phase 1 — Brain online</h2>
+  <ul class="check">
+    <li>Ollama answers with Pug’s prompt from a terminal</li>
+    <li>Cap replies to 1–2 sentences for live play</li>
+    <li>Save winning model + prompt in config/notes</li>
+  </ul>
+
+  <h2>Phase 2 — Avatar body (Warudo)</h2>
+  <ul class="check">
+    <li>Avatar loads; idle/talk/react mapped; TTS voice chosen</li>
+    <li>OBS layout keeps Pug visible without covering critical HUD</li>
+    <li>Optional second avatar for Warudo-only look</li>
+  </ul>
+
+  <h2>Phase 3 — Chat co-host</h2>
+  <ul class="check">
+    <li>Read live chat; filter spam; rate-limit replies</li>
+    <li>@Pug / trigger words for direct questions</li>
+    <li>Spoken TTS path + optional typed chat path + mute toggle</li>
+  </ul>
+
+  <h2>Phase 4 — Voice commands</h2>
+  <ul class="check">
+    <li>Push-to-talk Sal → STT → short spoken confirm</li>
+    <li>v1 commands: read that / hype / quiet / what did chat say</li>
+  </ul>
+
+  <h2>Phase 5 — In-game reactions</h2>
+  <ul class="check">
+    <li>Hotkey / Streamer.bot events first (death, clutch, wipe, etc.)</li>
+    <li>Preset lines + light LLM paraphrase</li>
+    <li>Deeper game-state hooks only after that; never tank FPS</li>
+  </ul>
+
+  <h2>Phase 6 — Website &amp; brand</h2>
+  <ul class="check">
+    <li>Meet Pug page matches real capabilities</li>
+    <li>Mobile hero/buttons stay readable (Aug 6, 2026 pass)</li>
+  </ul>
+
+  <h2>Phase 7 — Stream-ready polish</h2>
+  <ul class="check">
+    <li>30+ min dry-run; temps/FPS OK; emergency stop documented</li>
+    <li>Backup if Ollama dies (silent avatar or canned lines)</li>
+  </ul>
+
+  <div class="box">
+    <strong>Next one thing:</strong> Install Ollama → lock Pug’s system prompt → wire one chat source to a spoken Warudo reply.
+  </div>
+
+  <h2>Notes (Sal)</h2>
+  <p class="small">_______________________________________________<br /><br />
+  _______________________________________________<br /><br />
+  _______________________________________________</p>
+  <p class="small">© PapaThaiGG — docs/PUG_AI_COHOST_CHECKLIST.md</p>
+</body>
+</html>

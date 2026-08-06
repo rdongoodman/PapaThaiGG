@@ -261,7 +261,8 @@ html, body {
         width: 100% !important;
         max-width: 320px !important;
         min-width: 0 !important;
-        padding: 12px 0 !important;
+        /* Horizontal padding so labels are not flush to the box edges */
+        padding: 14px 28px !important;
         font-size: 0.95em !important;
         letter-spacing: 0.08em !important;
         margin-left: 0 !important;
@@ -270,6 +271,16 @@ html, body {
         margin-bottom: 0 !important;
         text-align: center !important;
         box-sizing: border-box !important;
+    }
+
+    /* Expat Intel / Field Guide / Meet Pug — identical box size */
+    .pug-container {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+    .pug-container .tactical-btn {
+        width: 100% !important;
+        max-width: 320px !important;
     }
 
     /* Captions under Expat / Field Guide / Meet Pug — hide on small screens */
