@@ -1,243 +1,162 @@
-# Pug — Independent AI Co-Host & Mascot Checklist
+# PapaThaiGG Master Checklist
 
-**Project:** PapaThaiGG.com / Pug  
 **Owner:** PapaThaiGG (rdongoodman)  
 **Updated:** August 6, 2026 (evening)  
-**Repo:** `GitHub/PapaThaiGG/docs/` — ask Cursor to refresh Desktop PDF when this changes.
+**Repo:** `GitHub/PapaThaiGG/docs/`  
+**Desktop PDF:** ask Cursor — *“update Pug checklist PDF on Desktop”*
+
+Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **Sal’s personal avatars**
+
+**Philosophy:** Fun first, retired pace, no rush. Profit later → more volunteering + gear + fun.
 
 ---
 
-## Endgame goal (~1 month)
+## Endgame (~1 month for streaming)
 
-**Stream with friends & family** — Pug live as your independent AI co-host on PapaThaiGG streams.
-
-- Reacts to **chat** (spoken and/or typed)
-- Takes **voice commands** from Sal
-- Reacts to **in-game moments** (hotkeys first, smarter hooks later)
-- Runs **locally** (Ollama brain + Warudo body + TTS voice)
-- **Two avatar bodies, one Pug personality** — swap for variety:
-  - **ALPHA** — Booth robot VRM (`D:\PTGG\ALPHA.vrm`) — stream **first**
-  - **Pugsan** — samurai pug dog mascot (build in parallel) — **upgrade**
-
-**Not blocking streaming on Pugsan 3D.** Robot goes live first; Pugsan ships when ready.
+Stream with friends & family — **Pug** live as independent AI co-host (Ollama + Warudo + TTS + OBS). Sal on cam **or** Sal avatar **or** game-only — all optional layouts.
 
 ---
 
-## Vision (Sal’s)
+# SECTION 1 — Website (papathaigg.com)
 
-- Pug is an **independent AI co-host and mascot**, not a passive overlay.
-- **Bodies:** Robot now → Pugsan samurai pug later (humanoid, rigged, talking mouth).
-- **Brain:** Local LLM (Ollama) on the streaming PC (“The Beast”).
-- **Personality:** Sarcastic, tactical, Thailand Base Camp energy — support-dog for a brain-surgery survivor living in Ao Nang.
-- **Listen:** Chat + Sal’s voice commands.
-- **Speak / type:** TTS + Warudo lip/expressions; optional chat replies.
-- **React to the game:** e.g. get shot in FPS → Pug freaks out; raid hype; death roasts.
-- **Website:** [papathaigg.com](https://papathaigg.com) — Meet Pug, Field Guide, recon pages tell the story.
+## Done
+- [x] Mobile hero fix — readable on phones/tablets (Aug 6, 2026)
+- [x] Button padding / equal sizes for Expat · Field Guide · Meet Pug
+- [x] Live on GitHub Pages + Cloudflare
 
-### Sal & Pug on screen (not the same thing)
+## To do
+- [ ] Meet Pug / recon pages match what Pug can **actually** do (update as features ship)
+- [ ] **Pug chat widget** on Meet Pug (later) — talk to Ollama; show online/offline honestly
+- [ ] Pugsan page updates when samurai avatar ships
+- [ ] Optional: “Pug status” blurb when major milestone hits
 
-- **Sal (human host):** real webcam **or** future Sal avatar with Ao Nang jungle/window behind you.
-- **Pug / Pugsan:** independent AI co-host — **not** Sal’s body, not face-tracked from Sal unless you choose that later.
-- **OBS layers:** game full screen · optional Sal cam · Pug in corner/side **or** walk-on/walk-off (no permanent box required).
-
-### Future vision — stream presentation (OBS + Warudo)
-
-- [x] Warudo **transparent background** — Pug/Pugsan layer over game (no blue-sky box in OBS)
-- [ ] Pug/Pugsan **small on screen** — resize in Warudo + OBS; not huge
-- [ ] **Sal cam box** — small video corner (any corner); real face **or** future Sal avatar + Ao Nang jungle/window behind you
-- [ ] **Toggle Sal cam** — on for “host + co-host” streams · off for game-only
-- [ ] **Game-only mode** — no Sal cam; Pug/Pugsan walk **on stage** → speak → walk **off**
-- [ ] Pug walks onto **game screen** (cam off) to react, then leaves
-- [ ] Pug walks onto/near **Sal cam box** (cam on) to react, then leaves
-- [ ] Custom **backgrounds** per scene (Thailand, tactical, game-matched, etc.)
-- [ ] Swap **ALPHA robot** vs **Pugsan samurai** for variety (same Ollama brain)
-- [ ] OBS scene presets: **Cam+Game+Pug** · **Game+Pug only** · **Game only** · **Cam+Game** (no Pug)
-
-### Future vision — Pug always on (website + Discord)
-
-**Goal:** Pug/Pugsan available for chat **off-stream** too — not only when live.
-
-| Place | Possible? | How (later) |
-|-------|-----------|-------------|
-| **Discord** | **Yes** | Discord bot → Ollama (Pug brain) · replies in chosen channels · Carl-bot can stay for moderation; Pug for personality/chat |
-| **Website** (papathaigg.com) | **Yes, phased** | Chat widget on Meet Pug / dedicated page → backend API → Ollama · needs 24/7 host or “online when Sal’s PC is on” v1 |
-| **Same brain** | **Yes** | One Ollama personality for stream Warudo + Discord + website |
-| **24/7 always on** | **Needs planning** | Home PC always on, or small cloud/VPS, or “Pug sleeps when offline” message |
-
-- [ ] Discord **Pug bot** — talk to Ollama in selected channels (e.g. `#the_long_bar_general_chat`)
-- [ ] Website **Pug chat** — embed on Meet Pug page; honest “online/offline” status
-- [ ] Shared **mute/rate limits** so Pug doesn’t spam Discord or web when busy
-- [ ] Moderation rules — Pug assists vibe per your house rules; not replacing human mod judgment on bans
-
-**Note:** Cursor **cannot log into your Discord** directly. I can help you **build/configure** bots, write channel copy, and plan structure from screenshots — you (or a bot token you create) apply changes in Discord.
-
-**Viewer cam control (Twitch/YouTube):** viewers **cannot** hide your cam box on *their* end individually — everyone sees the same stream. **You** control cam on/off (hotkey or chat command like `!layout nogamecam` switches scene **for all viewers**). Optional later: poll chat “cam or no cam?” then you switch.
-
-### Future vision — smart reactions (not 32 Stream Deck buttons)
-
-**Goal:** automation first; hotkeys only as backup.
-
-| Feature | Possible? | How (phased) |
-|---------|-----------|--------------|
-| React to chat (Twitch/YouTube) | **Yes** | Chat bridge → Ollama → TTS + Warudo |
-| Sal says **“Pug, be quiet until I call you back”** | **Yes** | Mute flag in brain; voice command clears it |
-| React to death / win / loot / big moment | **Yes, phased** | v1: Stream Deck **or** hotkeys · v2: game-specific hooks · v3: smarter detection per title |
-| **Any game** auto-aware without setup | **Hard** | No universal magic; we pick your main games and wire them |
-| Walk on → talk → walk off | **Yes** | Warudo animations + show/hide OBS layer + triggers |
-| Welcome **new** chatter in chat | **Yes** | Bot sees first message / first time in session |
-| “Where you been? 32 days” returning viewer | **Yes** | Viewer memory (last seen date) in bot DB |
-| **Private** DM to each new viewer | **Limited** | Twitch whispers/YouTube don’t work like private chat bots easily; **public** hello in chat is standard |
-
-**Both options available:** manual triggers (Stream Deck) **and** automated (chat/game/Ollama). You should **not** need 32 buttons forever — that’s the early/manual path.
+## Optional later (website)
+- [ ] SEO / industry guides (post-launch)
+- [ ] Download / stream links hub refresh when going live regularly
 
 ---
 
-## Recommended stack
+# SECTION 2 — Pug & Pugsan (independent AI co-host avatars)
 
-| Layer | Tool | Notes |
-|-------|------|-------|
-| Brain | **Ollama** + Llama 3.1 8B or Qwen2.5 | Dolphin optional; strong **system prompt** often enough |
-| Voice | **TTS** (separate from Ollama) | Start simple (Windows voice / pyttsx3); upgrade later |
-| Body | **Warudo** (Steam) | Load `.vrm`; swap ALPHA ↔ Pugsan |
-| 3D prep | **Blender** + VRM add-on 4.5.0 | Import/export VRM; build Pugsan here |
-| Chat ears | Streamer.bot or bridge → Ollama | Phase after brain + avatar test |
-| Game reactions | Hotkeys / Streamer.bot first | Not full screen AI yet |
-| Stream | OBS + existing PapaThaiGG setup | Pug in corner, doesn’t cover HUD |
+**Not Sal.** One **Ollama brain**, two bodies: **ALPHA robot** + **Pugsan samurai pug**.
 
-**Build order:** Brain → Robot in Warudo → TTS → Chat → Voice commands → Game reactions → Pugsan 3D.
+## Vision
+- Independent AI mascot — walks on, talks, reacts, walks off
+- Chat + voice commands + in-game moments (phased)
+- Transparent Warudo layer over game in OBS
+- Same brain later for Discord + website chat
 
----
+## Done (Aug 6, 2026)
+- [x] Blender 5.2 + VRM add-on 4.5.0
+- [x] ALPHA.vrm in Blender (view only — Booth no-edit license)
+- [x] Warudo: ALPHA loaded, transparent BG, 3 expressions, renamed **Pug (Android)**
+- [x] Scene **saved** in Warudo
+- [x] Pugsan reference art: `D:\PTGG\...\PapaThai Mascot Files\`
+- [x] Brain seed: `D:\PTGG\PugAI\Modelfile` + `Pug_Brain.py`
+- [ ] Ollama — install done; wire brain next session
 
-## Already done (Aug 6, 2026)
+## Phase A — Brain (Ollama + TTS)
+- [ ] Pull model; custom **Pug** from Modelfile
+- [ ] 1–2 sentence reply cap for stream pace
+- [ ] TTS chosen (simple first)
+- [ ] Test with game open — GPU OK
 
-- [x] PapaThaiGG website mobile hero fix (live)
-- [x] Pug checklist created (MD + PDF on Desktop + GitHub)
-- [x] **Blender 5.2** installed
-- [x] **VRM add-on 4.5.0** installed in Blender
-- [x] **ALPHA.vrm** imported in Blender (Booth license = view/use OK, no edit/re-export)
-- [x] Blender basics started (orbit view, delete cube, frame robot)
-- [x] **Pugsan reference art** located: `D:\PTGG\...\PapaThai Mascot Files\Pugsan - Perfect - T-Pose.png`
-- [x] **Warudo** ready to launch (Steam)
-- [x] **ALPHA.vrm** loaded in Warudo (characters folder + selected)
-- [x] Motion capture skipped (None) — independent mascot, not Sal’s face/body
-- [x] Warudo expressions imported (3 built-in)
-- [x] Warudo character renamed to **Pug** (Android / ALPHA avatar)
-- [ ] **Ollama** — installing
+## Phase B — Robot live (Warudo + OBS)
+- [ ] Idle animation picked (Character → Animation → Idle)
+- [ ] TTS → Pug speaks; mouth/expressions move
+- [ ] OBS: game + optional Sal cam + Pug layer (Spout2 plugin later)
+- [ ] Pug small on screen — not huge
+- [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only** · **Cam+Game**
 
----
+## Phase C — Smart co-host (not 32 Stream Deck buttons)
+- [ ] Chat → Ollama → TTS (Twitch/YouTube first)
+- [ ] **“Pug, be quiet until I call you back”** — mute flag
+- [ ] Walk on → talk → walk off (game or near Sal cam box)
+- [ ] Game reactions: hotkeys first → game hooks later
+- [ ] Welcome / returning viewer memory in chat bot
+- [ ] Manual Stream Deck = backup only, not forever
 
-## Phase 0 — Prep (PC & software)
+## Phase D — Pugsan samurai (parallel build)
+- [ ] Image → 3D (Tripo or similar) from T-pose art
+- [ ] Blender rig + mouth shapes → **Pugsan.vrm**
+- [ ] Load in Warudo; swap with robot for variety
 
-- [x] Blender + VRM add-on
-- [ ] **Ollama** installed + one model pulled
-- [ ] TTS path chosen (simple first)
-- [ ] Warudo launched + **ALPHA.vrm** loaded
-- [ ] Pug **Modelfile** / system prompt updated (seed in `D:\PTGG\PugAI\`)
-- [ ] OBS layout tested with Pug visible
-- [ ] Primary chat platform picked (Twitch / YouTube / Discord for v1)
-
----
-
-## Phase 1 — Brain online (Ollama)
-
-- [ ] Ollama runs; model responds in terminal
-- [ ] Custom **Pug** model from Modelfile (personality locked)
-- [ ] Replies capped to 1–2 sentences for stream pace
-- [ ] Test with game open — still fast enough on GPU
+## Stream layout notes
+- **Sal cam corner:** you or Sal avatar; **you** toggle on/off for all viewers
+- Viewers **cannot** hide your cam individually on Twitch/YouTube
+- Pug can walk onto game **or** cam box area
 
 ---
 
-## Phase 2 — Robot live in Warudo (stream v1 body)
+# SECTION 3 — Discord (PapaThaiGG server)
 
-- [ ] Launch Warudo; import `D:\PTGG\ALPHA.vrm`
-- [ ] Idle + basic expressions work
-- [ ] TTS hooked so Pug **speaks**
-- [ ] Mouth/face reacts when speaking (Warudo lip sync or expression mapping)
-- [ ] OBS capture tested
-- [ ] **Do not edit/re-export Booth robot** — use as-is
+**Cursor cannot log into Discord.** I help via screenshots, bot code, copy, and checklists — you apply in Discord.
 
----
+## What you built (looks great)
+- Onboarding: `#arrivals` → `#get_your_visa` (passport → Recruit) → `#house_rules`
+- Carl-bot welcomes; social contract; English-only (translators later)
+- Rank progression: Recruit → Scavenger → Vanguard → Ranger → Gladiator → Paladin → Grandmaster
+- Themed categories: Visitor Center, Beer Garden, Muay Thai Ring, Squad Shack, Classified, etc.
+- `#social_media_links_website` · `#the_local_legend` · Engine Room · Suggestion box
 
-## Phase 3 — Chat co-host
+## Audit — permissions & leveling (when ready, no rush)
+- [ ] Walk full onboarding path with a **test account** (fresh login)
+- [ ] Confirm passport reaction still grants **Recruit**
+- [ ] Confirm Carl-bot welcome + role assignment fire correctly
+- [ ] Verify **locked channels** match intended ranks (padlocks = correct roles)
+- [ ] Voice rooms: Front Porch · Island Radio · Elite Lounge · Barracks · Hypogeum · Colosseum — rank gates correct?
+- [ ] XP / leveling bot (Carl-bot or other): document **how to rank up** in pinned post
+- [ ] Moderator roles vs rank roles — who can ban, who can see Control Tower
+- [ ] `#house_rules` and `#arrivals` copy still accurate (Pug mention OK as “coming”)
 
-- [ ] One chat source wired → Ollama → TTS
-- [ ] Rate limit + trigger words (“hey Pug”)
-- [ ] Mute / “Pug sleep” toggle
-- [ ] Optional typed reply in chat
-
----
-
-## Phase 4 — Voice commands (Sal → Pug)
-
-- [ ] Push-to-talk → STT → Ollama → spoken reply
-- [ ] v1 commands: hype, quiet, read chat, roast on death
-
----
-
-## Phase 5 — In-game reactions
-
-- [ ] Hotkey presets (shot, clutch, wipe, win)
-- [ ] Optional LLM paraphrase so lines don’t repeat
-- [ ] ARC Raiders / AoC / FPS — pick 2–3 events each
+## Optional later (Discord — gentle notes)
+- [ ] **Pinned “How to rank up”** in `#arrivals` or `#bulletin_board` — what earns XP (chat, voice, posts, images)
+- [ ] New recruits may feel **channel overload** — OK; onboarding path helps; consider a one-page map image
+- [ ] **`#pug-lounge`** or use **Engine Room** for Pug AI bot chat when built
+- [ ] **Pug Discord bot** → Ollama in selected channels (e.g. `#the_long_bar_general_chat`)
+- [ ] Pug assists vibe per house rules — **not** auto-ban replacement for human mods
+- [ ] Rate limits so Pug doesn’t spam when always-on
 
 ---
 
-## Phase 6 — Pugsan samurai avatar (parallel build)
+# SECTION 4 — Sal’s personal avatars (you — not Pug)
 
-**Reference:** `Pugsan - Perfect.png`, `Pugsan - Perfect - T-Pose.png`  
-**Goal:** New VRM — humanoid pug, samurai armor, rigged, mouth moves for TTS.
+**Separate from Pug/Pugsan.** Avatars that look like **you**, driven by **your** webcam/voice — mouth moves when **you** talk, follows **your** movement.
 
-- [ ] Image → 3D base mesh (Tripo AI or similar)
-- [ ] Clean + rig in Blender
-- [ ] Face/mouth blend shapes for lip sync
-- [ ] Export **Pugsan.vrm**
-- [ ] Load in Warudo; same Ollama brain, different body
-- [ ] Stream variety: robot nights vs samurai Pug nights (sometimes both pop in)
+## Vision
+- Option alongside real webcam: Sal avatar in corner with Ao Nang jungle/window behind you
+- Hybrid (real eyes/mouth + 3D body) **or** full 3D likeness — phased over months
+- Used in OBS **Sal cam box** layer — independent from Pug layer
 
-**Blender learning:** use robot import to understand armature/VRM — don’t modify Booth asset.
+## Possible stack (from your old roadmaps — pick when ready)
+- **Hybrid:** Warudo + OBS + BRIO webcam + MediaPipe / Lens Studio mask
+- **Full face:** MetaPerson / FaceBuilder / Blender / MetaHuman (long-term)
+- **Not the same as Pug** — Pug uses Ollama; Sal avatar uses **your** face/body tracking
 
----
-
-## Phase 7 — Website & brand
-
-- [x] Mobile homepage readable
-- [ ] Meet Pug / recon pages match what Pug can actually do on stream
-- [ ] Update when Pugsan ships
-
----
-
-## Phase 8 — First stream (~1 month target)
-
-- [ ] 30+ min dry-run: game + Warudo + Ollama + TTS
-- [ ] Emergency stop (one key)
-- [ ] Backup if Ollama dies (silent avatar or canned line)
-- [ ] Stream with friends/family — Pug live
+## To do (later — no rush)
+- [ ] Decide: webcam-only for v1 streams vs start Sal avatar path
+- [ ] BRIO / cam setup for tracking if going hybrid
+- [ ] Test OBS 3D Transform or Warudo body + face overlay
+- [ ] Ao Nang window / jungle virtual background for Sal box
+- [ ] Document in OBS which layer is **Sal** vs **Pug** (never confuse the two)
 
 ---
 
-## Explicitly later
+## Next one thing (when you return)
 
-- Both avatars on screen at once (fun bit — optional)
-- Full autonomous game-watching AI
-- Cloud-only brain as primary
-- Editing/re-exporting Booth ALPHA (license forbids)
+1. Finish **Ollama** → test Pug brain (`D:\PTGG\PugAI\Modelfile`)  
+2. Finish **OBS** install (defaults)  
+3. Re-open Warudo only when wiring TTS/OBS  
 
----
-
-## Next one thing (right now)
-
-1. Warudo onboarding → **Yes, import expressions** (3 built-in) → **OK**  
-2. Finish onboarding; robot idle on preview  
-3. Finish **Ollama** → wire Pug brain  
-4. **OBS** default install → later: game + Pug layers
+**Safe to close Warudo now** — you saved the scene (“Success: Saved scene”). Closing editor + Steam app is fine.
 
 ---
 
 ## Notes (Sal edits here)
 
-- Booth robot = no edit license — stream only
-- Pugsan T-pose art in `D:\PTGG\PapaThaiGG brand build\...\PapaThai Mascot Files\`
-- Old brain seed: `D:\PTGG\PugAI\Modelfile` + `Pug_Brain.py`
-- Ask Cursor: “update Pug checklist PDF on Desktop” when this file changes
+- Warudo character renamed: **Pug (Android / ALPHA)**
+- Booth ALPHA = no edit/re-export
+- Discord: plenty of time to audit permissions
+- Ask Cursor to update Desktop PDF when this file changes
 
 -
