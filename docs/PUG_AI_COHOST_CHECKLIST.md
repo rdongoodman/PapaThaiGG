@@ -34,6 +34,36 @@
 - **React to the game:** e.g. get shot in FPS → Pug freaks out; raid hype; death roasts.
 - **Website:** [papathaigg.com](https://papathaigg.com) — Meet Pug, Field Guide, recon pages tell the story.
 
+### Sal & Pug on screen (not the same thing)
+
+- **Sal (human host):** real webcam **or** future Sal avatar with Ao Nang jungle/window behind you.
+- **Pug / Pugsan:** independent AI co-host — **not** Sal’s body, not face-tracked from Sal unless you choose that later.
+- **OBS layers:** game full screen · optional Sal cam · Pug in corner/side **or** walk-on/walk-off (no permanent box required).
+
+### Future vision — stream presentation
+
+- [ ] Pug/Pugsan **small on screen** — not huge; resize in Warudo + OBS
+- [ ] **Game-only stream** — no Sal cam; Pug walks **on stage**, speaks, walks **off**
+- [ ] Custom **backgrounds** per scene (Thailand, tactical, game-matched, etc.)
+- [ ] Swap **ALPHA robot** vs **Pugsan samurai** for variety (same brain)
+
+### Future vision — smart reactions (not 32 Stream Deck buttons)
+
+**Goal:** automation first; hotkeys only as backup.
+
+| Feature | Possible? | How (phased) |
+|---------|-----------|--------------|
+| React to chat (Twitch/YouTube) | **Yes** | Chat bridge → Ollama → TTS + Warudo |
+| Sal says **“Pug, be quiet until I call you back”** | **Yes** | Mute flag in brain; voice command clears it |
+| React to death / win / loot / big moment | **Yes, phased** | v1: Stream Deck **or** hotkeys · v2: game-specific hooks · v3: smarter detection per title |
+| **Any game** auto-aware without setup | **Hard** | No universal magic; we pick your main games and wire them |
+| Walk on → talk → walk off | **Yes** | Warudo animations + show/hide OBS layer + triggers |
+| Welcome **new** chatter in chat | **Yes** | Bot sees first message / first time in session |
+| “Where you been? 32 days” returning viewer | **Yes** | Viewer memory (last seen date) in bot DB |
+| **Private** DM to each new viewer | **Limited** | Twitch whispers/YouTube don’t work like private chat bots easily; **public** hello in chat is standard |
+
+**Both options available:** manual triggers (Stream Deck) **and** automated (chat/game/Ollama). You should **not** need 32 buttons forever — that’s the early/manual path.
+
 ---
 
 ## Recommended stack
@@ -62,6 +92,8 @@
 - [x] Blender basics started (orbit view, delete cube, frame robot)
 - [x] **Pugsan reference art** located: `D:\PTGG\...\PapaThai Mascot Files\Pugsan - Perfect - T-Pose.png`
 - [x] **Warudo** ready to launch (Steam)
+- [x] **ALPHA.vrm** loaded in Warudo (characters folder + selected)
+- [x] Motion capture skipped (None) — independent mascot, not Sal’s face/body
 - [ ] **Ollama** — installing
 
 ---
@@ -166,11 +198,10 @@
 
 ## Next one thing (right now)
 
-1. **Launch Warudo** (Steam)  
-2. Import **`D:\PTGG\ALPHA.vrm`**  
-3. Confirm robot visible and idle in Warudo  
-
-Then: finish **Ollama** → wire Pug brain.
+1. Warudo onboarding → **Yes, import expressions** (3 built-in) → **OK**  
+2. Finish onboarding; robot idle on preview  
+3. Finish **Ollama** → wire Pug brain  
+4. **OBS** default install → later: game + Pug layers
 
 ---
 
