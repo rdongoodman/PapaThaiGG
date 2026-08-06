@@ -53,6 +53,24 @@
 - [ ] Swap **ALPHA robot** vs **Pugsan samurai** for variety (same Ollama brain)
 - [ ] OBS scene presets: **Cam+Game+Pug** · **Game+Pug only** · **Game only** · **Cam+Game** (no Pug)
 
+### Future vision — Pug always on (website + Discord)
+
+**Goal:** Pug/Pugsan available for chat **off-stream** too — not only when live.
+
+| Place | Possible? | How (later) |
+|-------|-----------|-------------|
+| **Discord** | **Yes** | Discord bot → Ollama (Pug brain) · replies in chosen channels · Carl-bot can stay for moderation; Pug for personality/chat |
+| **Website** (papathaigg.com) | **Yes, phased** | Chat widget on Meet Pug / dedicated page → backend API → Ollama · needs 24/7 host or “online when Sal’s PC is on” v1 |
+| **Same brain** | **Yes** | One Ollama personality for stream Warudo + Discord + website |
+| **24/7 always on** | **Needs planning** | Home PC always on, or small cloud/VPS, or “Pug sleeps when offline” message |
+
+- [ ] Discord **Pug bot** — talk to Ollama in selected channels (e.g. `#the_long_bar_general_chat`)
+- [ ] Website **Pug chat** — embed on Meet Pug page; honest “online/offline” status
+- [ ] Shared **mute/rate limits** so Pug doesn’t spam Discord or web when busy
+- [ ] Moderation rules — Pug assists vibe per your house rules; not replacing human mod judgment on bans
+
+**Note:** Cursor **cannot log into your Discord** directly. I can help you **build/configure** bots, write channel copy, and plan structure from screenshots — you (or a bot token you create) apply changes in Discord.
+
 **Viewer cam control (Twitch/YouTube):** viewers **cannot** hide your cam box on *their* end individually — everyone sees the same stream. **You** control cam on/off (hotkey or chat command like `!layout nogamecam` switches scene **for all viewers**). Optional later: poll chat “cam or no cam?” then you switch.
 
 ### Future vision — smart reactions (not 32 Stream Deck buttons)
@@ -103,7 +121,7 @@
 - [x] **ALPHA.vrm** loaded in Warudo (characters folder + selected)
 - [x] Motion capture skipped (None) — independent mascot, not Sal’s face/body
 - [x] Warudo expressions imported (3 built-in)
-- [x] Warudo transparent background selected (OBS overlay path)
+- [x] Warudo character renamed to **Pug** (Android / ALPHA avatar)
 - [ ] **Ollama** — installing
 
 ---
