@@ -2,145 +2,183 @@
 
 **Project:** PapaThaiGG.com / Pug  
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 6, 2026  
-**Goal:** Local, independent AI co-host that lives as a 3D avatar on stream, reacts to chat, reacts to in-game moments, takes voice/text commands, and talks or types back — without relying on a cloud “brain” for the core personality.
+**Updated:** August 6, 2026 (evening)  
+**Repo:** `GitHub/PapaThaiGG/docs/` — ask Cursor to refresh Desktop PDF when this changes.
+
+---
+
+## Endgame goal (~1 month)
+
+**Stream with friends & family** — Pug live as your independent AI co-host on PapaThaiGG streams.
+
+- Reacts to **chat** (spoken and/or typed)
+- Takes **voice commands** from Sal
+- Reacts to **in-game moments** (hotkeys first, smarter hooks later)
+- Runs **locally** (Ollama brain + Warudo body + TTS voice)
+- **Two avatar bodies, one Pug personality** — swap for variety:
+  - **ALPHA** — Booth robot VRM (`D:\PTGG\ALPHA.vrm`) — stream **first**
+  - **Pugsan** — samurai pug dog mascot (build in parallel) — **upgrade**
+
+**Not blocking streaming on Pugsan 3D.** Robot goes live first; Pugsan ships when ready.
 
 ---
 
 ## Vision (Sal’s)
 
 - Pug is an **independent AI co-host and mascot**, not a passive overlay.
-- **Body:** 3D avatar (current shell + possible second avatar for Warudo streaming).
-- **Brain:** Local LLM (Ollama) so Pug can run on the streaming PC (“The Beast”).
-- **Personality:** Sarcastic, tactical, Thailand Base Camp energy — Pug has attitude.
-- **Listen:** Chat (Twitch / YouTube / Discord as needed) + voice commands from Sal.
-- **Speak / type:** Verbal TTS replies and/or on-stream chat messages.
-- **React to the game:** e.g. get shot in an FPS → Pug freaks out / comments; raid moments; wins/losses.
-- **Website:** papathaigg.com “Meet Pug” tells the story; tech builds behind the scenes.
+- **Bodies:** Robot now → Pugsan samurai pug later (humanoid, rigged, talking mouth).
+- **Brain:** Local LLM (Ollama) on the streaming PC (“The Beast”).
+- **Personality:** Sarcastic, tactical, Thailand Base Camp energy — support-dog for a brain-surgery survivor living in Ao Nang.
+- **Listen:** Chat + Sal’s voice commands.
+- **Speak / type:** TTS + Warudo lip/expressions; optional chat replies.
+- **React to the game:** e.g. get shot in FPS → Pug freaks out; raid hype; death roasts.
+- **Website:** [papathaigg.com](https://papathaigg.com) — Meet Pug, Field Guide, recon pages tell the story.
 
 ---
 
-## Recommended stack (start simple)
+## Recommended stack
 
-| Layer | Recommendation | Notes |
-|-------|----------------|-------|
-| Brain | **Ollama** + Llama 3.1 8B or Qwen2.5 (14B if VRAM allows) | Dolphin (or similar) optional for spicier personality; a strong **system prompt** often beats swapping models |
-| Memory | Short session memory + optional notes file | Keep replies short for stream pace |
-| Mouth | **Warudo** avatar + TTS (e.g. local or preferred voice) | Lip-sync later if needed |
-| Ears (chat) | Chat bridge → Ollama → TTS / typed reply | Twitch first, then YouTube |
-| Ears (voice) | Push-to-talk or wake word → STT → Ollama | Phase after chat works |
-| Game reactions | Streamer.bot / hotkeys / simple event triggers first | Full “see the game” AI is Phase 3 |
-| Control | Mute Pug, force line, panic button | Always have a kill switch on stream |
+| Layer | Tool | Notes |
+|-------|------|-------|
+| Brain | **Ollama** + Llama 3.1 8B or Qwen2.5 | Dolphin optional; strong **system prompt** often enough |
+| Voice | **TTS** (separate from Ollama) | Start simple (Windows voice / pyttsx3); upgrade later |
+| Body | **Warudo** (Steam) | Load `.vrm`; swap ALPHA ↔ Pugsan |
+| 3D prep | **Blender** + VRM add-on 4.5.0 | Import/export VRM; build Pugsan here |
+| Chat ears | Streamer.bot or bridge → Ollama | Phase after brain + avatar test |
+| Game reactions | Hotkeys / Streamer.bot first | Not full screen AI yet |
+| Stream | OBS + existing PapaThaiGG setup | Pug in corner, doesn’t cover HUD |
 
-**Build order:** Chat reactions → Voice commands → Game-event reactions.
-
----
-
-## Phase 0 — Prep (PC & accounts)
-
-- [ ] Confirm streaming PC GPU/VRAM budget for Ollama + game + Warudo
-- [ ] Install / update **Ollama**
-- [ ] Pull a base chat model (Llama 3.1 8B or Qwen2.5)
-- [ ] Optional: pull a Dolphin (or personality) model and A/B test vs system prompt only
-- [ ] Write Pug **system prompt** (name, tone, length limits, never spoil, never talk over Sal for long)
-- [ ] Decide primary stream platform for chat (Twitch / YouTube)
-- [ ] Warudo project ready with current Pug avatar
-- [ ] Decide if a **second Warudo-optimized avatar** is needed (robot shell vs final form)
+**Build order:** Brain → Robot in Warudo → TTS → Chat → Voice commands → Game reactions → Pugsan 3D.
 
 ---
 
-## Phase 1 — Brain online (local)
+## Already done (Aug 6, 2026)
 
-- [ ] Ollama answers from a terminal with Pug’s system prompt
-- [ ] Max reply length capped (1–2 sentences for live play)
-- [ ] “Stay in character” + Thailand / squad flavor without derailing
-- [ ] Save prompt + model name in a small config file in this repo (or private notes)
-- [ ] Document which model wins on *your* machine (speed + quality)
+- [x] PapaThaiGG website mobile hero fix (live)
+- [x] Pug checklist created (MD + PDF on Desktop + GitHub)
+- [x] **Blender 5.2** installed
+- [x] **VRM add-on 4.5.0** installed in Blender
+- [x] **ALPHA.vrm** imported in Blender (Booth license = view/use OK, no edit/re-export)
+- [x] Blender basics started (orbit view, delete cube, frame robot)
+- [x] **Pugsan reference art** located: `D:\PTGG\...\PapaThai Mascot Files\Pugsan - Perfect - T-Pose.png`
+- [x] **Warudo** ready to launch (Steam)
+- [ ] **Ollama** — installing
 
 ---
 
-## Phase 2 — Avatar body (Warudo)
+## Phase 0 — Prep (PC & software)
 
-- [ ] Pug avatar loads reliably in Warudo
-- [ ] Idle / talk / react animations mapped
-- [ ] TTS voice chosen and matched to Pug’s personality
-- [ ] Test lip-sync or talk motion when TTS plays
-- [ ] OBS / stream layout: Pug visible without covering critical HUD
-- [ ] Optional: second avatar variant for Warudo-only streaming look
+- [x] Blender + VRM add-on
+- [ ] **Ollama** installed + one model pulled
+- [ ] TTS path chosen (simple first)
+- [ ] Warudo launched + **ALPHA.vrm** loaded
+- [ ] Pug **Modelfile** / system prompt updated (seed in `D:\PTGG\PugAI\`)
+- [ ] OBS layout tested with Pug visible
+- [ ] Primary chat platform picked (Twitch / YouTube / Discord for v1)
+
+---
+
+## Phase 1 — Brain online (Ollama)
+
+- [ ] Ollama runs; model responds in terminal
+- [ ] Custom **Pug** model from Modelfile (personality locked)
+- [ ] Replies capped to 1–2 sentences for stream pace
+- [ ] Test with game open — still fast enough on GPU
+
+---
+
+## Phase 2 — Robot live in Warudo (stream v1 body)
+
+- [ ] Launch Warudo; import `D:\PTGG\ALPHA.vrm`
+- [ ] Idle + basic expressions work
+- [ ] TTS hooked so Pug **speaks**
+- [ ] Mouth/face reacts when speaking (Warudo lip sync or expression mapping)
+- [ ] OBS capture tested
+- [ ] **Do not edit/re-export Booth robot** — use as-is
 
 ---
 
 ## Phase 3 — Chat co-host
 
-- [ ] Read live chat (start with one platform)
-- [ ] Filter noise (bots, spam, links) before sending to the brain
-- [ ] Rate-limit Pug (e.g. one reply every N seconds) so he doesn’t spam
-- [ ] Trigger words / @Pug / “hey Pug” for direct questions
-- [ ] Output path A: **spoken** via TTS + Warudo
-- [ ] Output path B: **typed** message in chat (optional toggle)
-- [ ] On-stream mute / “Pug sleep” toggle
+- [ ] One chat source wired → Ollama → TTS
+- [ ] Rate limit + trigger words (“hey Pug”)
+- [ ] Mute / “Pug sleep” toggle
+- [ ] Optional typed reply in chat
 
 ---
 
 ## Phase 4 — Voice commands (Sal → Pug)
 
-- [ ] Push-to-talk mic path for Sal only
-- [ ] Speech-to-text → Ollama → short spoken confirm
-- [ ] Command list v1 examples: “Pug, read that,” “Pug, hype,” “Pug, quiet,” “Pug, what did chat say?”
-- [ ] Fail-safe: if STT is wrong, Pug asks a one-line clarification or stays quiet
+- [ ] Push-to-talk → STT → Ollama → spoken reply
+- [ ] v1 commands: hype, quiet, read chat, roast on death
 
 ---
 
 ## Phase 5 — In-game reactions
 
-- [ ] Start with **manual / hotkey** reactions (Sal or Streamer.bot button = “got shot” / “clutch” / “wipe”)
-- [ ] Preset short lines + optional LLM paraphrase so it doesn’t sound identical every time
-- [ ] Map a few high-value events per game (ARC Raiders / AoC / FPS): death, revive, extraction, boss, win
-- [ ] Only after that: explore deeper game-state hooks (overlays, APIs, memory — harder, game-specific)
-- [ ] Never block gameplay performance; reactions must be cheap and skippable
+- [ ] Hotkey presets (shot, clutch, wipe, win)
+- [ ] Optional LLM paraphrase so lines don’t repeat
+- [ ] ARC Raiders / AoC / FPS — pick 2–3 events each
 
 ---
 
-## Phase 6 — Website & brand sync
+## Phase 6 — Pugsan samurai avatar (parallel build)
 
-- [ ] Meet Pug page stays aligned with real capabilities (no over-promise)
-- [ ] Recon / Field Guide pages mention Phase status honestly
-- [ ] Optional: short “Pug status” blurb when a major phase ships
-- [ ] Keep mobile hero / buttons readable (Aug 6, 2026 pass done)
+**Reference:** `Pugsan - Perfect.png`, `Pugsan - Perfect - T-Pose.png`  
+**Goal:** New VRM — humanoid pug, samurai armor, rigged, mouth moves for TTS.
 
----
+- [ ] Image → 3D base mesh (Tripo AI or similar)
+- [ ] Clean + rig in Blender
+- [ ] Face/mouth blend shapes for lip sync
+- [ ] Export **Pugsan.vrm**
+- [ ] Load in Warudo; same Ollama brain, different body
+- [ ] Stream variety: robot nights vs samurai Pug nights (sometimes both pop in)
 
-## Phase 7 — Stream-ready polish
-
-- [ ] Full dry-run: game + Warudo + Ollama + chat bridge for 30+ minutes
-- [ ] CPU/GPU temps and FPS acceptable
-- [ ] Emergency stop documented (one key / one click)
-- [ ] Backup plan if Ollama dies mid-stream (silent avatar or canned lines)
-- [ ] First public “Pug is live” stream checklist (5 bullets max)
+**Blender learning:** use robot import to understand armature/VRM — don’t modify Booth asset.
 
 ---
 
-## Explicitly later / not v1
+## Phase 7 — Website & brand
 
-- Full autonomous “plays the game for you”
-- Unfiltered always-on chat without rate limits
-- Heavy vision AI watching the whole screen 24/7 (costly / laggy)
-- Cloud-only brain as the primary personality (local-first is the point)
+- [x] Mobile homepage readable
+- [ ] Meet Pug / recon pages match what Pug can actually do on stream
+- [ ] Update when Pugsan ships
 
 ---
 
-## Suggested “next one thing”
+## Phase 8 — First stream (~1 month target)
 
-1. Install Ollama and confirm a model runs fast enough while a game is open.  
-2. Lock Pug’s system prompt.  
-3. Wire **one** chat source → spoken reply in Warudo.
+- [ ] 30+ min dry-run: game + Warudo + Ollama + TTS
+- [ ] Emergency stop (one key)
+- [ ] Backup if Ollama dies (silent avatar or canned line)
+- [ ] Stream with friends/family — Pug live
+
+---
+
+## Explicitly later
+
+- Both avatars on screen at once (fun bit — optional)
+- Full autonomous game-watching AI
+- Cloud-only brain as primary
+- Editing/re-exporting Booth ALPHA (license forbids)
+
+---
+
+## Next one thing (right now)
+
+1. **Launch Warudo** (Steam)  
+2. Import **`D:\PTGG\ALPHA.vrm`**  
+3. Confirm robot visible and idle in Warudo  
+
+Then: finish **Ollama** → wire Pug brain.
 
 ---
 
 ## Notes (Sal edits here)
 
-_Add decisions, model names that worked, Warudo settings, and stream dates below._
+- Booth robot = no edit license — stream only
+- Pugsan T-pose art in `D:\PTGG\PapaThaiGG brand build\...\PapaThai Mascot Files\`
+- Old brain seed: `D:\PTGG\PugAI\Modelfile` + `Pug_Brain.py`
+- Ask Cursor: “update Pug checklist PDF on Desktop” when this file changes
 
--
--
 -
