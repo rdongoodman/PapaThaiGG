@@ -17,7 +17,7 @@
         
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=8" />
+        <link rel="stylesheet" href="assets/css/main.css?v=9" />
         
         <style>
             /* Ensures all buttons are uniform size and transparent */
@@ -51,15 +51,10 @@
                 align-items: center;
             }
 
-            /* Mobile Readability Overrides */
-            @media screen and (max-width: 768px) {
-                .pug-container p {
-                    background-color: rgba(0, 0, 0, 0.9) !important; /* High contrast shield for mobile */
-                    font-size: 0.75em !important;
-                    letter-spacing: 1px !important;
-                    padding: 12px 18px !important;
-                    max-width: 90% !important;
-                    line-height: 1.4 !important;
+            /* Mobile: captions live in CSS (main.css); keep this block for cache-clear clarity */
+            @media screen and (max-width: 980px) {
+                .pug-container > p {
+                    display: none !important;
                 }
             }
         </style>
