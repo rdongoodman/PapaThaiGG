@@ -40,12 +40,20 @@
 - **Pug / Pugsan:** independent AI co-host — **not** Sal’s body, not face-tracked from Sal unless you choose that later.
 - **OBS layers:** game full screen · optional Sal cam · Pug in corner/side **or** walk-on/walk-off (no permanent box required).
 
-### Future vision — stream presentation
+### Future vision — stream presentation (OBS + Warudo)
 
-- [ ] Pug/Pugsan **small on screen** — not huge; resize in Warudo + OBS
-- [ ] **Game-only stream** — no Sal cam; Pug walks **on stage**, speaks, walks **off**
+- [x] Warudo **transparent background** — Pug/Pugsan layer over game (no blue-sky box in OBS)
+- [ ] Pug/Pugsan **small on screen** — resize in Warudo + OBS; not huge
+- [ ] **Sal cam box** — small video corner (any corner); real face **or** future Sal avatar + Ao Nang jungle/window behind you
+- [ ] **Toggle Sal cam** — on for “host + co-host” streams · off for game-only
+- [ ] **Game-only mode** — no Sal cam; Pug/Pugsan walk **on stage** → speak → walk **off**
+- [ ] Pug walks onto **game screen** (cam off) to react, then leaves
+- [ ] Pug walks onto/near **Sal cam box** (cam on) to react, then leaves
 - [ ] Custom **backgrounds** per scene (Thailand, tactical, game-matched, etc.)
-- [ ] Swap **ALPHA robot** vs **Pugsan samurai** for variety (same brain)
+- [ ] Swap **ALPHA robot** vs **Pugsan samurai** for variety (same Ollama brain)
+- [ ] OBS scene presets: **Cam+Game+Pug** · **Game+Pug only** · **Game only** · **Cam+Game** (no Pug)
+
+**Viewer cam control (Twitch/YouTube):** viewers **cannot** hide your cam box on *their* end individually — everyone sees the same stream. **You** control cam on/off (hotkey or chat command like `!layout nogamecam` switches scene **for all viewers**). Optional later: poll chat “cam or no cam?” then you switch.
 
 ### Future vision — smart reactions (not 32 Stream Deck buttons)
 
@@ -94,6 +102,8 @@
 - [x] **Warudo** ready to launch (Steam)
 - [x] **ALPHA.vrm** loaded in Warudo (characters folder + selected)
 - [x] Motion capture skipped (None) — independent mascot, not Sal’s face/body
+- [x] Warudo expressions imported (3 built-in)
+- [x] Warudo transparent background selected (OBS overlay path)
 - [ ] **Ollama** — installing
 
 ---
