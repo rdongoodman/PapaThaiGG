@@ -287,6 +287,140 @@ html, body {
     .pug-container > p {
         display: none !important;
     }
+
+    /* Homepage parallax + content bands */
+    .parallax-bg {
+        height: 42vh !important;
+        min-height: 180px !important;
+        background-attachment: scroll !important;
+        -webkit-background-attachment: scroll !important;
+    }
+
+    .content-section {
+        padding: 2.5em 0 !important;
+    }
+
+    .content-section .container {
+        width: 92% !important;
+        padding: 0 !important;
+    }
+
+    .content-card {
+        padding: 1.25em !important;
+        box-shadow: 6px 6px 0 #000 !important;
+    }
+
+    .content-section h2 {
+        font-size: 1.35em !important;
+        line-height: 1.25 !important;
+        word-wrap: break-word !important;
+    }
+
+    .content-section h3 {
+        font-size: 1.1em !important;
+    }
+
+    .content-section .image.fit {
+        display: block !important;
+        margin-bottom: 1em !important;
+    }
+
+    .intel-section {
+        padding: 2.5em 0 !important;
+    }
+
+    .intel-section .container {
+        width: 92% !important;
+    }
+
+    .bio-card {
+        padding: 1.25em !important;
+        box-shadow: 6px 6px 0 #000 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .parallax-bg {
+        height: 35vh !important;
+        min-height: 140px !important;
+    }
+
+    .content-section,
+    .intel-section {
+        padding: 2em 0 !important;
+    }
+
+    .content-card,
+    .bio-card {
+        padding: 1em !important;
+        border-left-width: 4px !important;
+    }
+
+    .content-section h2 {
+        font-size: 1.15em !important;
+    }
+}
+
+/* iOS / mobile: fixed backgrounds often break parallax */
+@supports (-webkit-touch-callout: none) {
+    @media screen and (max-width: 980px) {
+        .parallax-bg,
+        #header,
+        #live-header {
+            background-attachment: scroll !important;
+            -webkit-background-attachment: scroll !important;
+        }
+    }
+}
+
+/* --- Homepage parallax + content sections (desktop base) --- */
+.parallax-bg {
+    height: 70vh;
+    min-height: 220px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-section {
+    padding: 5em 0;
+    background: #0a0a0a;
+    color: #fff;
+    border-top: 2px solid #4dfbfb;
+    border-bottom: 2px solid #ffe66d;
+}
+
+.content-section .container {
+    padding: 0;
+}
+
+.content-card {
+    background: rgba(15, 15, 15, 0.95);
+    border-left: 5px solid #4dfbfb;
+    padding: 2em;
+    box-shadow: 10px 10px 0 #000;
+}
+
+.content-section.style-alt .content-card {
+    border-left-color: #ffe66d;
+}
+
+.intel-section {
+    padding: 5em 0;
+    background: #0a0a0a;
+    color: #fff;
+    border-top: 2px solid #4dfbfb;
+    border-bottom: 2px solid #ffe66d;
+}
+
+.bio-card {
+    background: rgba(15, 15, 15, 0.95);
+    border-left: 5px solid #4dfbfb;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 0 #000;
 }
 
 /* --- LIVE COMMAND CENTER BACKGROUND --- */

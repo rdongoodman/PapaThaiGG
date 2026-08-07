@@ -17,9 +17,26 @@
         
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=10" />
+        <link rel="stylesheet" href="assets/css/main.css?v=12" />
         
         <style>
+            /* Homepage parallax image bands */
+            .home-parallax-1 {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic02.jpg");
+            }
+
+            .home-parallax-2 {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic03.jpg");
+            }
+
+            .home-parallax-3 {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic07.jpg");
+            }
+
+            .home-parallax-4 {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic05.jpg");
+            }
+
             /* Ensures all buttons are uniform size and transparent */
             .command-center {
                 display: flex;
@@ -147,18 +164,22 @@
             </div>
         </section>
 
-        <section id="one" class="main style1">
+        <section class="parallax-bg home-parallax-1" aria-hidden="true"></section>
+
+        <section id="one" class="content-section">
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-12-medium">
-                        <header class="major">
-                            <h2>My Story</h2>
-                        </header>
-                        <p>Ao Nang, Thailand is now "Base Camp." Located just 1 mile from the world-famous Railay Beach (ranked as the 9th most beautiful beach in the world), this is where the retired expat life meets high-octane gaming.<br /><br />
-                        
-                        At 55, after surviving a massive brain tumor that erased a previous career, the objective changed. The focus is now on the true passions: MMOs, FPS grinders, drone photography, and coding.<br /><br />
-                        
-                        Reaction times are rebuilding, but determination is 100%. Whether exploring the Andaman coast or grinding for loot, the squad is always welcome. Let's conquer virtual worlds and explore the real one together.</p>
+                        <div class="content-card">
+                            <header class="major">
+                                <h2 style="color: #ffe66d;">My Story</h2>
+                            </header>
+                            <p>Ao Nang, Thailand is now "Base Camp." Located just 1 mile from the world-famous Railay Beach (ranked as the 9th most beautiful beach in the world), this is where the retired expat life meets high-octane gaming.<br /><br />
+                            
+                            At 55, after surviving a massive brain tumor that erased a previous career, the objective changed. The focus is now on the true passions: MMOs, FPS grinders, drone photography, and coding.<br /><br />
+                            
+                            Reaction times are rebuilding, but determination is 100%. Whether exploring the Andaman coast or grinding for loot, the squad is always welcome. Let's conquer virtual worlds and explore the real one together.</p>
+                        </div>
                     </div>
                     <div class="col-6 col-12-medium">
                         <span class="image fit"><img src="images/pic01.jpg" alt="Bio Image" /></span>
@@ -167,48 +188,58 @@
             </div>
         </section>
 
-        <section id="two" class="main style2">
+        <section class="parallax-bg home-parallax-2" aria-hidden="true"></section>
+
+        <section id="two" class="content-section style-alt">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <header class="major">
-                            <h2>Thailand & Asia</h2>
-                        </header>
-                        <p>This is the remote office: Phra Nang Beach, Railay. It looks like a postcard, but it is fully operational. Yes, I can deploy my 17" Gigabyte RTX 3070 laptop right here and game wirelessly from the sand.<br /><br />
-                        
-                        Beyond the views, I provide the ground-level intel needed to set up your own paradise command center—covering visas, internet reliability, cost of living, and the reality of daily life in Southeast Asia.</p>
-                    </div>
                     <div class="col-6 col-12-medium">
                         <span class="image fit"><img src="images/pic02.jpg" alt="Railay Beach Gaming" /></span>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="loadout" class="main style1">
-            <div class="container">
-                <header class="major">
-                    <h2>Current Specs</h2>
-                </header>
-                <div class="row">
                     <div class="col-6 col-12-medium">
-                        <ul class="alt" style="text-align: left;">
-                            <li><strong>CPU:</strong> Intel Core i9-12900KF</li>
-                            <li><strong>GPU:</strong> NVIDIA RTX 3080 Ti</li>
-                            <li><strong>RAM:</strong> 64GB DDR5</li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <p><em>Click "My Loadout" at the top to see the full Command Center Video Tour.</em></p>
+                        <div class="content-card">
+                            <header class="major">
+                                <h2 style="color: #4dfbfb;">Thailand & Asia</h2>
+                            </header>
+                            <p>This is the remote office: Phra Nang Beach, Railay. It looks like a postcard, but it is fully operational. Yes, I can deploy my 17" Gigabyte RTX 3070 laptop right here and game wirelessly from the sand.<br /><br />
+                            
+                            Beyond the views, I provide the ground-level intel needed to set up your own paradise command center—covering visas, internet reliability, cost of living, and the reality of daily life in Southeast Asia.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="three" class="main style1 special">
+        <section class="parallax-bg home-parallax-3" aria-hidden="true"></section>
+
+        <section id="loadout" class="content-section">
+            <div class="container">
+                <div class="content-card">
+                    <header class="major">
+                        <h2 style="color: #ffe66d;">Current Specs</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-6 col-12-medium">
+                            <ul class="alt" style="text-align: left;">
+                                <li><strong>CPU:</strong> Intel Core i9-12900KF</li>
+                                <li><strong>GPU:</strong> NVIDIA RTX 3080 Ti</li>
+                                <li><strong>RAM:</strong> 64GB DDR5</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-12-medium">
+                            <p><em>Click "My Loadout" at the top to see the full Command Center Video Tour.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg home-parallax-4" aria-hidden="true"></section>
+
+        <section id="three" class="content-section style-alt">
             <div class="container">
                 <header class="major">
-                    <h2>Photos & Videos "Under Construction. Bear with me. I started this build 1/12/26"</h2>
+                    <h2 style="color: #4dfbfb;">Photos & Videos "Under Construction. Bear with me. I started this build 1/12/26"</h2>
                 </header>
                 <div class="row">
                     <div class="col-4 col-12-medium">
