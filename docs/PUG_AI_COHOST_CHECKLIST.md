@@ -98,7 +98,16 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 | **Hard** | Pug **watches the screen** like a human (AI vision on game capture) | △ Experimental — slow, GPU-heavy, not reliable alone | Future test |
 | **Animations** | Victory dance, sad slump, hype bounce in Warudo | ✓ Yes — **triggered** by any event above | Phase C |
 
-**Honest answer:** Pug won’t silently “see” you lose a fight and react **by magic** on day one. We **build event pipes** (chat → you → hotkey → game hook → vision). Each pipe can fire Ollama + TTS + Warudo animation. True autonomous game-watching is possible to **experiment with later**, but **chat + voice + Steam Deck + game hooks** is the reliable path first.
+**Honest answer:** Pug won’t silently “see” you lose a fight and react **by magic** on day one. We **build event pipes** (chat → you → hotkey → game hook → vision). Each pipe can fire Ollama + TTS + Warudo animation. **Chat + voice + Steam Deck + game hooks** is the reliable path first.
+
+### Vision experiment — “Pug watch the game” (future · fun to try · not now)
+
+- [ ] **Experimental:** AI vision on game capture — Pug/Pugsan “watch” screen and react (slow, GPU-heavy, may not work well — OK to turn off forever if bad)  
+- [ ] **Steam Deck toggle ON:** before a big fight/group battle — tap button → vision mode starts watching  
+- [ ] **Steam Deck toggle OFF:** tap same (or second) button → vision mode stops — **not on all the time** (saves GPU)  
+- [ ] Works **alongside** reliable pipes (chat · mic · game hooks) — not a replacement  
+- [ ] If too slow or flaky: disable feature, keep the rest — still a fun experiment when time comes  
+- [ ] Same toggle idea for Pugsan when samurai body ships
 
 ---
 
@@ -162,6 +171,7 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 - [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
 
 ## Phase C — Smart co-host
+- [ ] **Reliable path (main):** chat + Papa mic + Steam Deck + game hooks → Ollama → TTS → Warudo animation
 - [ ] **Talk to Pug with mic** (Whisper/STT) — no typing
 - [ ] **Personality modes** — voice command + Stream Deck buttons (see goals above)
 - [ ] Chat → Ollama → TTS (Twitch/YouTube first)
@@ -169,6 +179,7 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 - [ ] Walk on → talk → walk off (game or near Sal cam box)
 - [ ] Pug **movement** / expressions in Warudo tied to speech
 - [ ] Game reactions: hotkeys first → game hooks later
+- [ ] **Vision experiment (optional):** AI watches game capture · Steam Deck ON/OFF toggle · GPU-heavy · fun to try · OK to disable
 - [ ] Welcome / returning viewer memory in chat bot
 - [ ] Stream Deck: personality buttons + backup hotkeys (not 32 manual macros forever)
 

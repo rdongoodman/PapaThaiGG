@@ -29,7 +29,7 @@
 
 <h1>PapaThaiGG — Pug Project Master Guide</h1>
 <p class="meta">
-  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (evening — nicknames + voice routing)<br />
+  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (evening — vision experiment + voice Step 3)<br />
   Mozart + Sal · Open this PDF when you forget — goals, order, paths, and what’s next.
 </p>
 
@@ -172,6 +172,7 @@
   <li>Streamer.bot: Twitch/YouTube chat → Ollama → TTS</li>
   <li>Talk to Pug with mic (Whisper/STT) · personality modes · Stream Deck buttons</li>
   <li>Game event hooks → Pug reacts + Warudo animations (dance, slump, hype)</li>
+  <li><strong>Vision experiment (optional):</strong> AI watches game · Steam Deck ON/OFF · GPU-heavy · fun to try later</li>
   <li>“Pug, be quiet” · walk on / walk off · rate limits</li>
 </ul>
 
@@ -282,6 +283,12 @@
   <tr><td><strong>Hard △</strong></td><td>AI “watches” game video — experimental, not reliable alone</td><td>Future test</td></tr>
 </table>
 <p>Pug won’t auto-react to a fight loss <em>with zero setup</em>. We wire <strong>event pipes</strong> (chat, voice, hotkeys, game signals) → Ollama → TTS → Warudo animation. That’s how victory dances and “nice try, Boss” become real.</p>
+
+<h3>Vision experiment — “watch the game” (future · optional)</h3>
+<div class="warn">
+  <strong>Fun to try · not for tonight.</strong> AI vision on game capture — slow, GPU-heavy, may not work well. OK to disable if flaky.<br />
+  <strong>Steam Deck toggle:</strong> tap ON before a big fight → Pug/Pugsan watch screen and may react · tap OFF when done — <em>not on all the time</em> (saves GPU). Works alongside chat/mic/hooks, not instead of them.
+</div>
 
 <h3>Future personality modes</h3>
 <ul>
