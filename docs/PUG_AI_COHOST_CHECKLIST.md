@@ -89,6 +89,23 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 
 **Game-aware use (Phase C+):** secondary nicknames on big wins/clutches; primary for normal chat.
 
+### Nickname usage percentages (tune later — logged Aug 9 late evening)
+
+Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural, not random:
+
+| Nickname | Suggested starting weight | Notes |
+|----------|---------------------------|--------|
+| **Papa** | ~40% of primary uses | Most common — short and warm |
+| **Papa Thai** | ~35% of primary uses | Brand name — use often |
+| **Papa T** | ~25% of primary uses | Casual hype |
+| **Secondary** (PT · Big guy · Boss · Chief · Pops) | ~15–20% of **all** replies | Hype moments, wins, banter |
+| **Khun Papa** | ~2–5% | Rare Thai flavor |
+| **Pugsan Japanese** | ~5–10% when Pugsan active | Rare · special moments |
+
+- [ ] Papa + Mozart pick final percentages after more live testing  
+- [ ] Lock one **TTS voice** for stream (viewers stay consistent) — upgrade from robotic David later (Edge TTS / Piper / etc.) · **not** multiple voices on stream  
+- [ ] Optional: preview voices in private before picking the permanent one
+
 ### Game awareness — what’s possible (logged Aug 9 evening)
 
 | Level | What happens | Realistic? | When |
@@ -154,17 +171,20 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 - [x] Pull llama3; custom **Pug** from Modelfile
 - [x] Wholesome 1–2 sentence replies in Modelfile (+ example messages)
 - [x] Windows TTS via Pug_Brain.py (David voice · prints “Speaking now…”)
-- [ ] **Hear Pug in headset + OBS meter** — route **Python only** → CABLE Input (in progress tonight)
+- [x] **Hear Pug in headset + OBS meter** — Python → CABLE Input · OBS → CABLE Output · Monitoring Enabled ✓ (Aug 9)
+- [x] Identity fix — Pug speaks **as Pug**, not as Papa (*“Pug here, ready to stream with you”* ✓)
+- [ ] Upgrade TTS to nicer single voice (later — one voice for viewers)
+- [ ] Tune nickname usage percentages (see Nickname Bible)
 - [ ] Test with game open on gaming PC — GPU OK (later, dual-PC)
 
-## Phase B — Robot live (Warudo + OBS) — IN PROGRESS (almost done)
+## Phase B — Robot live (Warudo + OBS) — DONE (Aug 9 evening)
 - [x] Warudo: ALPHA.vrm · **Pug (Android)** · Orbit camera · Focus Character
 - [x] Transparent background ON · Render Environment OFF
 - [x] Scene saved: **Pug (Android)**
 - [x] OBS: Window Capture → Warudo · Pug small in corner ✓
-- [ ] OBS: **Pug Voice** — fix source → **Audio Input Capture → CABLE Output** (not Output Capture on CABLE Input)
-- [ ] Route TTS: Volume mixer → **Python** → CABLE Input (per-app, not system default)
-- [ ] Hear Pug while testing (OBS monitor and/or Listen on CABLE Output)
+- [x] OBS: **Pug Voice** — Audio Input Capture → **CABLE Output** ✓
+- [x] Route TTS: Volume mixer → **Python** → CABLE Input (per-app)
+- [x] Hear Pug in headset (OBS Monitoring Enabled · USB Audio Device)
 - [ ] Idle animation picked (optional polish)
 - [ ] TTS → lip-sync / mouth (later polish)
 - [ ] Crop/Pad Warudo capture edges (optional polish)
@@ -249,14 +269,15 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 
 ---
 
-## Tonight — voice fix (do in order)
+## Tonight — voice fix — DONE ✓ (Aug 9)
 
-1. **Windows default output** = **USB Audio Device** (headset) — ✓ Sal fixed Aug 9  
-2. **Volume mixer** → **Python** → Output = **CABLE Input** (only while Talk to Pug is open)  
-3. **OBS** → replace **Pug Voice** with **Audio Input Capture → CABLE Output**  
-4. Ask Pug a question → meter should move · enable OBS **Monitor** on Pug Voice to hear in headset  
+1. Windows default output = **USB Audio Device** (headset) ✓  
+2. Volume mixer → **Python** → **CABLE Input** ✓  
+3. OBS **Pug Voice** = **Audio Input Capture → CABLE Output** ✓  
+4. OBS Settings → Monitoring Device = USB headset · Pug Voice = **Monitoring Enabled** ✓  
+5. **Skip** “Listen to this device” on CABLE Output (not needed — would echo)
 
-Say **“Pug voice step 2”** in Cursor for click-by-click help.
+**Next session:** Phase C prep · nicer TTS voice · nickname percentage tuning
 
 ---
 
