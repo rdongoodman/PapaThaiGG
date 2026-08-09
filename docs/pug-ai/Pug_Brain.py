@@ -10,10 +10,11 @@ import pyttsx3
 
 MODEL = "Pug"
 
-# Neural voice (needs internet). Change this to preview other voices.
-# Options to try: en-US-AndrewMultilingualNeural · en-US-GuyNeural · en-US-ChristopherNeural · en-GB-RyanNeural
-PUG_VOICE = "en-US-AndrewMultilingualNeural"
-PUG_VOICE_RATE = "+8%"
+# Neural voice (needs internet). Voice audition Aug 9: Roger #1 so far (a bit loud).
+# Try next: Guy · Christopher · Ryan
+PUG_VOICE = "en-CA-LiamNeural"
+PUG_VOICE_RATE = "+5%"
+PUG_VOICE_VOLUME = 0.82  # 0.0–1.0 — lower if voice feels too loud in headset
 
 
 def speak_with_edge_tts(text: str) -> None:
@@ -30,6 +31,7 @@ def speak_with_edge_tts(text: str) -> None:
     path = asyncio.run(_save())
     try:
         pygame.mixer.init()
+        pygame.mixer.music.set_volume(PUG_VOICE_VOLUME)
         pygame.mixer.music.load(path)
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():

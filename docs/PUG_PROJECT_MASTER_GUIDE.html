@@ -29,7 +29,7 @@
 
 <h1>PapaThaiGG — Pug Project Master Guide</h1>
 <p class="meta">
-  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (late evening — packaging + Warudo notes)<br />
+  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 10, 2026 (late night — Piper voices + MediaPipe notes)<br />
   Mozart + Sal · Open this PDF when you forget — goals, order, paths, and what’s next.
 </p>
 
@@ -140,6 +140,9 @@
   <li class="done">✓ OBS: Window Capture → Warudo · Pug in corner</li>
   <li class="done">✓ Wholesome personality rebuilt · Papa nicknames locked (not “Sal”)</li>
   <li class="done">✓ **Pug voice works** — CABLE routing + OBS Monitoring · Aug 9 late evening</li>
+  <li class="done">✓ OBS Pug Voice fixed — Audio Input Capture → CABLE Output (not desktop audio)</li>
+  <li class="done">✓ Piper TTS local voices — Northern English #1 · auditioning Joe/Norman · Aug 10</li>
+  <li class="done">✓ MediaPipe Tracker idle — Face/Hand off · Pug Motion Capture = No · scene saved</li>
   <li class="done">✓ Identity fix — Pug speaks as Pug (*“Hey Papa T, Pug here…”*)</li>
   <li class="done">✓ Master guide PDF + GitHub docs synced</li>
 </ul>
@@ -147,8 +150,8 @@
 <!-- ========== NOW ========== -->
 <h2>5. What we’re doing NOW</h2>
 <div class="now">
-  <strong class="next">Phase B — DONE ✓</strong> · Pug talks in OBS + headset.<br />
-  <strong>Next up (Phase C):</strong> nicer TTS voice · nickname % tuning · chat/mic · Stream Deck · game hooks.
+  <strong class="next">Phase B — DONE ✓</strong> · Pug talks in OBS + headset · Warudo scene saved.<br />
+  <strong>Next up (Phase C):</strong> lock Piper voice (Northern English likely) · Joe/Norman audition · mic talk-to-Pug · chat · Stream Deck.
 </div>
 
 <!-- ========== NEXT STEPS ========== -->
@@ -160,11 +163,11 @@
   <li class="done"><code>Talk to Pug.bat</code> on Desktop</li>
 </ol>
 
-<h3>Phase B — Body on stream <span class="next">IN PROGRESS</span></h3>
+<h3>Phase B — Body on stream <span class="done">DONE</span></h3>
 <ol>
   <li class="done">Warudo: ALPHA.vrm · Pug (Android) · transparent BG · scene saved</li>
   <li class="done">OBS: Window Capture → Warudo window · small corner</li>
-  <li class="next">OBS: Audio Input Capture → CABLE Output for Pug voice</li>
+  <li class="done">OBS: Audio Input Capture → CABLE Output for Pug voice</li>
   <li>Scene presets: Cam+Game+Pug · Game+Pug (no cam) · Game only</li>
 </ol>
 
@@ -218,14 +221,25 @@
   <li>See <code>AI_Stream_Cohost_App_Syllabus</code> in Plans folder</li>
 </ul>
 
-<h3>Warudo — MediaPipe Tracker (Pug co-host)</h3>
-<p><strong>Not needed</strong> for Pug tonight — Pug uses Ollama + TTS, not your webcam. Closing the tracker <em>window</em> makes it pop back; disable the <strong>MediaPipe Tracker asset</strong> in Editor → Assets tab → uncheck Enabled (or Show Camera) → Save Scene.</p>
+<h3>Warudo — MediaPipe Tracker (leave alone for TTS Pug)</h3>
+<div class="box">
+  <strong>Two places — don’t mix them up:</strong><br />
+  <strong>Assets → MediaPipe Tracker:</strong> Face = No · Hand = No · Pendulum = No · Show Camera = No · OK to leave asset in scene.<br />
+  <strong>Characters → Pug (Android):</strong> Enabled = Yes · Motion Capture = No · (correct for TTS/audio lip-sync).<br />
+  Deleting the tracker asset = this scene only · may respawn (Warudo blueprint). Full webcam mocap = later · separate scene for Sal avatar OK.
+</div>
 
-<h3>When you return — voice fix (Step 3)</h3>
-<ol>
-  <li class="next">OBS → replace Pug Voice with <strong>Audio Input Capture → CABLE Output</strong></li>
-  <li class="next">Ask Pug a question in <code>Talk to Pug.bat</code> · meter should move · enable Monitor to hear</li>
-</ol>
+<h3>Voice rankings (Aug 9–10 — audition in progress)</h3>
+<table>
+  <tr><th>#</th><th>Voice</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Northern English Piper</td><td class="done">Sal’s favorite so far</td></tr>
+  <tr><td>2</td><td>Alan Piper</td><td></td></tr>
+  <tr><td>3–5</td><td>Ryan · Christopher · Liam (Edge)</td><td></td></tr>
+  <tr><td>6</td><td>HFC Male Piper</td><td>Okay</td></tr>
+  <tr><td>7–9</td><td>Roger · Guy · Thomas (Edge)</td><td></td></tr>
+  <tr><td>Next</td><td>Joe · Norman (Piper)</td><td class="next">Then lock one voice for stream</td></tr>
+</table>
+<p>TTS engine: <strong>Piper</strong> (local) in <code>Pug_Brain.py</code> · voices in <code>...\PugAI\voices\</code></p>
 
 <!-- ========== HOW TO TALK TO PUG ========== -->
 <h2>7. How to talk to Pug (every time)</h2>
@@ -311,7 +325,7 @@
   <tr><td>Secondary (PT · Big guy · Boss · Chief · Pops)</td><td>~15–20% of all replies (hype moments)</td></tr>
   <tr><td>Khun Papa</td><td>~2–5% rare</td></tr>
 </table>
-<p>Adjust after live testing with Mozart. <strong>One TTS voice</strong> on stream (upgrade from robotic David later — Edge TTS / Piper options).</p>
+<p>Adjust after live testing with Mozart. <strong>One TTS voice</strong> on stream — Piper local (Northern English leading) · lock before going live.</p>
 
 <!-- ========== WHEN STUCK ========== -->
 <h2>12. When stuck</h2>

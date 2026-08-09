@@ -104,8 +104,25 @@ Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural,
 
 - [ ] Papa + Mozart pick final percentages after more live testing  
 - [ ] **Percentages shift by game mood** — doing poorly vs doing great (see below)  
-- [ ] Lock one **TTS voice** for stream (viewers stay consistent) — upgrade from robotic David later (Edge TTS / Piper / etc.) · **not** multiple voices on stream  
-- [ ] Optional: preview voices in private before picking the permanent one
+- [ ] Lock one **TTS voice** for stream (viewers stay consistent) · **not** multiple voices on stream  
+- [x] **Voice rankings (Aug 9–10):** 1 Northern English Piper · 2 Alan Piper · 3 Ryan · 4 Christopher · 5 Liam · 6 HFC Male Piper · 7 Roger · 8 Guy · 9 Thomas  
+- [ ] **MediaPipe notes (review later):** **Assets → MediaPipe Tracker** = scene webcam engine · **Characters → Pug → Motion Capture = No** = correct for TTS/audio lip-sync · tracker **Face/Hand/Pendulum = No** + **Show Camera = No** = idle/safe · **Character Freeze = No** (Freeze on Pug freezes the avatar, not the tracker) · deleting tracker asset = **this scene only** (Sal avatar later needs own scene or re-add tracker) · minus/delete may respawn (Warudo blueprint) — OK to leave asset idle · full mocap phase later when corner-cam or gestures wanted  
+- [ ] **More uncommon Piper:** Joe (trying) · Norman · then lock voice  
+- [ ] **Multilingual (near end — optional / may discard):** Pug/Pugsan reply in viewer language (YouTube/Twitch/Discord/website text) · personal vs global · spoken non-English needs multilingual TTS · integrate with Discord/website translators · Warudo N/A for chat  
+- [ ] **Friend recordings:** quiet 1–2 min with phone OK · lunch-table chat = lower quality · permission required  
+- [ ] **Lock voice once streaming starts** — no voice changes unless strong viewer feedback (brand consistency)  
+- [ ] **Viewer feedback system:** stream polls · website · Discord — “like Pug voice?” yes/no · other mascot feedback  
+- [ ] **Stand out vs common voices:** avoid overused Edge defaults · avoid ElevenLabs “Josh” presets · pick less-common Piper models  
+- [ ] **Custom voice path (before paid):** record **British/Canadian expat friends** in Ao Nang (with permission) → clone for Pug/Pugsan  
+- [ ] **Papa voice clone + British cadence blend** — test Coqui XTTS · free · quality TBD  
+- [ ] **AI “generate voice from nothing”** — research ElevenLabs custom · cost · one-time vs monthly · only if free paths fail  
+- [ ] **Fully unique studio voice — LAST RESORT:** pro voice actor or premium AI studio · document cost + licensing  
+- [ ] **Paid TTS research (later):** ElevenLabs · Play.ht · monthly vs one-time · stream/commercial ToS  
+- [ ] **Volume tune:** Roger felt loud — `PUG_VOICE_VOLUME` in Pug_Brain.py (now 0.82)  
+- [ ] **Pause / hesitancy tune (later):** shorter one-sentence replies · SSML · merge lines · Piper  
+- [ ] **TTS speed (later):** local Piper · pre-warm · on-screen “Pug is thinking…”  
+- [ ] **Discord (Phase E):** text first · Pug/Pugsan voice replies later (TTS clips · VC)  
+- [ ] **Website (Phase F):** text chat first · optional browser voice · Pugsan JP/EN voice modes  
 
 ### Game-mood nicknames & lines (future — logged Aug 9 late evening)
 
@@ -133,6 +150,8 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 - [ ] Private offline jokes in bat file only = still gray area — treat as **no** for brand safety  
 - [ ] **Mixed/original voice design** — blend or generate a unique Pug voice (not copying one celebrity)  
 - [ ] **Papa voice clone** — optional funny mode · check ToS + stream use · probably not default on stream
+- [ ] **Pugsan dual voice modes (Phase H):** (1) Japanese-primary — mostly JP, little English · (2) Japanese-English bilingual mix
+- [ ] **TTS speed:** neural Edge voice has ~1–4s delay (internet) · first reply slower · improve later with local Piper or pre-cache
 
 ### VRM gestures, dances & expressions (future — Pug + Pugsan)
 
@@ -225,7 +244,7 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 - [ ] Idle animation picked (optional polish)
 - [ ] TTS → lip-sync / mouth (later polish)
 - [ ] Crop/Pad Warudo capture edges (optional polish)
-- [ ] **MediaPipe Tracker:** not needed for Pug co-host (TTS-driven) — disable asset in Warudo Assets tab · save scene · window won't pop back
+- [ ] **MediaPipe Tracker:** not required for TTS Pug — **Show Camera = No** + Face/Hand off · leave asset in scene OK · delete only affects current scene · see MediaPipe notes above  
 - [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
 
 ## Phase C — Smart co-host
