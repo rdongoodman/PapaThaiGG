@@ -1,7 +1,7 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 9, 2026 (streaming PC)  
+**Updated:** August 9, 2026 (streaming PC · lunch break — goals synced)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
 **Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
 **Also:** `Desktop\PapaThaiGG Plans\` · repo `docs/PUG_PROJECT_MASTER_GUIDE.pdf`  
@@ -27,9 +27,31 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 
 ---
 
-## Endgame (~1 month for streaming)
+## Endgame
 
-Stream with friends & family — **Pug** live as independent AI co-host (Ollama + Warudo + TTS + OBS). Sal on cam **or** Sal avatar **or** game-only — all optional layouts.
+**Stream:** Pug live co-host (Ollama + Warudo + TTS + OBS). Sal cam optional — **Game + Pug only** layout OK.
+
+**Everywhere (after stream proves fun):** Same brain on **Discord**, **website chat**, viewer **memory/welcome-back**, optional **DMs**. **Pugsan** second body. **Sell product** to other streamers later (low priority).
+
+### Build order (do not skip)
+1. **Phase B** — OBS (now) · Warudo scene **Pug (Android)** saved ✓  
+2. **Phase C** — Stream chat → Pug · mute · walk on/off  
+3. **Phase D** — Dual-PC Elgato  
+4. **Phase E** — Discord bot  
+5. **Phase F** — Website chat widget  
+6. **Phase G** — Remember viewers · “Where you been?” welcome-back · DMs where allowed  
+7. **Phase H** — Pugsan samurai  
+8. **Phase I** — Product / sell (optional)
+
+### Sal’s extra goals (logged Aug 9)
+- [ ] Pug remembers users across stream + Discord + website  
+- [ ] Welcome back with exact time away (*“30 days, 2 hours, 16 minutes…”*)  
+- [ ] Global stream shout when returning viewer joins live  
+- [ ] Private one-on-one messages (Discord DMs, website; Twitch/FB/X limited)  
+- [ ] Pug + Pugsan both available for chat everywhere  
+- [ ] 3D on website/Discord = nice-to-have; text/voice first  
+- [ ] Social media full bots = unlikely · low priority  
+- [ ] Sell toolkit to gamers/VTubers · one-time or monthly TBD · **after proof on Sal’s stream**
 
 ---
 
@@ -76,12 +98,15 @@ Stream with friends & family — **Pug** live as independent AI co-host (Ollama 
 - [x] Windows TTS via Pug_Brain.py
 - [ ] Test with game open on gaming PC — GPU OK (later, dual-PC)
 
-## Phase B — Robot live (Warudo + OBS)
-- [ ] Idle animation picked (Character → Animation → Idle)
-- [ ] TTS → Pug speaks; mouth/expressions move
-- [ ] OBS: game + optional Sal cam + Pug layer (Spout2 plugin later)
-- [ ] Pug small on screen — not huge
-- [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only** · **Cam+Game**
+## Phase B — Robot live (Warudo + OBS) — IN PROGRESS
+- [x] Warudo: ALPHA.vrm · **Pug (Android)** · Orbit camera · Focus Character
+- [x] Transparent background ON · Render Environment OFF
+- [x] Scene saved: **Pug (Android)**
+- [ ] Idle animation picked (optional polish)
+- [ ] OBS: Window Capture → Warudo · Pug small in corner
+- [ ] OBS: CABLE Output for Pug voice
+- [ ] TTS → lip-sync (later polish)
+- [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
 
 ## Phase C — Smart co-host (not 32 Stream Deck buttons)
 - [ ] Chat → Ollama → TTS (Twitch/YouTube first)
@@ -157,11 +182,11 @@ Stream with friends & family — **Pug** live as independent AI co-host (Ollama 
 
 ---
 
-## Next one thing (when you return)
+## Next one thing (when you return from lunch)
 
-1. **Phase B:** Warudo on streaming PC — load `ALPHA.vrm`, delete old Character 1, save scene  
-2. **OBS** — add Warudo window + CABLE Output audio  
-3. Say **“ready for Warudo”** in Cursor for click-by-step help  
+1. **OBS** — Window Capture → **Warudo 0.15.0** → Pug in corner, small  
+2. **Optional:** CABLE Output audio · test with **Talk to Pug.bat**  
+3. Say **“back from lunch — OBS”** in Cursor for click-by-step help  
 
 ---
 

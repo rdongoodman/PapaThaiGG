@@ -29,8 +29,8 @@
 
 <h1>PapaThaiGG — Pug Project Master Guide</h1>
 <p class="meta">
-  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026<br />
-  Mozart + Sal · Open this PDF when you forget where things are — that’s what it’s for.
+  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (lunch break)<br />
+  Mozart + Sal · Open this PDF when you forget — goals, order, paths, and what’s next.
 </p>
 
 <div class="box">
@@ -99,8 +99,31 @@
 </table>
 <p>Pug’s <strong>real home</strong> is the streaming PC. Gaming PC = games only when dual-PC is live.</p>
 
+<!-- ========== VISION & GOALS ========== -->
+<h2>3. Sal’s goals (vision — in build order)</h2>
+<p><strong>One Ollama brain</strong> · two bodies (<strong>Pug</strong> Android + <strong>Pugsan</strong> samurai) · <strong>wholesome</strong> personality · same AI everywhere we can place it.</p>
+
+<table>
+  <tr><th>Goal</th><th>What Sal wants</th><th>When (phase)</th></tr>
+  <tr><td><strong>Stream co-host</strong></td><td>Pug on Twitch/YouTube over game; corner mascot; optional Sal cam off = game + Pug only</td><td class="next"><strong>Now — Phase B</strong></td></tr>
+  <tr><td><strong>Discord</strong></td><td>Anyone can talk to Pug anytime in server; later DMs one-on-one</td><td class="later">Phase E (after stream works)</td></tr>
+  <tr><td><strong>Website</strong></td><td>Chat widget on papathaigg.com / Meet Pug — talk anytime; 3D on web is hard, text/voice first</td><td class="later">Phase F</td></tr>
+  <tr><td><strong>Remember viewers</strong></td><td>Pug remembers who visited stream, Discord, website; welcome back: <em>“Where you been? 30 days, 2h, 16m…”</em></td><td class="later">Phase G</td></tr>
+  <tr><td><strong>Private messages</strong></td><td>One-on-one with users (Discord DMs, website chat); platform limits on Twitch/FB/X</td><td class="later">Phase G (with memory)</td></tr>
+  <tr><td><strong>Global stream shout</strong></td><td>When a returning viewer joins live, Pug says hi on stream (TTS)</td><td class="later">Phase C + G</td></tr>
+  <tr><td><strong>Pugsan</strong></td><td>Second body, same brain — samurai pug humanoid</td><td class="later">Phase H</td></tr>
+  <tr><td><strong>Sell product</strong></td><td>Package for other streamers/VTubers — one-time or monthly TBD · <em>not priority</em></td><td class="later">Phase I (after proof on Sal’s stream)</td></tr>
+  <tr><td><strong>Social media bots</strong></td><td>Facebook/X etc. — platforms restrict bots; unlikely full Pug · maybe later</td><td class="later">Optional / low</td></tr>
+</table>
+
+<div class="box">
+  <strong>Build order is locked — do NOT skip ahead:</strong><br />
+  Stream (Warudo+OBS) → chat on stream → Discord bot → website chat → viewer memory → Pugsan → sell later.<br />
+  Streaming first <em>proves</em> Pug before we put him everywhere.
+</div>
+
 <!-- ========== DONE ========== -->
-<h2>3. What we’ve DONE (as of Aug 9, 2026)</h2>
+<h2>4. What we’ve DONE (Aug 9, 2026)</h2>
 <ul>
   <li class="done">✓ Chose Ollama as free local AI brain (right path for you)</li>
   <li class="done">✓ Streaming PC: Python 3.12, Ollama, llama3, custom <code>Pug</code> model</li>
@@ -111,63 +134,92 @@
   <li class="done">✓ ALPHA.vrm on disk · Warudo installed on Steam</li>
   <li class="done">✓ OBS installed</li>
   <li class="done">✓ Website live at papathaigg.com (separate track)</li>
-  <li class="done">✓ Prototype brain work on gaming PC (migrated concept to streaming PC)</li>
+  <li class="done">✓ Warudo: Pug (Android) loaded · Orbit camera · Focus Character set · zoom works</li>
+  <li class="done">✓ Transparent background ON · Render Environment OFF · black = transparent for OBS</li>
+  <li class="done">✓ Scene saved: <strong>Pug (Android)</strong></li>
+  <li class="done">✓ Master guide PDF + GitHub docs synced</li>
 </ul>
 
 <!-- ========== NOW ========== -->
-<h2>4. What we’re doing NOW</h2>
+<h2>5. What we’re doing NOW (when Sal returns)</h2>
 <div class="now">
-  <strong class="next">Step 2 — Phase B: Warudo + OBS</strong><br />
-  Load Pug Android (ALPHA.vrm) in Warudo on <em>this</em> PC, delete old “Character 1”, save scene. Then add Pug to OBS (small corner + VB-Cable audio).
+  <strong class="next">Phase B — finish OBS</strong><br />
+  Warudo is done for today. Next: OBS Window Capture → Pug in corner → optional CABLE Output for voice.
 </div>
-<p>Say to Mozart in Cursor: <strong>“ready for Warudo”</strong> — one click at a time.</p>
 
 <!-- ========== NEXT STEPS ========== -->
-<h2>5. Step-by-step — full roadmap</h2>
+<h2>6. Full roadmap — phases in order</h2>
 
-<h3>Phase A — Brain (DONE on streaming PC)</h3>
+<h3>Phase A — Brain <span class="done">DONE</span></h3>
 <ol>
-  <li class="done">Install Ollama, Python, VB-Cable</li>
-  <li class="done">Pull llama3 · create <code>Pug</code> model from Modelfile</li>
-  <li class="done">Run <code>Talk to Pug.bat</code> — confirm he answers</li>
+  <li class="done">Ollama · llama3 · custom <code>Pug</code> model · wholesome Modelfile</li>
+  <li class="done"><code>Talk to Pug.bat</code> on Desktop</li>
 </ol>
 
-<h3>Phase B — Body on stream (NEXT)</h3>
+<h3>Phase B — Body on stream <span class="next">IN PROGRESS</span></h3>
 <ol>
-  <li class="next">Open Warudo (Steam) on streaming PC</li>
-  <li class="next">Remove old Character 1 (your personal avatar)</li>
-  <li class="next">Import <code>ALPHA.vrm</code> → rename <strong>Pug (Android)</strong></li>
-  <li class="next">Transparent background ON · pick Idle animation · save scene</li>
-  <li class="next">Open OBS → add Warudo window (Pug small in corner)</li>
-  <li class="next">Add audio: CABLE Output (Pug voice separate from mic)</li>
-  <li>Scene presets: Cam+Game+Pug · Game+Pug · Game only</li>
+  <li class="done">Warudo: ALPHA.vrm · Pug (Android) · transparent BG · scene saved</li>
+  <li class="next">OBS: Window Capture → Warudo window · small corner</li>
+  <li class="next">OBS: CABLE Output audio for Pug voice</li>
+  <li>Scene presets: Cam+Game+Pug · Game+Pug (no cam) · Game only</li>
 </ol>
 
-<h3>Phase C — Smart co-host (later)</h3>
+<h3>Phase C — Smart stream co-host</h3>
 <ul>
-  <li>Install Streamer.bot · chat → Ollama → TTS</li>
-  <li>“Pug, be quiet” mute command</li>
-  <li>Walk on / walk off · rate limits</li>
+  <li>Streamer.bot: Twitch/YouTube chat → Ollama → TTS</li>
+  <li>“Pug, be quiet” · walk on / walk off · rate limits</li>
+  <li>Hotkeys first; Stream Deck backup only</li>
 </ul>
 
-<h3>Phase D — Dual-PC + Elgato (later)</h3>
+<h3>Phase D — Dual-PC + Elgato</h3>
 <ul>
-  <li>Game PC HDMI/DP → Elgato → streaming PC OBS</li>
-  <li>Gaming PC runs game only; streaming PC runs everything else</li>
+  <li>Game PC out → Elgato → streaming PC OBS (after Phase B solo works)</li>
 </ul>
 
-<h3>Phase E — Pugsan (after Pug is fun on stream)</h3>
+<h3>Phase E — Discord (Pug everywhere #1)</h3>
 <ul>
-  <li>T-pose art → 3D → rig → Pugsan.vrm · same brain, swap body</li>
+  <li>Pug bot in <code>#pug-lounge</code> or Engine Room — same Ollama brain</li>
+  <li>Text chat first · optional DMs one-on-one</li>
+  <li>Rate limits · family-friendly · not a replacement for human mods</li>
 </ul>
 
-<h3>Phase F — Maybe sell app someday (much later)</h3>
+<h3>Phase F — Website chat (Pug everywhere #2)</h3>
 <ul>
-  <li>Only after Pug proves fun on your stream · see syllabus PDFs in Plans folder</li>
+  <li>Meet Pug page widget — talk to Pug anytime</li>
+  <li>Honest online/offline status · 3D avatar on web = optional later</li>
 </ul>
+
+<h3>Phase G — Viewer memory &amp; welcome-back</h3>
+<ul>
+  <li>Remember users across stream + Discord + website (one profile per person)</li>
+  <li>Last-seen tracking · global welcome: <em>“Good to have you back — it’s been X days…”</em></li>
+  <li>Private messages where platforms allow (Discord DMs, site chat)</li>
+  <li>Returning viewer → Pug speaks on live stream (TTS)</li>
+</ul>
+
+<h3>Phase H — Pugsan samurai body</h3>
+<ul>
+  <li>T-pose art → 3D → rig → Pugsan.vrm · swap body in Warudo · same brain</li>
+</ul>
+
+<h3>Phase I — Product (optional · low priority)</h3>
+<ul>
+  <li>Only after Pug is fun on <strong>Sal’s</strong> stream for weeks</li>
+  <li>Sell toolkit to gamers/VTubers/streamers · one-time or monthly TBD</li>
+  <li>Attitude/personality editor (Modelfile made friendly) · BYO avatar</li>
+  <li>See <code>AI_Stream_Cohost_App_Syllabus</code> in Plans folder</li>
+</ul>
+
+<h3>When you return from lunch — do these two</h3>
+<ol>
+  <li class="next">Open <strong>OBS</strong> → Sources → + → Window Capture → <strong>Warudo 0.15.0</strong> → corner · small</li>
+  <li class="next">Optional: add <strong>CABLE Output</strong> audio · test with <code>Talk to Pug.bat</code></li>
+</ol>
+
+<!-- remove old duplicate sections - I'll replace section 4-5 old content -->
 
 <!-- ========== HOW TO TALK TO PUG ========== -->
-<h2>6. How to talk to Pug (every time)</h2>
+<h2>7. How to talk to Pug (every time)</h2>
 <div class="box">
   <strong>Easiest:</strong> Desktop → double-click <code>Talk to Pug.bat</code><br />
   Type your message · Enter · Pug replies · type <code>quit</code> to exit.
@@ -175,25 +227,25 @@
 <p><strong>Do NOT</strong> run Pug from Cursor’s terminal unless you <code>cd</code> to PugAI first — the bat file avoids that confusion.</p>
 
 <!-- ========== WARUDO QUICK ========== -->
-<h2>7. Warudo — quick notes (Phase B)</h2>
+<h2>8. Warudo — saved scene</h2>
 <ul>
   <li>Scenes are <strong>per PC</strong> — redo on streaming PC (not copied from gaming PC)</li>
   <li>VRM file: <code>...\PTGG\ALPHA.vrm</code></li>
   <li>Booth ALPHA license = view/use, no re-export from Blender</li>
   <li>Pug = corner mascot, not full screen</li>
+  <li>Scene file: <strong>Pug (Android)</strong> — open via Warudo menu (paw icon) → Open Scene</li>
 </ul>
 
-<!-- ========== CURSOR CHATS ========== -->
-<h2>8. Cursor chats (where conversations live)</h2>
+<h2>9. Cursor chats &amp; doc updates</h2>
 <p>Cursor chats are tied to each PC and project folder — they don’t auto-sync between machines.</p>
 <ul>
   <li><strong>Streaming PC / this project:</strong> PapaThaiGG streaming setup chat (Mozart + Sal, Aug 9 2026)</li>
   <li><strong>Gaming PC:</strong> earlier Pug build chat (prototype brain work)</li>
   <li>If a chat disappears: open same project folder in Cursor · or ask Mozart to summarize from this PDF</li>
+  <li>If chat gets too long or you start fresh: say <strong>“update master guide PDF”</strong> — Mozart syncs Desktop + Plans + GitHub</li>
 </ul>
 
-<!-- ========== OTHER PDFs ========== -->
-<h2>9. Other PDFs in PapaThaiGG Plans (reference)</h2>
+<h2>10. Other PDFs in PapaThaiGG Plans</h2>
 <ul>
   <li><code>01 - PapaThaiGG Master Checklist...</code> — website, Discord, Pug, Sal avatars</li>
   <li><code>03 - Project Roadmap - Pug the AI Co-Host.pdf</code></li>
@@ -204,12 +256,12 @@
 <p><strong>This PDF (00)</strong> is the one to open first — it’s the current “where are we” sheet.</p>
 
 <!-- ========== PERSONALITY ========== -->
-<h2>10. Pug’s personality</h2>
+<h2>11. Pug’s personality</h2>
 <p><strong>Wholesome, warm, family-friendly</strong> — fun uncle energy, not mean sarcasm. Edit <code>Modelfile</code>, then run:</p>
 <p><code>ollama create Pug -f Modelfile</code> (from PugAI folder, or ask Mozart)</p>
 
 <!-- ========== WHEN STUCK ========== -->
-<h2>11. When stuck — read this</h2>
+<h2>12. When stuck</h2>
 <ol>
   <li>Open this PDF</li>
   <li>Check: am I in the right folder for what I’m doing?</li>
@@ -220,7 +272,8 @@
 
 <p class="footer">
   PapaThaiGG · Pug first, then Pugsan · Fun first, retired pace · Mozart + Sal<br />
-  Ask Mozart: “update master guide PDF” when big milestones change.
+  Ask Mozart: <strong>“update master guide PDF”</strong> when goals or milestones change.<br />
+  Sources: Desktop PDF · <code>PapaThaiGG Plans\</code> · GitHub <code>docs/PUG_PROJECT_MASTER_GUIDE.pdf</code> · <code>PUG_AI_COHOST_CHECKLIST.md</code>
 </p>
 
 </body>
