@@ -1,28 +1,62 @@
 # Pug_Brain.py — talk to Pug on the streaming PC.
 # Run: double-click Talk to Pug.bat
 
+import asyncio
+import os
+import tempfile
+
 import ollama
 import pyttsx3
 
 MODEL = "Pug"
 
+# Neural voice (needs internet). Change this to preview other voices.
+# Options to try: en-US-AndrewMultilingualNeural · en-US-GuyNeural · en-US-ChristopherNeural · en-GB-RyanNeural
+PUG_VOICE = "en-US-AndrewMultilingualNeural"
+PUG_VOICE_RATE = "+8%"
 
-def make_tts_engine():
+
+def speak_with_edge_tts(text: str) -> None:
+    import edge_tts
+    import pygame
+
+    async def _save() -> str:
+        communicate = edge_tts.Communicate(text, PUG_VOICE, rate=PUG_VOICE_RATE)
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".mp3")
+        tmp.close()
+        await communicate.save(tmp.name)
+        return tmp.name
+
+    path = asyncio.run(_save())
+    try:
+        pygame.mixer.init()
+        pygame.mixer.music.load(path)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.wait(100)
+    finally:
+        pygame.mixer.quit()
+        os.unlink(path)
+
+
+def speak_with_pyttsx3(text: str) -> None:
     engine = pyttsx3.init()
     engine.setProperty("rate", 158)
     voices = engine.getProperty("voices")
-    # Prefer David (male) or first available voice
     for voice in voices:
         if "david" in voice.name.lower():
             engine.setProperty("voice", voice.id)
             break
-    else:
-        if voices:
-            engine.setProperty("voice", voices[0].id)
-    return engine
+    engine.say(text)
+    engine.runAndWait()
 
 
-engine = make_tts_engine()
+def speak(text: str) -> None:
+    try:
+        speak_with_edge_tts(text)
+    except Exception as exc:
+        print(f"Neural voice unavailable ({exc}). Using backup voice...")
+        speak_with_pyttsx3(text)
 
 
 def ask_pug(user_input: str) -> str:
@@ -32,10 +66,9 @@ def ask_pug(user_input: str) -> str:
     )
     reply = response["message"]["content"].strip()
     print(f"\nPug: {reply}\n")
-    print("(Speaking now — check speakers or OBS Pug Voice meter...)\n")
+    print(f"(Speaking now — voice: {PUG_VOICE}...)\n")
     try:
-        engine.say(reply)
-        engine.runAndWait()
+        speak(reply)
     except Exception as exc:
         print(f"TTS error: {exc}")
     return reply
@@ -43,7 +76,7 @@ def ask_pug(user_input: str) -> str:
 
 def main() -> None:
     print("Pug is awake. Type something (or 'quit' to exit).")
-    print("Tip: For OBS audio, route Python to CABLE Input in Windows Volume mixer.\n")
+    print("Tip: Route Python to CABLE Input in Windows Volume mixer for OBS.\n")
     while True:
         text = input("You: ").strip()
         if not text:

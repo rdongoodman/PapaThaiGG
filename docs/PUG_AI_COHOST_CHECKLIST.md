@@ -103,10 +103,47 @@ Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural,
 | **Pugsan Japanese** | ~5–10% when Pugsan active | Rare · special moments |
 
 - [ ] Papa + Mozart pick final percentages after more live testing  
+- [ ] **Percentages shift by game mood** — doing poorly vs doing great (see below)  
 - [ ] Lock one **TTS voice** for stream (viewers stay consistent) — upgrade from robotic David later (Edge TTS / Piper / etc.) · **not** multiple voices on stream  
 - [ ] Optional: preview voices in private before picking the permanent one
 
+### Game-mood nicknames & lines (future — logged Aug 9 late evening)
+
+Pug’s **tone and nickname pick** change with how the run is going (via game hooks, your voice, or Stream Deck):
+
+| Game mood | Nickname vibe | Example lines |
+|-----------|---------------|---------------|
+| **Rough night / losing** | Stick to **primary** — Papa, Papa Thai, Papa T · gentle, not mean | *“Papa, what’s happening tonight? We’ll turn it around.”* · *“You got this, Papa T — shake it off.”* |
+| **Crushing it / big win** | More **secondary** + rare flavor · hype energy | *“Boss, that was clean!”* · *“Khun Papa kicks butt!”* · *“Papa-san kicks butt!”* (Pugsan) |
+| **Normal / mid game** | Default percentage table above | Wholesome co-host banter |
+
+- [ ] Tie mood to game signals (deaths, streak, score) or Papa saying *“rough night”* / *“we’re cooking”*  
+- [ ] Percentages are **starting guesses** — tune after live streams
+
+### Custom AI voices & “impersonations” (future · legal caution)
+
+**Idea:** Funny occasional voice styles — accent vibes, character energy, custom cloned voices.
+
+**Legal / platform reality (not legal advice):**
+- **Celebrity impersonations** (Sean Connery, etc.) on a **public stream** = risky — publicity rights, platform rules, monetization issues. **Not recommended** for PapaThaiGG streams.
+- **Safer paths:** original Pug/Pugsan voices · generic accents/archetypes (*“wise mentor”*, *“hype announcer”*) · **your own** voice clone · licensed voice packs where terms allow streaming.
+- [ ] Research TTS options: Edge TTS · Piper · Coqui · ElevenLabs (check ToS + commercial/stream use)  
+- [ ] **One default stream voice** for viewers + optional **non-celebrity** style modes via Stream Deck (if legal and ToS-safe)  
+- [ ] **Skip celebrity impersonations** unless lawyer/licensed — note for future: probably forget this idea for public stream  
+- [ ] Private offline jokes in bat file only = still gray area — treat as **no** for brand safety  
+- [ ] **Mixed/original voice design** — blend or generate a unique Pug voice (not copying one celebrity)  
+- [ ] **Papa voice clone** — optional funny mode · check ToS + stream use · probably not default on stream
+
+### VRM gestures, dances & expressions (future — Pug + Pugsan)
+
+- [ ] **Warudo animations** — idle · wave · hype dance · sad slump · victory pose · walk on/off  
+- [ ] Trigger dances/gestures from Stream Deck · game events · chat · TTS timing  
+- [ ] **Pugsan build:** T-pose art → 3D → rig → **Pugsan.vrm** with same gesture library  
+- [ ] Lip-sync to TTS (later polish) · eye/mouth expressions in Warudo  
+- [ ] Custom animation clips for ALPHA + Pugsan bodies in Warudo
+
 ### Game awareness — what’s possible (logged Aug 9 evening)
+
 
 | Level | What happens | Realistic? | When |
 |-------|----------------|------------|------|
@@ -188,6 +225,7 @@ Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural,
 - [ ] Idle animation picked (optional polish)
 - [ ] TTS → lip-sync / mouth (later polish)
 - [ ] Crop/Pad Warudo capture edges (optional polish)
+- [ ] **MediaPipe Tracker:** not needed for Pug co-host (TTS-driven) — disable asset in Warudo Assets tab · save scene · window won't pop back
 - [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
 
 ## Phase C — Smart co-host
@@ -203,7 +241,26 @@ Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural,
 - [ ] Welcome / returning viewer memory in chat bot
 - [ ] Stream Deck: personality buttons + backup hotkeys (not 32 manual macros forever)
 
-## Phase D — Pugsan samurai (parallel build)
+## Phase I — Package for streamers / VTubers to buy (optional · after Sal proves it)
+
+**Goal:** Turn PapaThaiGG’s working Pug stack into a **product other streamers can buy** — one-time or monthly TBD.
+
+**Already modular (good for packaging later):**
+- [x] `Pug_Brain.py` — brain + voice config at top of file
+- [x] `Modelfile` — personality (editable text)
+- [x] `Talk to Pug.bat` — simple launcher
+- [x] Checklist + master PDF — setup docs
+- [x] OBS + VB-Cable routing documented
+
+**Still needed before selling:**
+- [ ] Pug fun on **Sal’s stream** for weeks (proof first)
+- [ ] One-click or guided **installer** (Ollama · Python deps · VB-Cable check)
+- [ ] **Settings UI** or simple config screen (voice · personality · OBS profile)
+- [ ] **BYO VRM avatar** — buyer brings own body, our brain + voice + OBS template
+- [ ] License + **Terms of Service** (TTS providers · stream use · no celebrity voices)
+- [ ] Support docs / video walkthrough
+- [ ] Pricing: one-time vs monthly · update channel
+- [ ] See `AI_Stream_Cohost_App_Syllabus` in PapaThaiGG Plans folder
 - [ ] Image → 3D (Tripo or similar) from T-pose art
 - [ ] Blender rig + mouth shapes → **Pugsan.vrm**
 - [ ] Load in Warudo; swap with robot for variety
