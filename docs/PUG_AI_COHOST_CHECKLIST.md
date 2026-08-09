@@ -1,13 +1,29 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 6, 2026 (evening)  
+**Updated:** August 9, 2026 (streaming PC)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
-**Desktop PDF:** ask Cursor — *“update Pug checklist PDF on Desktop”*
+**Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
+**Also:** `Desktop\PapaThaiGG Plans\` · repo `docs/PUG_PROJECT_MASTER_GUIDE.pdf`  
+**Ask Mozart:** *“update master guide PDF”* after big milestones
 
 Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **Sal’s personal avatars**
 
 **Philosophy:** Fun first, retired pace, no rush. Profit later → more volunteering + gear + fun.
+
+---
+
+## Dual-PC map (streaming PC = Pug home)
+
+| | **Gaming PC** | **Streaming PC** |
+|--|----------------|------------------|
+| **Job** | Game only → capture out | **Pug / AI / Warudo / OBS** |
+| **CPU** | i9-12900KF | i9-10900KF |
+| **RAM** | 32 GB DDR5 | 64 GB DDR4 |
+| **GPU** | RTX 3080 Ti | RTX 3080 |
+| **Hostname** | DESKTOP-JCVJ6HR | RANDYS_PC_TH |
+
+**Pug files (streaming PC):** `OneDrive\Desktop\App ideas\PTGG\PugAI\` · talk via Desktop **`Talk to Pug.bat`**
 
 ---
 
@@ -46,20 +62,19 @@ Stream with friends & family — **Pug** live as independent AI co-host (Ollama 
 - Transparent Warudo layer over game in OBS
 - Same brain later for Discord + website chat
 
-## Done (Aug 6, 2026)
-- [x] Blender 5.2 + VRM add-on 4.5.0
-- [x] ALPHA.vrm in Blender (view only — Booth no-edit license)
-- [x] Warudo: ALPHA loaded, transparent BG, 3 expressions, renamed **Pug (Android)**
-- [x] Scene **saved** in Warudo
-- [x] Pugsan reference art: `D:\PTGG\...\PapaThai Mascot Files\`
-- [x] Brain seed: `D:\PTGG\PugAI\Modelfile` + `Pug_Brain.py`
-- [ ] Ollama — install done; wire brain next session
+## Done
+- [x] Blender 5.2 + VRM · ALPHA.vrm · Warudo scene (gaming PC prototype)
+- [x] **Streaming PC (Aug 9, 2026):** Ollama · llama3 · custom **Pug** model · Python 3.12
+- [x] Pug_Brain.py works · **Talk to Pug.bat** on Desktop
+- [x] Modelfile → wholesome personality · VB-Cable installed · OBS installed
+- [x] Master guide PDF on Desktop + `PapaThaiGG Plans\`
+- [x] Pugsan reference art in PTGG brand build folders
 
-## Phase A — Brain (Ollama + TTS)
-- [ ] Pull model; custom **Pug** from Modelfile
-- [ ] 1–2 sentence reply cap for stream pace
-- [ ] TTS chosen (simple first)
-- [ ] Test with game open — GPU OK
+## Phase A — Brain (Ollama + TTS) — DONE on streaming PC
+- [x] Pull llama3; custom **Pug** from Modelfile
+- [x] Wholesome 1–2 sentence replies in Modelfile
+- [x] Windows TTS via Pug_Brain.py
+- [ ] Test with game open on gaming PC — GPU OK (later, dual-PC)
 
 ## Phase B — Robot live (Warudo + OBS)
 - [ ] Idle animation picked (Character → Animation → Idle)
@@ -144,19 +159,17 @@ Stream with friends & family — **Pug** live as independent AI co-host (Ollama 
 
 ## Next one thing (when you return)
 
-1. Finish **Ollama** → test Pug brain (`D:\PTGG\PugAI\Modelfile`)  
-2. Finish **OBS** install (defaults)  
-3. Re-open Warudo only when wiring TTS/OBS  
-
-**Safe to close Warudo now** — you saved the scene (“Success: Saved scene”). Closing editor + Steam app is fine.
+1. **Phase B:** Warudo on streaming PC — load `ALPHA.vrm`, delete old Character 1, save scene  
+2. **OBS** — add Warudo window + CABLE Output audio  
+3. Say **“ready for Warudo”** in Cursor for click-by-step help  
 
 ---
 
 ## Notes (Sal edits here)
 
-- Warudo character renamed: **Pug (Android / ALPHA)**
+- Talk to Pug: Desktop **`Talk to Pug.bat`** only (skip Cursor terminal)
+- Warudo scenes are per-PC — redo Android on streaming PC
 - Booth ALPHA = no edit/re-export
-- Discord: plenty of time to audit permissions
-- Ask Cursor to update Desktop PDF when this file changes
+- Elgato on desk — hook up after Phase B works solo
+- Mozart updates master PDF on Desktop + `PapaThaiGG Plans\` + GitHub `docs/`
 
--

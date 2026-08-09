@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PapaThaiGG — Pug Project Master Guide (Sal)</title>
+<style>
+  @page { size: letter; margin: 0.55in; }
+  body { font-family: "Segoe UI", Calibri, Georgia, serif; font-size: 10.5pt; line-height: 1.38; color: #1a1a1a; max-width: 8in; margin: 0 auto; }
+  h1 { font-size: 19pt; margin: 0 0 4px; color: #0f172a; }
+  h2 { font-size: 13pt; margin: 16px 0 6px; padding-bottom: 3px; border-bottom: 2px solid #1e3a5f; color: #1e3a5f; page-break-after: avoid; }
+  h3 { font-size: 11pt; margin: 10px 0 4px; color: #243b53; page-break-after: avoid; }
+  .meta { font-size: 9pt; color: #64748b; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid #cbd5e1; }
+  .box { background: #f0fdf4; border-left: 4px solid #0f766e; padding: 8px 10px; margin: 8px 0 12px; }
+  .warn { background: #fff7ed; border-left: 4px solid #c2410c; padding: 8px 10px; margin: 8px 0 12px; }
+  .now { background: #eff6ff; border-left: 4px solid #2563eb; padding: 8px 10px; margin: 8px 0 12px; }
+  ul, ol { margin: 4px 0 8px 18px; padding: 0; }
+  li { margin: 2px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 6px 0 12px; }
+  th, td { border: 1px solid #cbd5e1; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #e2e8f0; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f1f5f9; padding: 0 3px; }
+  .done { color: #166534; font-weight: bold; }
+  .next { color: #1d4ed8; font-weight: bold; }
+  .later { color: #9a3412; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 1px solid #cbd5e1; font-size: 8.5pt; color: #64748b; }
+</style>
+</head>
+<body>
+
+<h1>PapaThaiGG — Pug Project Master Guide</h1>
+<p class="meta">
+  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026<br />
+  Mozart + Sal · Open this PDF when you forget where things are — that’s what it’s for.
+</p>
+
+<div class="box">
+  <strong>Best way to stay least confused:</strong><br />
+  1) <strong>Talk to Pug</strong> → double-click Desktop <code>Talk to Pug.bat</code> (NOT Cursor terminal)<br />
+  2) <strong>Website edits</strong> → Cursor, open folder <code>PapaThaiGG_Brand_Cursor_GitHub_Website_AI_All</code><br />
+  3) <strong>Warudo / OBS / Steam</strong> → normal apps (not terminal)<br />
+  4) <strong>This PDF + PapaThaiGG Plans folder</strong> → your memory backup
+</div>
+
+<div class="warn">
+  <strong>Cursor terminal red errors?</strong> Usually wrong folder, or pasted two commands on one line, or pasted Mozart’s explanation text by accident. Use <code>Talk to Pug.bat</code> instead — no paths to remember.
+</div>
+
+<!-- ========== WHERE EVERYTHING LIVES ========== -->
+<h2>1. Where everything lives (one map)</h2>
+
+<h3>Pug brain &amp; personality (HOME BASE)</h3>
+<table>
+  <tr><th>What</th><th>Full path on streaming PC</th></tr>
+  <tr><td><strong>Talk to Pug (easiest)</strong></td><td><code>C:\Users\randy\OneDrive\Desktop\Talk to Pug.bat</code></td></tr>
+  <tr><td>Pug_Brain.py</td><td><code>C:\Users\randy\OneDrive\Desktop\App ideas\PTGG\PugAI\Pug_Brain.py</code></td></tr>
+  <tr><td>Modelfile (personality)</td><td><code>...\PTGG\PugAI\Modelfile</code></td></tr>
+  <tr><td>Quick text cheat sheet</td><td><code>...\PTGG\PUG_HOME.txt</code></td></tr>
+  <tr><td>ALPHA.vrm (Android body)</td><td><code>C:\Users\randy\OneDrive\Desktop\App ideas\PTGG\ALPHA.vrm</code></td></tr>
+  <tr><td>All PTGG project files</td><td><code>C:\Users\randy\OneDrive\Desktop\App ideas\PTGG\</code></td></tr>
+</table>
+
+<h3>Website &amp; GitHub</h3>
+<table>
+  <tr><th>What</th><th>Where</th></tr>
+  <tr><td>Website folder (Cursor)</td><td><code>C:\Users\randy\PapaThaiGG_Brand_Cursor_GitHub_Website_AI_All\PapaThaiGG\</code></td></tr>
+  <tr><td>Live site</td><td><a href="https://papathaigg.com">https://papathaigg.com</a></td></tr>
+  <tr><td>GitHub repo</td><td><a href="https://github.com/rdongoodman/PapaThaiGG">github.com/rdongoodman/PapaThaiGG</a></td></tr>
+  <tr><td>Checklist in repo</td><td><code>...\PapaThaiGG\docs\PUG_AI_COHOST_CHECKLIST.md</code></td></tr>
+</table>
+
+<h3>PDF plans &amp; older roadmaps</h3>
+<table>
+  <tr><th>What</th><th>Where</th></tr>
+  <tr><td><strong>This master guide (PDF)</strong></td><td>Desktop + <code>PapaThaiGG Plans\00 - PUG PROJECT MASTER GUIDE (Sal).pdf</code></td></tr>
+  <tr><td>All other plan PDFs</td><td><code>C:\Users\randy\OneDrive\Desktop\PapaThaiGG Plans\</code></td></tr>
+</table>
+
+<h3>Apps (installed on streaming PC)</h3>
+<table>
+  <tr><th>App</th><th>Status</th><th>Notes</th></tr>
+  <tr><td>Ollama + model <code>Pug</code></td><td class="done">Ready</td><td>Starts with Windows</td></tr>
+  <tr><td>Python 3.12</td><td class="done">Ready</td><td>Runs Pug_Brain.py</td></tr>
+  <tr><td>VB-Cable</td><td class="done">Installed</td><td>Pug voice → OBS later</td></tr>
+  <tr><td>OBS 32.x</td><td class="done">Installed</td><td>Phase B</td></tr>
+  <tr><td>Warudo (Steam)</td><td class="done">Installed</td><td>Load ALPHA.vrm — Phase B</td></tr>
+  <tr><td>Streamer.bot</td><td class="later">Later</td><td>Chat → Pug (Phase C)</td></tr>
+  <tr><td>Elgato 4K60</td><td class="later">On desk — not plugged in yet</td><td>Dual-PC hookup (after Phase B)</td></tr>
+</table>
+
+<!-- ========== TWO PCs ========== -->
+<h2>2. Two PCs — who does what</h2>
+<table>
+  <tr><th></th><th>Gaming PC</th><th>Streaming PC (YOU ARE HERE)</th></tr>
+  <tr><td><strong>Job</strong></td><td>Play game → capture out</td><td><strong>Pug / AI / Warudo / OBS</strong></td></tr>
+  <tr><td><strong>CPU</strong></td><td>i9-12900KF</td><td>i9-10900KF</td></tr>
+  <tr><td><strong>RAM</strong></td><td>32 GB DDR5 (→ 64 later)</td><td>64 GB DDR4</td></tr>
+  <tr><td><strong>GPU</strong></td><td>RTX 3080 Ti</td><td>RTX 3080</td></tr>
+  <tr><td><strong>Hostname</strong></td><td>DESKTOP-JCVJ6HR</td><td>RANDYS_PC_TH</td></tr>
+</table>
+<p>Pug’s <strong>real home</strong> is the streaming PC. Gaming PC = games only when dual-PC is live.</p>
+
+<!-- ========== DONE ========== -->
+<h2>3. What we’ve DONE (as of Aug 9, 2026)</h2>
+<ul>
+  <li class="done">✓ Chose Ollama as free local AI brain (right path for you)</li>
+  <li class="done">✓ Streaming PC: Python 3.12, Ollama, llama3, custom <code>Pug</code> model</li>
+  <li class="done">✓ Refreshed Modelfile → <strong>wholesome</strong> co-host (warm, family-friendly)</li>
+  <li class="done">✓ Fixed Pug_Brain.py — Pug talks on screen + out loud</li>
+  <li class="done">✓ VB-Cable installed</li>
+  <li class="done">✓ Desktop shortcut: <code>Talk to Pug.bat</code></li>
+  <li class="done">✓ ALPHA.vrm on disk · Warudo installed on Steam</li>
+  <li class="done">✓ OBS installed</li>
+  <li class="done">✓ Website live at papathaigg.com (separate track)</li>
+  <li class="done">✓ Prototype brain work on gaming PC (migrated concept to streaming PC)</li>
+</ul>
+
+<!-- ========== NOW ========== -->
+<h2>4. What we’re doing NOW</h2>
+<div class="now">
+  <strong class="next">Step 2 — Phase B: Warudo + OBS</strong><br />
+  Load Pug Android (ALPHA.vrm) in Warudo on <em>this</em> PC, delete old “Character 1”, save scene. Then add Pug to OBS (small corner + VB-Cable audio).
+</div>
+<p>Say to Mozart in Cursor: <strong>“ready for Warudo”</strong> — one click at a time.</p>
+
+<!-- ========== NEXT STEPS ========== -->
+<h2>5. Step-by-step — full roadmap</h2>
+
+<h3>Phase A — Brain (DONE on streaming PC)</h3>
+<ol>
+  <li class="done">Install Ollama, Python, VB-Cable</li>
+  <li class="done">Pull llama3 · create <code>Pug</code> model from Modelfile</li>
+  <li class="done">Run <code>Talk to Pug.bat</code> — confirm he answers</li>
+</ol>
+
+<h3>Phase B — Body on stream (NEXT)</h3>
+<ol>
+  <li class="next">Open Warudo (Steam) on streaming PC</li>
+  <li class="next">Remove old Character 1 (your personal avatar)</li>
+  <li class="next">Import <code>ALPHA.vrm</code> → rename <strong>Pug (Android)</strong></li>
+  <li class="next">Transparent background ON · pick Idle animation · save scene</li>
+  <li class="next">Open OBS → add Warudo window (Pug small in corner)</li>
+  <li class="next">Add audio: CABLE Output (Pug voice separate from mic)</li>
+  <li>Scene presets: Cam+Game+Pug · Game+Pug · Game only</li>
+</ol>
+
+<h3>Phase C — Smart co-host (later)</h3>
+<ul>
+  <li>Install Streamer.bot · chat → Ollama → TTS</li>
+  <li>“Pug, be quiet” mute command</li>
+  <li>Walk on / walk off · rate limits</li>
+</ul>
+
+<h3>Phase D — Dual-PC + Elgato (later)</h3>
+<ul>
+  <li>Game PC HDMI/DP → Elgato → streaming PC OBS</li>
+  <li>Gaming PC runs game only; streaming PC runs everything else</li>
+</ul>
+
+<h3>Phase E — Pugsan (after Pug is fun on stream)</h3>
+<ul>
+  <li>T-pose art → 3D → rig → Pugsan.vrm · same brain, swap body</li>
+</ul>
+
+<h3>Phase F — Maybe sell app someday (much later)</h3>
+<ul>
+  <li>Only after Pug proves fun on your stream · see syllabus PDFs in Plans folder</li>
+</ul>
+
+<!-- ========== HOW TO TALK TO PUG ========== -->
+<h2>6. How to talk to Pug (every time)</h2>
+<div class="box">
+  <strong>Easiest:</strong> Desktop → double-click <code>Talk to Pug.bat</code><br />
+  Type your message · Enter · Pug replies · type <code>quit</code> to exit.
+</div>
+<p><strong>Do NOT</strong> run Pug from Cursor’s terminal unless you <code>cd</code> to PugAI first — the bat file avoids that confusion.</p>
+
+<!-- ========== WARUDO QUICK ========== -->
+<h2>7. Warudo — quick notes (Phase B)</h2>
+<ul>
+  <li>Scenes are <strong>per PC</strong> — redo on streaming PC (not copied from gaming PC)</li>
+  <li>VRM file: <code>...\PTGG\ALPHA.vrm</code></li>
+  <li>Booth ALPHA license = view/use, no re-export from Blender</li>
+  <li>Pug = corner mascot, not full screen</li>
+</ul>
+
+<!-- ========== CURSOR CHATS ========== -->
+<h2>8. Cursor chats (where conversations live)</h2>
+<p>Cursor chats are tied to each PC and project folder — they don’t auto-sync between machines.</p>
+<ul>
+  <li><strong>Streaming PC / this project:</strong> PapaThaiGG streaming setup chat (Mozart + Sal, Aug 9 2026)</li>
+  <li><strong>Gaming PC:</strong> earlier Pug build chat (prototype brain work)</li>
+  <li>If a chat disappears: open same project folder in Cursor · or ask Mozart to summarize from this PDF</li>
+</ul>
+
+<!-- ========== OTHER PDFs ========== -->
+<h2>9. Other PDFs in PapaThaiGG Plans (reference)</h2>
+<ul>
+  <li><code>01 - PapaThaiGG Master Checklist...</code> — website, Discord, Pug, Sal avatars</li>
+  <li><code>03 - Project Roadmap - Pug the AI Co-Host.pdf</code></li>
+  <li><code>13 - MASTER ROADMAP - PapaThaiGG Stream Build.pdf</code></li>
+  <li><code>15 - Pugsan AI Mascot Build.pdf</code></li>
+  <li>VRAM math, deployment roadmaps, etc.</li>
+</ul>
+<p><strong>This PDF (00)</strong> is the one to open first — it’s the current “where are we” sheet.</p>
+
+<!-- ========== PERSONALITY ========== -->
+<h2>10. Pug’s personality</h2>
+<p><strong>Wholesome, warm, family-friendly</strong> — fun uncle energy, not mean sarcasm. Edit <code>Modelfile</code>, then run:</p>
+<p><code>ollama create Pug -f Modelfile</code> (from PugAI folder, or ask Mozart)</p>
+
+<!-- ========== WHEN STUCK ========== -->
+<h2>11. When stuck — read this</h2>
+<ol>
+  <li>Open this PDF</li>
+  <li>Check: am I in the right folder for what I’m doing?</li>
+  <li>Pug? → <code>Talk to Pug.bat</code></li>
+  <li>Website? → Cursor + PapaThaiGG repo folder</li>
+  <li>Ask Mozart: “where are we?” or “ready for [next step]”</li>
+</ol>
+
+<p class="footer">
+  PapaThaiGG · Pug first, then Pugsan · Fun first, retired pace · Mozart + Sal<br />
+  Ask Mozart: “update master guide PDF” when big milestones change.
+</p>
+
+</body>
+</html>
