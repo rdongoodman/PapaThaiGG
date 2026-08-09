@@ -1,7 +1,7 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 9, 2026 (streaming PC · lunch break — goals synced)  
+**Updated:** August 9, 2026 (streaming PC · evening — wholesome Pug + voice routing)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
 **Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
 **Also:** `Desktop\PapaThaiGG Plans\` · repo `docs/PUG_PROJECT_MASTER_GUIDE.pdf`  
@@ -27,7 +27,19 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 
 ---
 
-## Endgame
+## Brand vision (PapaThaiGG · Pug · Pugsan)
+
+**PapaThaiGG (Sal):** Retired-pace gaming/stream brand — fun first, Thailand expat vibe, community on Discord + website.
+
+**Pug:** Wholesome AI co-host in the **Android robot** body (ALPHA.vrm). One **Ollama brain** — talks on stream, later in Discord + website chat. Default personality: **sweet, upbeat, loyal**; light humor OK; not mean or irritating.
+
+**Pugsan:** Same brain, **samurai pug** body — second mascot for variety (Phase H).
+
+**Endgame:** Pug/Pugsan live on stream → chat everywhere → remember viewers → welcome-back → optional DMs → sell toolkit to other streamers (low priority, after Sal proves it’s fun).
+
+---
+
+## Endgame (technical)
 
 **Stream:** Pug live co-host (Ollama + Warudo + TTS + OBS). Sal cam optional — **Game + Pug only** layout OK.
 
@@ -52,6 +64,41 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 - [ ] 3D on website/Discord = nice-to-have; text/voice first  
 - [ ] Social media full bots = unlikely · low priority  
 - [ ] Sell toolkit to gamers/VTubers · one-time or monthly TBD · **after proof on Sal’s stream**
+
+### Personality modes (future — logged Aug 9 evening)
+- [x] **Default:** wholesome / sweet / hype co-host (done in Modelfile)  
+- [x] **Nickname list locked** — see **Nickname Bible** section below  
+- [ ] **Game-aware nicknames:** use secondary names on hype moments when game hooks exist (Phase C)  
+- [ ] **Modes to add later:** funny · scared · light sarcastic (not irritating) · extra-wholesome · hype beast · etc.  
+- [ ] **Switch by voice while streaming:** e.g. *“Pug, wholesome mode”* · *“Pug, funny mode”* · *“Pug, snark mode”* (light only)  
+- [ ] **Switch by Steam Deck:** map modes to buttons on Sal’s **32-button Stream Deck** (one button = one personality)  
+- [ ] **Implementation idea:** separate Ollama models (`Pug-wholesome`, `Pug-funny`, …) **or** one model + system prompt swap in `Pug_Brain.py`  
+- [ ] Pugsan can share same mode system when samurai body ships
+
+### Nickname Bible (Pug & Pugsan call Papa — never “Sal”)
+
+**Primary (most of the time — brand core):** Papa · Papa Thai · Papa T  
+
+**Secondary (hype, wins, funny moments):** PT · Big guy · Boss · Chief · Pops  
+
+**Rare flavor:** Khun Papa (Thai respect — like Kun Randy)  
+
+**Pugsan only — occasional Japanese:** Papa-san (パパさん) · Bossu (ボス) · Chīfu (チーフ) · Aniki (兄貴) · Denka-sama / Honored Papa (殿下様) · Khun Papa (クン・パパ)  
+
+**Never:** Sal · old man · grandpa · geezer · elder · dude · age-mocking insults  
+
+**Game-aware use (Phase C+):** secondary nicknames on big wins/clutches; primary for normal chat.
+
+### Game awareness — what’s possible (logged Aug 9 evening)
+
+| Level | What happens | Realistic? | When |
+|-------|----------------|------------|------|
+| **Easy** | Pug reacts to **chat**, **your voice**, or **Stream Deck button** you press | ✓ Yes | Phase C |
+| **Medium** | Pug reacts to **game events** via hooks/APIs for specific games you play | ✓ Yes, per-game | Phase C–D |
+| **Hard** | Pug **watches the screen** like a human (AI vision on game capture) | △ Experimental — slow, GPU-heavy, not reliable alone | Future test |
+| **Animations** | Victory dance, sad slump, hype bounce in Warudo | ✓ Yes — **triggered** by any event above | Phase C |
+
+**Honest answer:** Pug won’t silently “see” you lose a fight and react **by magic** on day one. We **build event pipes** (chat → you → hotkey → game hook → vision). Each pipe can fire Ollama + TTS + Warudo animation. True autonomous game-watching is possible to **experiment with later**, but **chat + voice + Steam Deck + game hooks** is the reliable path first.
 
 ---
 
@@ -88,33 +135,42 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 - [x] Blender 5.2 + VRM · ALPHA.vrm · Warudo scene (gaming PC prototype)
 - [x] **Streaming PC (Aug 9, 2026):** Ollama · llama3 · custom **Pug** model · Python 3.12
 - [x] Pug_Brain.py works · **Talk to Pug.bat** on Desktop
-- [x] Modelfile → wholesome personality · VB-Cable installed · OBS installed
+- [x] Modelfile → **wholesome** personality rebuilt (no snark / no “ugh”) · tested *“Hey, pal”* ✓
+- [x] VB-Cable installed · OBS installed
 - [x] Master guide PDF on Desktop + `PapaThaiGG Plans\`
 - [x] Pugsan reference art in PTGG brand build folders
+- [x] **Lesson learned:** Windows default output must stay on **USB headset** — not CABLE Input (YouTube + OBS meter fix)
 
 ## Phase A — Brain (Ollama + TTS) — DONE on streaming PC
 - [x] Pull llama3; custom **Pug** from Modelfile
-- [x] Wholesome 1–2 sentence replies in Modelfile
-- [x] Windows TTS via Pug_Brain.py
+- [x] Wholesome 1–2 sentence replies in Modelfile (+ example messages)
+- [x] Windows TTS via Pug_Brain.py (David voice · prints “Speaking now…”)
+- [ ] **Hear Pug in headset + OBS meter** — route **Python only** → CABLE Input (in progress tonight)
 - [ ] Test with game open on gaming PC — GPU OK (later, dual-PC)
 
-## Phase B — Robot live (Warudo + OBS) — IN PROGRESS
+## Phase B — Robot live (Warudo + OBS) — IN PROGRESS (almost done)
 - [x] Warudo: ALPHA.vrm · **Pug (Android)** · Orbit camera · Focus Character
 - [x] Transparent background ON · Render Environment OFF
 - [x] Scene saved: **Pug (Android)**
+- [x] OBS: Window Capture → Warudo · Pug small in corner ✓
+- [ ] OBS: **Pug Voice** — fix source → **Audio Input Capture → CABLE Output** (not Output Capture on CABLE Input)
+- [ ] Route TTS: Volume mixer → **Python** → CABLE Input (per-app, not system default)
+- [ ] Hear Pug while testing (OBS monitor and/or Listen on CABLE Output)
 - [ ] Idle animation picked (optional polish)
-- [ ] OBS: Window Capture → Warudo · Pug small in corner
-- [ ] OBS: CABLE Output for Pug voice
-- [ ] TTS → lip-sync (later polish)
+- [ ] TTS → lip-sync / mouth (later polish)
+- [ ] Crop/Pad Warudo capture edges (optional polish)
 - [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
 
-## Phase C — Smart co-host (not 32 Stream Deck buttons)
+## Phase C — Smart co-host
+- [ ] **Talk to Pug with mic** (Whisper/STT) — no typing
+- [ ] **Personality modes** — voice command + Stream Deck buttons (see goals above)
 - [ ] Chat → Ollama → TTS (Twitch/YouTube first)
 - [ ] **“Pug, be quiet until I call you back”** — mute flag
 - [ ] Walk on → talk → walk off (game or near Sal cam box)
+- [ ] Pug **movement** / expressions in Warudo tied to speech
 - [ ] Game reactions: hotkeys first → game hooks later
 - [ ] Welcome / returning viewer memory in chat bot
-- [ ] Manual Stream Deck = backup only, not forever
+- [ ] Stream Deck: personality buttons + backup hotkeys (not 32 manual macros forever)
 
 ## Phase D — Pugsan samurai (parallel build)
 - [ ] Image → 3D (Tripo or similar) from T-pose art
@@ -182,19 +238,25 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 
 ---
 
-## Next one thing (when you return from lunch)
+## Tonight — voice fix (do in order)
 
-1. **OBS** — Window Capture → **Warudo 0.15.0** → Pug in corner, small  
-2. **Optional:** CABLE Output audio · test with **Talk to Pug.bat**  
-3. Say **“back from lunch — OBS”** in Cursor for click-by-step help  
+1. **Windows default output** = **USB Audio Device** (headset) — ✓ Sal fixed Aug 9  
+2. **Volume mixer** → **Python** → Output = **CABLE Input** (only while Talk to Pug is open)  
+3. **OBS** → replace **Pug Voice** with **Audio Input Capture → CABLE Output**  
+4. Ask Pug a question → meter should move · enable OBS **Monitor** on Pug Voice to hear in headset  
+
+Say **“Pug voice step 2”** in Cursor for click-by-click help.
 
 ---
 
 ## Notes (Sal edits here)
 
 - Talk to Pug: Desktop **`Talk to Pug.bat`** only (skip Cursor terminal)
+- **USB Audio Device** = Sal’s headset (YouTube + normal sound)
+- **Never** set Windows default output to CABLE Input — only route **Python** there
 - Warudo scenes are per-PC — redo Android on streaming PC
 - Booth ALPHA = no edit/re-export
 - Elgato on desk — hook up after Phase B works solo
 - Mozart updates master PDF on Desktop + `PapaThaiGG Plans\` + GitHub `docs/`
+- **Personality buttons + voice modes** = Phase C (logged above — not forgotten)
 

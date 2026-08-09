@@ -29,7 +29,7 @@
 
 <h1>PapaThaiGG — Pug Project Master Guide</h1>
 <p class="meta">
-  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (lunch break)<br />
+  For Sal (PapaThaiGG) · Streaming PC setup · Updated August 9, 2026 (evening — nicknames + voice routing)<br />
   Mozart + Sal · Open this PDF when you forget — goals, order, paths, and what’s next.
 </p>
 
@@ -137,14 +137,17 @@
   <li class="done">✓ Warudo: Pug (Android) loaded · Orbit camera · Focus Character set · zoom works</li>
   <li class="done">✓ Transparent background ON · Render Environment OFF · black = transparent for OBS</li>
   <li class="done">✓ Scene saved: <strong>Pug (Android)</strong></li>
+  <li class="done">✓ OBS: Window Capture → Warudo · Pug in corner</li>
+  <li class="done">✓ Wholesome personality rebuilt · Papa nicknames locked (not “Sal”)</li>
+  <li class="done">✓ Sound lesson: default output = USB headset · Python only → CABLE Input</li>
   <li class="done">✓ Master guide PDF + GitHub docs synced</li>
 </ul>
 
 <!-- ========== NOW ========== -->
-<h2>5. What we’re doing NOW (when Sal returns)</h2>
+<h2>5. What we’re doing NOW (Aug 9 evening)</h2>
 <div class="now">
-  <strong class="next">Phase B — finish OBS</strong><br />
-  Warudo is done for today. Next: OBS Window Capture → Pug in corner → optional CABLE Output for voice.
+  <strong class="next">Phase B — finish Pug voice in OBS</strong><br />
+  Python → CABLE Input (Volume mixer) ✓ · Next: OBS Audio Input Capture → CABLE Output · hear Pug in headset.
 </div>
 
 <!-- ========== NEXT STEPS ========== -->
@@ -159,16 +162,17 @@
 <h3>Phase B — Body on stream <span class="next">IN PROGRESS</span></h3>
 <ol>
   <li class="done">Warudo: ALPHA.vrm · Pug (Android) · transparent BG · scene saved</li>
-  <li class="next">OBS: Window Capture → Warudo window · small corner</li>
-  <li class="next">OBS: CABLE Output audio for Pug voice</li>
+  <li class="done">OBS: Window Capture → Warudo window · small corner</li>
+  <li class="next">OBS: Audio Input Capture → CABLE Output for Pug voice</li>
   <li>Scene presets: Cam+Game+Pug · Game+Pug (no cam) · Game only</li>
 </ol>
 
 <h3>Phase C — Smart stream co-host</h3>
 <ul>
   <li>Streamer.bot: Twitch/YouTube chat → Ollama → TTS</li>
+  <li>Talk to Pug with mic (Whisper/STT) · personality modes · Stream Deck buttons</li>
+  <li>Game event hooks → Pug reacts + Warudo animations (dance, slump, hype)</li>
   <li>“Pug, be quiet” · walk on / walk off · rate limits</li>
-  <li>Hotkeys first; Stream Deck backup only</li>
 </ul>
 
 <h3>Phase D — Dual-PC + Elgato</h3>
@@ -210,13 +214,11 @@
   <li>See <code>AI_Stream_Cohost_App_Syllabus</code> in Plans folder</li>
 </ul>
 
-<h3>When you return from lunch — do these two</h3>
+<h3>When you return — voice fix (Step 3)</h3>
 <ol>
-  <li class="next">Open <strong>OBS</strong> → Sources → + → Window Capture → <strong>Warudo 0.15.0</strong> → corner · small</li>
-  <li class="next">Optional: add <strong>CABLE Output</strong> audio · test with <code>Talk to Pug.bat</code></li>
+  <li class="next">OBS → replace Pug Voice with <strong>Audio Input Capture → CABLE Output</strong></li>
+  <li class="next">Ask Pug a question in <code>Talk to Pug.bat</code> · meter should move · enable Monitor to hear</li>
 </ol>
-
-<!-- remove old duplicate sections - I'll replace section 4-5 old content -->
 
 <!-- ========== HOW TO TALK TO PUG ========== -->
 <h2>7. How to talk to Pug (every time)</h2>
@@ -256,9 +258,36 @@
 <p><strong>This PDF (00)</strong> is the one to open first — it’s the current “where are we” sheet.</p>
 
 <!-- ========== PERSONALITY ========== -->
-<h2>11. Pug’s personality</h2>
-<p><strong>Wholesome, warm, family-friendly</strong> — fun uncle energy, not mean sarcasm. Edit <code>Modelfile</code>, then run:</p>
-<p><code>ollama create Pug -f Modelfile</code> (from PugAI folder, or ask Mozart)</p>
+<h2>11. Pug’s personality &amp; nicknames</h2>
+<p><strong>Wholesome, warm, family-friendly</strong> — fun co-host energy, not mean sarcasm. Pug calls you <strong>Papa</strong> names — never <strong>Sal</strong> (Sal is Mozart-only).</p>
+
+<h3>Nickname Bible</h3>
+<table>
+  <tr><th>When</th><th>Names</th></tr>
+  <tr><td><strong>Primary (most replies)</strong></td><td>Papa · Papa Thai · Papa T</td></tr>
+  <tr><td><strong>Secondary (hype / wins / funny)</strong></td><td>PT · Big guy · Boss · Chief · Pops</td></tr>
+  <tr><td><strong>Rare</strong></td><td>Khun Papa (Thai respect)</td></tr>
+  <tr><td><strong>Pugsan only — occasional Japanese</strong></td><td>Papa-san · Bossu · Chīfu · Aniki · Denka-sama (Honored Papa) · Khun Papa</td></tr>
+  <tr><td><strong>Never</strong></td><td>Sal · old man · grandpa · geezer · elder · dude</td></tr>
+</table>
+
+<p>Edit <code>Modelfile</code>, then run <code>ollama create Pug -f Modelfile</code> (from PugAI folder, or ask Mozart).</p>
+
+<h3>Game awareness — what’s truly possible</h3>
+<table>
+  <tr><th>Level</th><th>How Pug “knows”</th><th>When</th></tr>
+  <tr><td><strong>Easy ✓</strong></td><td>Chat · your voice · Stream Deck button you press</td><td>Phase C</td></tr>
+  <tr><td><strong>Medium ✓</strong></td><td>Game hooks/APIs for specific games</td><td>Phase C–D</td></tr>
+  <tr><td><strong>Animations ✓</strong></td><td>Warudo dance/sad/hype — fired by any event above</td><td>Phase C</td></tr>
+  <tr><td><strong>Hard △</strong></td><td>AI “watches” game video — experimental, not reliable alone</td><td>Future test</td></tr>
+</table>
+<p>Pug won’t auto-react to a fight loss <em>with zero setup</em>. We wire <strong>event pipes</strong> (chat, voice, hotkeys, game signals) → Ollama → TTS → Warudo animation. That’s how victory dances and “nice try, Boss” become real.</p>
+
+<h3>Future personality modes</h3>
+<ul>
+  <li>Voice: <em>“Pug, funny mode”</em> · <em>“Pug, wholesome mode”</em></li>
+  <li>Stream Deck: one button = one personality (32-button deck)</li>
+</ul>
 
 <!-- ========== WHEN STUCK ========== -->
 <h2>12. When stuck</h2>
