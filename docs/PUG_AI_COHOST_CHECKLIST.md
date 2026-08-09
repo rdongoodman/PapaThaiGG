@@ -261,6 +261,8 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 - [ ] Support docs / video walkthrough
 - [ ] Pricing: one-time vs monthly · update channel
 - [ ] See `AI_Stream_Cohost_App_Syllabus` in PapaThaiGG Plans folder
+
+## Phase H — Pugsan samurai (parallel build)
 - [ ] Image → 3D (Tripo or similar) from T-pose art
 - [ ] Blender rig + mouth shapes → **Pugsan.vrm**
 - [ ] Load in Warudo; swap with robot for variety
