@@ -1,7 +1,7 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 10, 2026 (website review recommendations logged · step-by-step merged)  
+**Updated:** August 10, 2026 (Discord help workflow logged · website review · step-by-step merged)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
 **Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
 **Ordered build steps:** Desktop → `PUG_PUGSAN_STEP_BY_STEP_BUILD.pdf` · repo `docs/PUG_PUGSAN_STEP_BY_STEP_BUILD.html`  
@@ -348,7 +348,65 @@ Retired pace — one item at a time is fine.
 
 # SECTION 3 — Discord (PapaThaiGG server)
 
-**Cursor cannot log into Discord.** I help via screenshots, bot code, copy, and checklists — you apply in Discord.
+**When to work on this:** Phase E — after Pug is fun on stream. Server setup/audit can happen anytime at retired pace.
+
+**Brand goal:** Discord = squad hangout that matches **stream · website · Pug/Pugsan · social links** — fun first, teach Thailand/expat intel, zero cash-grab vibe.
+
+---
+
+## How Mozart helps with Discord (what I can / cannot do)
+
+**Cursor cannot log into Discord.** No AI (including me) can open your personal Discord account or browse your server on its own. Discord does not allow that — and there is no Discord connection in this project.
+
+### What I **can** do (very helpful — we use this all the time)
+- Review **screenshots** you paste into Cursor (channels, roles, permissions, welcome flow, pins)
+- Review **copy you paste** (rules, welcome messages, channel topics, bot text)
+- Write **bot code** for Pug (Phase E) — you run it on your PC with your bot token
+- Suggest **channel names, categories, pinned posts, onboarding copy** — PapaThaiGG voice
+- Audit **permissions & rank gates** from screenshots — “who can see what?”
+- Align Discord with **website · stream · Pug/Pugsan story · social links**
+- Build **checklists** like this one — you apply changes in Discord yourself
+
+### What I **cannot** do
+- Log in as you or browse the server live
+- See messages, members, or settings unless **you share** them
+- Click buttons in Discord or change roles/channels directly
+- Read DMs or private channels you don’t show me
+
+### What **you** do — so I can help Discord kick butt
+
+When you want a review, send **one or more** of these in Cursor chat:
+
+| Share this | Why it helps |
+|------------|----------------|
+| **Screenshot: full channel list** (left sidebar, categories expanded) | Map structure · spot overload · Pug placement |
+| **Screenshot: Server Settings → Roles** (role list + one role’s permissions) | Rank gates · mod vs member · Pug bot role later |
+| **Screenshot: onboarding path** — `#arrivals` → visa reaction → `#house_rules` | Test what recruits actually see |
+| **Screenshot: `#social_media_links_website`** (or equivalent) | Match papathaigg.com + Twitch/YouTube/Kick links |
+| **Screenshot: welcome message** (Carl-bot or other) | Tone check · Pug “coming soon” wording |
+| **Paste: `#house_rules`** text | Family-friendly · English-only · squad vibe |
+| **Paste: pinned “how to rank up”** (if any) | Clarity for new members |
+| **Say what feels off** — e.g. “too many locked channels” or “recruits get lost” | I suggest fixes without guessing |
+
+**Tips for good screenshots:** one topic per screenshot · include channel name in frame · for permissions, show **role name + key toggles** · blur personal info if you want (not required for server structure).
+
+**Easy prompt when ready:** *“Mozart, review my Discord — here are screenshots”* + attach images.
+
+---
+
+## Brand alignment — Discord ↔ everything else
+
+Use this when auditing so the server feels like one PapaThaiGG world:
+
+- [ ] **Website:** `#social_media_links_website` (or pin) lists **papathaigg.com** + same platforms as site footer (Twitch · YouTube · Kick · X · TikTok · Instagram · Facebook · Steam · Discord invite)
+- [ ] **Stream:** clear **“Watch Live”** path — link to live page or “live now” pin when streaming (manual OK at first)
+- [ ] **Pug (Phase E):** one home channel (`#pug-lounge` or Engine Room) · honest status: *“Talk to Pug on stream now · Discord bot coming”* until bot ships
+- [ ] **Pugsan (Phase H):** tease in same area when samurai body ships — same brain, second mascot
+- [ ] **Thailand / expat intel:** Field Guide & Expat Intel on site ↔ optional `#travel-tips` or Beer Garden threads (don’t duplicate whole site — point to pages)
+- [ ] **Tone:** fun squad · retired pace · teach & entertain · **no donation pressure** · matches website voice
+- [ ] **Sal vs Pug:** you = PapaThaiGG human · Pug/Pugsan = AI mascots — never confuse in channel descriptions
+
+---
 
 ## What you built (looks great)
 - Onboarding: `#arrivals` → `#get_your_visa` (passport → Recruit) → `#house_rules`
