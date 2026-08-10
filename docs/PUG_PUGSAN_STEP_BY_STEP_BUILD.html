@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pug &amp; Pugsan — Step-by-Step Build Guide</title>
+<style>
+  @page { size: letter; margin: 0.55in; }
+  body { font-family: "Segoe UI", Calibri, Georgia, serif; font-size: 10.5pt; line-height: 1.38; color: #1a1a1a; max-width: 8in; margin: 0 auto; }
+  h1 { font-size: 18pt; margin: 0 0 4px; color: #0f172a; }
+  h2 { font-size: 12.5pt; margin: 16px 0 6px; padding-bottom: 3px; border-bottom: 2px solid #1e3a5f; color: #1e3a5f; page-break-after: avoid; }
+  h3 { font-size: 11pt; margin: 10px 0 4px; color: #243b53; page-break-after: avoid; }
+  .meta { font-size: 9pt; color: #64748b; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid #cbd5e1; }
+  .box { background: #f1f5f9; border-left: 4px solid #0f766e; padding: 8px 10px; margin: 8px 0 12px; }
+  .warn { background: #fff7ed; border-left: 4px solid #c2410c; padding: 8px 10px; margin: 8px 0 12px; }
+  .step { background: #f8fafc; border: 1px solid #e2e8f0; padding: 8px 10px; margin: 6px 0 10px; page-break-inside: avoid; }
+  .step h3 { margin-top: 0; }
+  .num { display: inline-block; background: #1e3a5f; color: #fff; font-size: 9pt; font-weight: 700; padding: 1px 7px; margin-right: 6px; }
+  ul, ol { margin: 4px 0 8px 18px; padding: 0; }
+  li { margin: 2px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 6px 0 12px; }
+  th, td { border: 1px solid #cbd5e1; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #e2e8f0; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f1f5f9; padding: 0 3px; }
+  .done { color: #166534; }
+  .todo { color: #9a3412; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 1px solid #cbd5e1; font-size: 8.5pt; color: #64748b; }
+</style>
+</head>
+<body>
+
+<h1>Pug &amp; Pugsan — Step-by-Step Build Guide</h1>
+<p class="meta">
+  For Sal / PapaThaiGG · Personal stream co-host first · Updated August 10, 2026<br />
+  Characters: <strong>Pug</strong> (Android / ALPHA VRM) → then <strong>Pugsan</strong> (samurai pug humanoid)<br />
+  Home chat: Cursor project PapaThaiGG (Mozart + Sal)<br />
+  <strong>Open first for status:</strong> Desktop <code>00 - PUG PROJECT MASTER GUIDE (Sal).pdf</code><br />
+  Related: <code>PUG_AI_COHOST_CHECKLIST.md</code> (full checklist) · this file = ordered build steps
+</p>
+
+<div class="box">
+  <strong>What this guide is:</strong> Exact build order — brain → body on stream → chat controls → dual-PC → Pugsan → sell later.<br />
+  <strong>What it is not:</strong> The live status sheet (that’s the Master Guide PDF). Sell-later product ideas live in <code>AI_Stream_Cohost_App_Syllabus</code>.
+</div>
+
+<!-- ========== DUAL PC ========== -->
+<h2>0. Dual-PC hardware map (locked in)</h2>
+<table>
+  <tr>
+    <th></th>
+    <th>Gaming PC</th>
+    <th>Streaming PC (Pug home)</th>
+  </tr>
+  <tr>
+    <td><strong>Job</strong></td>
+    <td>Play the game clean — max FPS, capture out to Elgato</td>
+    <td><strong>Pug / Pugsan / AI / Warudo / OBS / Steam (Warudo)</strong> — all co-host work lives here</td>
+  </tr>
+  <tr>
+    <td><strong>CPU</strong></td>
+    <td>Intel Core i9-12900KF</td>
+    <td>Intel Core i9-10900KF</td>
+  </tr>
+  <tr>
+    <td><strong>RAM</strong></td>
+    <td>32 GB DDR5 (upgrade later → 64 GB DDR5 when budget allows)</td>
+    <td>64 GB DDR4</td>
+  </tr>
+  <tr>
+    <td><strong>GPU</strong></td>
+    <td>NVIDIA GeForce RTX 3080 Ti</td>
+    <td>NVIDIA GeForce RTX 3080</td>
+  </tr>
+  <tr>
+    <td><strong>Hostname</strong></td>
+    <td>DESKTOP-JCVJ6HR</td>
+    <td>RANDYS_PC_TH</td>
+  </tr>
+  <tr>
+    <td><strong>Capture</strong></td>
+    <td>HDMI/DP out → Elgato</td>
+    <td>Elgato 4K60 in · OBS composites game + Pug</td>
+  </tr>
+</table>
+<div class="warn">
+  <strong>Important:</strong> Early brain work started on the <em>gaming</em> PC (<code>D:\PTGG\</code>). Pug’s live home is now the <strong>streaming PC</strong>
+  (<code>OneDrive\Desktop\App ideas\PTGG\</code>). Gaming PC should not fight the game for VRAM once dual-PC is live.
+</div>
+
+<!-- ========== BRAIN PATH ========== -->
+<h2>1. Is Ollama the right brain? (Yes — for you)</h2>
+<table>
+  <tr><th>Choice</th><th>Cost</th><th>Verdict for PapaThaiGG</th></tr>
+  <tr>
+    <td><strong>Ollama + local model</strong> (what we use)</td>
+    <td>Free (3080 / 3080 Ti you already own)</td>
+    <td><strong>Best path.</strong> No monthly bill. Private. Fast enough on your GPU. Personality = Modelfile text you control. Final home = <strong>streaming PC</strong>.</td>
+  </tr>
+  <tr>
+    <td>Ollama + Dolphin-style models</td>
+    <td>Free</td>
+    <td><strong>Optional later.</strong> Often less filtered / more “chaotic funny.” Riskier on live stream. Try after Pug works with llama3. Keep a stream-safe Pug backup.</td>
+  </tr>
+  <tr>
+    <td>Cloud APIs (OpenAI, etc.)</td>
+    <td>Pay per use</td>
+    <td>Not needed now. Useful later as an <em>optional</em> tier for customers without a strong GPU.</td>
+  </tr>
+</table>
+<div class="warn">
+  You do <strong>not</strong> need to spend hundreds or thousands on AI APIs to build this.
+  Hardware you already have + free Ollama is the correct MVP path.
+  When selling later: local brain by default, optional cheap cloud for people without GPUs — and a simple “Attitude” slider that rewrites Modelfile personality.
+</div>
+
+<!-- ========== STATUS ========== -->
+<h2>2. Where you are right now (Aug 10, 2026)</h2>
+<ul>
+  <li class="done">✓ Blender 5.2 · ALPHA.vrm · Warudo scene <strong>Pug (Android)</strong> saved on streaming PC</li>
+  <li class="done">✓ Ollama · llama3 · custom <code>Pug</code> · wholesome Modelfile · identity fix (speaks as Pug)</li>
+  <li class="done">✓ Python 3.12 + <code>Pug_Brain.py</code> · Desktop <code>Talk to Pug.bat</code> · Piper TTS auditioning</li>
+  <li class="done">✓ VB-Cable installed · OBS + Warudo · Pug voice via CABLE + Monitoring</li>
+  <li class="done">✓ Pugsan T-pose / reference art on disk (build later — Phase H)</li>
+  <li class="todo">→ Next (Phase C): lock Piper voice · mic talk · chat → Pug · mute · walk on/off · scene presets</li>
+</ul>
+
+<!-- ========== STEPS ========== -->
+<h2>3. Step-by-step — do in this order</h2>
+
+<div class="step">
+  <h3><span class="num">1</span> Talk to Pug (brain only) — <span class="done">DONE</span></h3>
+  <p><strong>Easiest:</strong> Desktop → double-click <code>Talk to Pug.bat</code></p>
+  <p>Or PowerShell from PugAI:</p>
+  <code>cd "$env:USERPROFILE\OneDrive\Desktop\App ideas\PTGG\PugAI"</code><br />
+  <code>&amp; "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" .\Pug_Brain.py</code>
+  <ul>
+    <li>Type to him · he answers + TTS speaks</li>
+    <li>Type <code>quit</code> to stop</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">2</span> Tune personality (Modelfile) — <span class="done">DONE</span> (wholesome locked)</h3>
+  <ul>
+    <li class="done">✓ Wholesome / warm / family-friendly · 1–2 short sentences · Papa nicknames (never “Sal”)</li>
+    <li>Rebuild anytime: from PugAI folder → <code>ollama create Pug -f Modelfile</code></li>
+    <li><em>Optional later:</em> Dolphin base for edgier comedy · keep stream-safe Pug as backup</li>
+    <li><em>Still tuning:</em> nickname usage percentages · Piper voice lock</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">3</span> Install VB-Cable (audio pipe for stream) — <span class="done">DONE</span></h3>
+  <ul>
+    <li class="done">✓ CABLE Input / CABLE Output in Windows Sound</li>
+    <li class="done">✓ Python → CABLE Input · OBS → CABLE Output · Monitoring Enabled · USB headset default</li>
+    <li><strong>Never</strong> set Windows default output to CABLE Input</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">4</span> Warudo body — Phase B — <span class="done">DONE</span></h3>
+  <ul>
+    <li class="done">✓ Scene <strong>Pug (Android)</strong> · transparent BG · Orbit camera · Focus Character</li>
+    <li>Optional polish: Idle animation · MediaPipe Tracker stays idle (Face/Hand off · Pug Motion Capture = No)</li>
+    <li>Keep Pug small in frame — corner mascot, not full-screen</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">5</span> OBS — put Pug on the canvas — <span class="done">MOSTLY DONE</span></h3>
+  <ul>
+    <li class="done">✓ Window Capture → Warudo · Pug Voice = Audio Input Capture → CABLE Output</li>
+    <li class="todo">Scene presets still to build:
+      <strong>Cam+Game+Pug</strong> · <strong>Game+Pug</strong> · <strong>Game only</strong> · <strong>Cam+Game</strong></li>
+    <li>Optional: crop/pad Warudo edges · Spout2 later</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">6</span> Mouth / expressions follow speech — <span class="todo">LATER POLISH</span></h3>
+  <ul>
+    <li>Wire TTS audio (or Warudo lip-sync) so mouth moves when Pug talks</li>
+    <li>Map expressions to mood later (happy / hype / gentle)</li>
+    <li>Goal: viewers see + hear the co-host, not a frozen statue</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">7</span> Stream controls (co-host manners) — <span class="todo">PHASE C</span></h3>
+  <ul>
+    <li>Hard mute: “Pug, be quiet until I call you back”</li>
+    <li>Walk on → talk → walk off (not always on screen)</li>
+    <li>Hotkeys first; Stream Deck as backup</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">8</span> Chat → Pug (Twitch / YouTube) — <span class="todo">PHASE C</span></h3>
+  <ul>
+    <li>Streamer.bot on Desktop → <code>Streaming\Streamer.bot-x64-1.0.4\</code> — good bridge candidate</li>
+    <li>Chat message → filter → Ollama <code>Pug</code> → TTS → avatar</li>
+    <li>Rate limits so he doesn’t spam</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">9</span> Dual-PC hookup — <span class="todo">PHASE D</span></h3>
+  <ul>
+    <li><strong>Gaming PC:</strong> game only → video out to Elgato</li>
+    <li><strong>Streaming PC:</strong> Elgato in + OBS + Warudo + Ollama Pug + TTS + VB-Cable</li>
+    <li>Cable: game GPU HDMI/DP → Elgato 4K60 → streaming PC</li>
+    <li>Later upgrade: gaming PC RAM 32 → 64 GB DDR5 (nice, not required for Pug)</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">10</span> Pugsan — <span class="todo">PHASE H</span> (after Pug is fun on stream)</h3>
+  <ul>
+    <li>T-pose art → 3D (Tripo or similar) → Blender rig / mouth shapes → <code>Pugsan.vrm</code></li>
+    <li>Load in Warudo · same Ollama brain · swap bodies for variety</li>
+    <li><strong>Do not</strong> block Pug’s first live streams waiting on this</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3><span class="num">11</span> Only after proof — think about selling — <span class="todo">PHASE I</span></h3>
+  <ul>
+    <li>Package control app + “Attitude” personality editor (Modelfile made friendly)</li>
+    <li>BYO avatar import for customers · Official Pug / Pugsan packs as your IP</li>
+    <li>Pricing later: one-time vs monthly — after beta streamers tell you what they’d pay</li>
+  </ul>
+</div>
+
+<!-- ========== PATHS ========== -->
+<h2>4. Important paths</h2>
+<table>
+  <tr><th>What</th><th>Where (streaming PC — current home)</th></tr>
+  <tr><td>Talk to Pug</td><td>Desktop → <code>Talk to Pug.bat</code></td></tr>
+  <tr><td>Pug brain</td><td><code>OneDrive\Desktop\App ideas\PTGG\PugAI\</code> (Modelfile, Pug_Brain.py, voices)</td></tr>
+  <tr><td>ALPHA VRM</td><td><code>...\PTGG\ALPHA.vrm</code></td></tr>
+  <tr><td>All PTGG files</td><td><code>...\Desktop\App ideas\PTGG\</code></td></tr>
+  <tr><td>Streamer.bot</td><td>Desktop → <code>Streaming\Streamer.bot-x64-1.0.4\</code></td></tr>
+  <tr><td>Master guide PDF</td><td>Desktop → <code>00 - PUG PROJECT MASTER GUIDE (Sal).pdf</code></td></tr>
+  <tr><td>This step-by-step</td><td>Repo <code>docs\PUG_PUGSAN_STEP_BY_STEP_BUILD</code> · Plans folder copy · Desktop PDF</td></tr>
+  <tr><td>Checklist (repo)</td><td><code>PapaThaiGG\docs\PUG_AI_COHOST_CHECKLIST.md</code></td></tr>
+</table>
+<p><strong>Gaming PC archive paths</strong> (early build — don’t use as live home): <code>D:\PTGG\PugAI\</code> · <code>D:\PTGG\ALPHA.vrm</code> · <code>D:\PTGG\Blender Pug and Pugsan avatar builds\Pug 1.blend</code> · <code>D:\PTGG\PapaThaiGG brand build\...\PapaThai Mascot Files\</code> · <code>D:\PTGG\VBCABLE_Driver_Pack45\</code></p>
+
+<!-- ========== NEXT ========== -->
+<h2>5. Your next session (Phase C prep)</h2>
+<ol>
+  <li>Lock one Piper voice for stream (Northern English leading · finish Joe/Norman audition)</li>
+  <li>OBS scene presets: Cam+Game+Pug · Game+Pug · Game only</li>
+  <li>Then: mic talk-to-Pug · chat → Pug · mute · walk on/off</li>
+</ol>
+
+<p class="footer">
+  FFmpeg / Node = optional · Elgato = Phase D · Fun first, retired pace · Mozart + Sal<br />
+  Synced into GitHub <code>docs/</code> · PapaThaiGG Plans · Desktop — safe to delete the old “Cursor work info” folder.
+</p>
+
+</body>
+</html>

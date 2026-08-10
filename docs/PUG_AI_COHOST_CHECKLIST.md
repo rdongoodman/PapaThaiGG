@@ -1,9 +1,10 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 9, 2026 (streaming PC · evening — wholesome Pug + voice routing)  
+**Updated:** August 10, 2026 (website review recommendations logged · step-by-step merged)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
 **Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
+**Ordered build steps:** Desktop → `PUG_PUGSAN_STEP_BY_STEP_BUILD.pdf` · repo `docs/PUG_PUGSAN_STEP_BY_STEP_BUILD.html`  
 **Also:** `Desktop\PapaThaiGG Plans\` · repo `docs/PUG_PROJECT_MASTER_GUIDE.pdf`  
 **Ask Mozart:** *“update master guide PDF”* after big milestones
 
@@ -24,6 +25,14 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 | **Hostname** | DESKTOP-JCVJ6HR | RANDYS_PC_TH |
 
 **Pug files (streaming PC):** `OneDrive\Desktop\App ideas\PTGG\PugAI\` · talk via Desktop **`Talk to Pug.bat`**
+
+**Key paths (from step-by-step guide):**
+| What | Where |
+|------|--------|
+| ALPHA.vrm | `...\PTGG\ALPHA.vrm` |
+| Streamer.bot (Phase C) | Desktop → `Streaming\Streamer.bot-x64-1.0.4\` |
+| Gaming PC archive (old home) | `D:\PTGG\` — Blender `...\Blender Pug and Pugsan avatar builds\Pug 1.blend` · Pugsan art under brand build / Mascot Files |
+| Brain choice | **Ollama local** = locked path · Dolphin optional later · cloud APIs only if selling to folks without GPUs |
 
 ---
 
@@ -186,20 +195,63 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 
 # SECTION 1 — Website (papathaigg.com)
 
+**When to work on this:** After avatar/stream phases prove fun — or small copy fixes anytime. **Do not block Pug build for website polish.**
+
+**Site review (Aug 10, 2026):** Foundation is solid — tactical vibe, good page split, Expat Intel is strongest teaching page. Gaps = brand accuracy copy + more Sal/Thailand depth over time.
+
 ## Done
 - [x] Mobile hero fix — readable on phones/tablets (Aug 6, 2026)
 - [x] Button padding / equal sizes for Expat · Field Guide · Meet Pug
 - [x] Live on GitHub Pages + Cloudflare
+- [x] Multi-page structure: Live · Discord · Loadout · Expat Intel · Field Guide · Meet Pug
+- [x] Expat Intel: ping table, visa breakdown, 3km villa case study, real cost numbers
+- [x] Field Guide hub: Krabi cards + Pug → Pugsan evolution block
 
-## To do
+## Fix when ready — brand accuracy (small text, big trust)
+
+Do these before Pug goes public on stream/site — no redesign needed.
+
+- [ ] **Meet Pug tone:** Change “sarcasm-fueled commentary” → **wholesome, loyal, family-friendly** co-host (match Modelfile)
+- [ ] **Meet Pug hardware:** Remove “RTX 5090 / The Beast” → **3080 Ti gaming PC + 3080 streaming PC** (dual-PC truth)
+- [ ] **Homepage specs:** Fix RAM line — **32 GB DDR5 (gaming) + 64 GB DDR4 (streaming)**, not “64GB DDR5” as one box
+- [ ] **“Under Construction” header:** Soften giant H2 on photos/videos section → small badge e.g. *“Gallery growing — Jan 2026”*; keep fun section names (In-Country Intel · Combat Footage · Base Camp)
+- [ ] **Meet Pug expectations:** Add honest phased line — *“Live on stream first · Discord & site chat coming soon”* (don’t overpromise before Phase F)
+
+## Add over time — aligned with vision (fun + teach + community)
+
+Retired pace — one item at a time is fine.
+
+1. [ ] **One-sentence mission under hero** — e.g. retired-pace gaming from the Andaman coast · real Thailand intel · zero cash grab · squad welcome
+2. [ ] **Light “About Papa” beat** — 35+ years travel · military · worldwide experience · why Ao Nang (short block, not a memoir)
+3. [ ] **Field Guide as real chapters** — each Krabi card → its own page over time:
+   - [ ] Ao Nang day-to-day (markets, scooter, rainy season)
+   - [ ] Railay / Phra Nang (“postcard office” story)
+   - [ ] Island day trips (4 Islands, Hong, etc.)
+   - [ ] Beyond Krabi — Lanta, Phuket, Malaysia runs, wider SE Asia
+4. [ ] **Homepage trio clickable** — In-Country Intel → recon · Combat Footage → live/YouTube · Base Camp → Discord
+5. [ ] **More Sal voice in copy** — warm, self-deprecating, “building for fun” (like recon Blender joke); balance tactical skin with hangout feel
+6. [ ] **Pugsan tease on Meet Pug** — one line: same brain, samurai pug body, joins squad later (Phase H)
+7. [ ] **When Pug ships — honest status on site** — online/offline · “talk on stream now” · “site chat soon” · update as features ship
+8. [ ] **Optional: “This week at Base Camp”** — one homepage line: what you’re playing · one Thailand tip · stream day (only if it stays fun, not a chore)
+
+## Phase F — Website chat (when avatars prove fun)
+
 - [ ] Meet Pug / recon pages match what Pug can **actually** do (update as features ship)
-- [ ] **Pug chat widget** on Meet Pug (later) — talk to Ollama; show online/offline honestly
+- [ ] **Pug chat widget** on Meet Pug — talk to Ollama; show online/offline honestly
 - [ ] Pugsan page updates when samurai avatar ships
-- [ ] Optional: “Pug status” blurb when major milestone hits
 
 ## Optional later (website)
+
 - [ ] SEO / industry guides (post-launch)
 - [ ] Download / stream links hub refresh when going live regularly
+- [ ] Persistent nav on subpages (nice-to-have)
+
+## Do NOT change (by design)
+
+- No donation / “buy me a coffee” pressure — not your brand
+- Keep tactical aesthetic — distinctive and on-brand
+- No rush for Pug 3D on web — text/voice first (Phase F)
+- Don’t bloat homepage — mobile readability is good now
 
 ---
 
@@ -281,10 +333,11 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 - [ ] Pricing: one-time vs monthly · update channel
 - [ ] See `AI_Stream_Cohost_App_Syllabus` in PapaThaiGG Plans folder
 
-## Phase H — Pugsan samurai (parallel build)
+## Phase H — Pugsan samurai (after Pug is fun on stream)
 - [ ] Image → 3D (Tripo or similar) from T-pose art
 - [ ] Blender rig + mouth shapes → **Pugsan.vrm**
 - [ ] Load in Warudo; swap with robot for variety
+- [ ] **Do not** block Pug’s first live streams waiting on Pugsan
 
 ## Stream layout notes
 - **Sal cam corner:** you or Sal avatar; **you** toggle on/off for all viewers
@@ -355,7 +408,7 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 4. OBS Settings → Monitoring Device = USB headset · Pug Voice = **Monitoring Enabled** ✓  
 5. **Skip** “Listen to this device” on CABLE Output (not needed — would echo)
 
-**Next session:** Phase C prep · nicer TTS voice · nickname percentage tuning
+**Next session:** Phase C prep · lock Piper voice · OBS scene presets · nickname percentage tuning
 
 ---
 
@@ -369,4 +422,6 @@ Pug’s **tone and nickname pick** change with how the run is going (via game ho
 - Elgato on desk — hook up after Phase B works solo
 - Mozart updates master PDF on Desktop + `PapaThaiGG Plans\` + GitHub `docs/`
 - **Personality buttons + voice modes** = Phase C (logged above — not forgotten)
+- **Ordered steps companion:** `PUG_PUGSAN_STEP_BY_STEP_BUILD` (Desktop PDF + repo docs) — safe after deleting old “Cursor work info” folder
+- Ollama local brain = correct MVP path (no paid API required)
 
