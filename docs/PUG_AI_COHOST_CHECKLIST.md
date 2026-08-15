@@ -1,7 +1,7 @@
 # PapaThaiGG Master Checklist
 
 **Owner:** PapaThaiGG (rdongoodman)  
-**Updated:** August 10, 2026 (Discord help workflow logged · website review · step-by-step merged)  
+**Updated:** August 15, 2026 — evening session (Elgato live · Game+Pug OBS · Stream Deck scene buttons working)  
 **Repo:** `GitHub/PapaThaiGG/docs/`  
 **Master PDF (open first):** Desktop → `00 - PUG PROJECT MASTER GUIDE (Sal).pdf`  
 **Ordered build steps:** Desktop → `PUG_PUGSAN_STEP_BY_STEP_BUILD.pdf` · repo `docs/PUG_PUGSAN_STEP_BY_STEP_BUILD.html`  
@@ -25,6 +25,31 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 | **Hostname** | DESKTOP-JCVJ6HR | RANDYS_PC_TH |
 
 **Pug files (streaming PC):** `OneDrive\Desktop\App ideas\PTGG\PugAI\` · talk via Desktop **`Talk to Pug.bat`**
+
+---
+
+## What’s next — do in this order (Aug 15 evening)
+
+Sal can stop anytime · pick up tomorrow · one step at a time.
+
+### A — Easy hardware (next session — ~30 min total)
+1. [ ] Stream Deck **Switch Profile** button (Default ↔ **PapaThaiGG Stream**)  
+2. [ ] **Logitech Brio** plug-in test (optional — Sal rarely on cam)  
+3. [ ] **Blue Yeti** quick mic test (USB headset stays main mic)  
+4. [ ] **Cable tidy** — gaffer tape / velcro ties on desk + Elgato USB run  
+
+### B — Fun with Pug (Phase C — the real co-host stuff)
+5. [ ] Full-stack **Talk to Pug** test on **Game + Pug** OBS scene (type → Ollama → TTS → Warudo + game visible)  
+6. [ ] **Mic talk** — Whisper/STT so you don’t type  
+7. [ ] **“Pug, be quiet until I call you back”** — mute flag  
+8. [ ] **Chat → Pug** — Twitch/YouTube via Streamer.bot → Ollama → TTS  
+
+### C — Optional polish (whenever — don’t block streaming)
+9. [ ] Rename OBS scenes if still **Scene 1 / Scene 2** → **Game only** / **Game + Pug**  
+10. [ ] Crop/Pad Warudo capture edges in OBS  
+11. [ ] **Spout2** for Warudo transparency (replace Chroma Key later)  
+12. [ ] **Cam+Game+Pug** scene when Brio is ready  
+13. [ ] Lock final TTS voice for viewers ( **HFC Male** default in `Talk to Pug.bat` is OK for now )  
 
 **Key paths (from step-by-step guide):**
 | What | Where |
@@ -57,12 +82,13 @@ Four separate tracks: **Website** · **Pug/Pugsan avatars** · **Discord** · **
 ### Build order (do not skip)
 1. **Phase B** — OBS (now) · Warudo scene **Pug (Android)** saved ✓  
 2. **Phase C** — Stream chat → Pug · mute · walk on/off  
-3. **Phase D** — Dual-PC Elgato  
-4. **Phase E** — Discord bot  
-5. **Phase F** — Website chat widget  
-6. **Phase G** — Remember viewers · “Where you been?” welcome-back · DMs where allowed  
-7. **Phase H** — Pugsan samurai  
-8. **Phase I** — Product / sell (optional)
+3. **Phase D** — Dual-PC Elgato + Stream Deck — **MOSTLY DONE** ✓ (Aug 15) · one easy hardware item left  
+4. **Phase C** — Smart co-host (chat · mic · mute) — **NEXT** after easy hardware  
+5. **Phase E** — Discord bot  
+6. **Phase F** — Website chat widget  
+7. **Phase G** — Remember viewers · “Where you been?” welcome-back · DMs where allowed  
+8. **Phase H** — Pugsan samurai  
+9. **Phase I** — Product / sell (optional)
 
 ### Sal’s extra goals (logged Aug 9)
 - [ ] Pug remembers users across stream + Discord + website  
@@ -114,9 +140,22 @@ Set target **weights** in Modelfile or `Pug_Brain.py` so nicknames feel natural,
 - [ ] Papa + Mozart pick final percentages after more live testing  
 - [ ] **Percentages shift by game mood** — doing poorly vs doing great (see below)  
 - [ ] Lock one **TTS voice** for stream (viewers stay consistent) · **not** multiple voices on stream  
-- [x] **Voice rankings (Aug 9–10):** 1 Northern English Piper · 2 Alan Piper · 3 Ryan · 4 Christopher · 5 Liam · 6 HFC Male Piper · 7 Roger · 8 Guy · 9 Thomas  
-- [ ] **MediaPipe notes (review later):** **Assets → MediaPipe Tracker** = scene webcam engine · **Characters → Pug → Motion Capture = No** = correct for TTS/audio lip-sync · tracker **Face/Hand/Pendulum = No** + **Show Camera = No** = idle/safe · **Character Freeze = No** (Freeze on Pug freezes the avatar, not the tracker) · deleting tracker asset = **this scene only** (Sal avatar later needs own scene or re-add tracker) · minus/delete may respawn (Warudo blueprint) — OK to leave asset idle · full mocap phase later when corner-cam or gestures wanted  
-- [ ] **More uncommon Piper:** Joe (trying) · Norman · then lock voice  
+- [x] **Voice rankings (Aug 15, 2026 — Sal audition):**
+  1. **HFC Male** Piper (US) — **#1**  
+  2. **Joe** Piper (US) — **#2**  
+  3. **Northern English** Piper (GB) — **#3**  
+  4. **Ryan** Edge — **confirmed #4** (Sal remembered why he liked it)  
+  5. **Christopher** Edge  
+  6. **Liam** Edge  
+  7. **Roger** Edge  
+  8. **Guy** Edge  
+  9. **Thomas** Edge  
+  **Dropped:** Alan · John · Lessac · Norman  
+  **Stream lock:** one voice once live (Piper preferred — HFC Male leading)  
+- [x] **Edge audition bats fixed** — wrong `%LOCALAPPDATA\Programs` path corrected on Desktop · Roger = `en-US-RogerNeural` · Thomas = `en-GB-ThomasNeural` — **COMPLETED (Aug 15)**  
+- [x] **HFC Male** default in `Talk to Pug.bat` (no env override needed) — **COMPLETED (Aug 15)**  
+- [x] **MediaPipe notes (review later):** **Assets → MediaPipe Tracker** = scene webcam engine · **Characters → Pug → Motion Capture = No** = correct for TTS/audio lip-sync · tracker **Face/Hand/Pendulum = No** + **Show Camera = No** = idle/safe · **Character Freeze = No** (Freeze on Pug freezes the avatar, not the tracker) · deleting tracker asset = **this scene only** (Sal avatar later needs own scene or re-add tracker) · minus/delete may respawn (Warudo blueprint) — OK to leave asset idle · full mocap phase later when corner-cam or gestures wanted  
+- [ ] **More Piper to try (optional):** southern English · amy · libritts — only if still hunting after Joe vs Northern English  
 - [ ] **Multilingual (near end — optional / may discard):** Pug/Pugsan reply in viewer language (YouTube/Twitch/Discord/website text) · personal vs global · spoken non-English needs multilingual TTS · integrate with Discord/website translators · Warudo N/A for chat  
 - [ ] **Friend recordings:** quiet 1–2 min with phone OK · lunch-table chat = lower quality · permission required  
 - [ ] **Lock voice once streaming starts** — no voice changes unless strong viewer feedback (brand consistency)  
@@ -283,9 +322,9 @@ Retired pace — one item at a time is fine.
 - [x] Identity fix — Pug speaks **as Pug**, not as Papa (*“Pug here, ready to stream with you”* ✓)
 - [ ] Upgrade TTS to nicer single voice (later — one voice for viewers)
 - [ ] Tune nickname usage percentages (see Nickname Bible)
-- [ ] Test with game open on gaming PC — GPU OK (later, dual-PC)
+- [x] Test with game open on gaming PC — Elgato + OBS live feed ✓ (Aug 15)
 
-## Phase B — Robot live (Warudo + OBS) — DONE (Aug 9 evening)
+## Phase B — Robot live (Warudo + OBS) — DONE (Aug 9 + Aug 15 refresh)
 - [x] Warudo: ALPHA.vrm · **Pug (Android)** · Orbit camera · Focus Character
 - [x] Transparent background ON · Render Environment OFF
 - [x] Scene saved: **Pug (Android)**
@@ -297,7 +336,36 @@ Retired pace — one item at a time is fine.
 - [ ] TTS → lip-sync / mouth (later polish)
 - [ ] Crop/Pad Warudo capture edges (optional polish)
 - [ ] **MediaPipe Tracker:** not required for TTS Pug — **Show Camera = No** + Face/Hand off · leave asset in scene OK · delete only affects current scene · see MediaPipe notes above  
-- [ ] Scene presets: **Cam+Game+Pug** · **Game+Pug** · **Game only**
+- [x] **Game + Pug** scene — OBS collection **PapaThaiGG Game + Pug** · Elgato game layer + Warudo Pug · voice test ✓ — **COMPLETED (Aug 15)**  
+- [x] Warudo in OBS: **`Warudo 0.15.0`** window · Capture Method **Windows 10** · Chroma Key Sim **1** / Smooth **1** (transparent over game) — **COMPLETED (Aug 15)**  
+- [x] **Game only** scene — Pug source hidden · **Pug Voice** muted · game full screen — **COMPLETED (Aug 15)**  
+- [ ] Scene preset still to add: **Cam+Game+Pug** (Brio later)  
+
+## Phase D — Dual-PC Elgato + Stream Deck — MOSTLY DONE (Aug 15)
+
+### Elgato + OBS — COMPLETED (Aug 15)
+- [x] **Elgato 4K X** — USB → streaming PC · gaming GPU **DisplayPort→HDMI** → **HDMI IN** · **Duplicate** display (not Extend) — **COMPLETED (Aug 15)**  
+- [x] OBS **Gaming PC** source (Video Capture Device · Elgato 4K X) · live gaming desktop/game ✓ — **COMPLETED (Aug 15)**  
+- [x] **NO SIGNAL fix:** gaming monitor sleep dropped Display 2 — set **never sleep** during setup · re-**Duplicate** restores feed — **COMPLETED (Aug 15)**  
+
+### Stream Deck XL — COMPLETED (Aug 15) except Switch Profile
+- [x] **Stream Deck XL** — 5 m USB → **streaming PC** · **Stream Deck 7.5.1** installed — **COMPLETED (Aug 15)**  
+- [x] Profile **PapaThaiGG Stream** created (Default profile left alone) — **COMPLETED (Aug 15)**  
+- [x] **OBS Studio plugin** (Elgato Marketplace) installed · **WebSocket server** enabled in OBS — **COMPLETED (Aug 15)**  
+- [x] **Button 1** → **Game only** OBS scene — **COMPLETED (Aug 15)** · working ✓  
+- [x] **Button 2** → **Game + Pug** OBS scene — **COMPLETED (Aug 15)** · working ✓  
+- [ ] **Switch Profile** button (Default ↔ PapaThaiGG Stream) — **NEXT (easy hardware #1)**  
+- [ ] Later Stream Deck: Pug mute · personality modes · vision toggle  
+
+### Gaming PC stability (ongoing — not Elgato proven cause)
+- [x] USB selective suspend → **Disabled** — **COMPLETED (Aug 15)**  
+- [x] NVIDIA control panel → **Prefer maximum performance** — **COMPLETED (Aug 15)**  
+- [x] Gaming monitor → **100 Hz** — **COMPLETED (Aug 15)**  
+- [ ] **nvlddmkm.sys** / PAGE_FAULT crashes — watch over next sessions (7+ months history)  
+
+### Optional polish (Phase D leftovers)
+- [ ] Cable tidy (gaffer/ties) — **easy hardware #4**  
+- [ ] **Spout2** for Warudo transparency (replace Chroma Key later) — optional polish  
 
 ## Phase C — Smart co-host
 - [ ] **Reliable path (main):** chat + Papa mic + Steam Deck + game hooks → Ollama → TTS → Warudo animation
@@ -458,15 +526,16 @@ Use this when auditing so the server feels like one PapaThaiGG world:
 
 ---
 
-## Tonight — voice fix — DONE ✓ (Aug 9)
+## Aug 15 evening session — DONE ✓
 
-1. Windows default output = **USB Audio Device** (headset) ✓  
-2. Volume mixer → **Python** → **CABLE Input** ✓  
-3. OBS **Pug Voice** = **Audio Input Capture → CABLE Output** ✓  
-4. OBS Settings → Monitoring Device = USB headset · Pug Voice = **Monitoring Enabled** ✓  
-5. **Skip** “Listen to this device” on CABLE Output (not needed — would echo)
+1. Elgato 4K X dual-PC capture live · **Duplicate** display rule locked in ✓  
+2. OBS **PapaThaiGG Game + Pug** collection · **Game only** + **Game + Pug** scenes ✓  
+3. Warudo transparent over game (Chroma Key Sim 1 / Smooth 1) ✓  
+4. Stream Deck XL on streaming PC · scene buttons 1 & 2 working ✓  
+5. Voice audition bats fixed · **HFC Male** leading · rankings logged ✓  
+6. Gaming PC stability tweaks (USB suspend off · NVIDIA max perf · 100 Hz) ✓  
 
-**Next session:** Phase C prep · lock Piper voice · OBS scene presets · nickname percentage tuning
+**Next session (when ready):** See **What’s next** section at top — easy hardware first, then Phase C fun with Pug.
 
 ---
 
@@ -477,7 +546,9 @@ Use this when auditing so the server feels like one PapaThaiGG world:
 - **Never** set Windows default output to CABLE Input — only route **Python** there
 - Warudo scenes are per-PC — redo Android on streaming PC
 - Booth ALPHA = no edit/re-export
-- Elgato on desk — hook up after Phase B works solo
+- Elgato 4K X live Aug 15 · gaming PC **Duplicate** always for capture · monitor **never sleep** during setup — **COMPLETED (Aug 15)**  
+- Stream Deck XL on streaming desk · USB to **streaming PC** (not gaming PC) · Button 1 = Game only · Button 2 = Game + Pug — **COMPLETED (Aug 15)**  
+- **Default TTS voice:** HFC Male Piper in `Talk to Pug.bat` — lock for viewers later (optional polish)  
 - Mozart updates master PDF on Desktop + `PapaThaiGG Plans\` + GitHub `docs/`
 - **Personality buttons + voice modes** = Phase C (logged above — not forgotten)
 - **Ordered steps companion:** `PUG_PUGSAN_STEP_BY_STEP_BUILD` (Desktop PDF + repo docs) — safe after deleting old “Cursor work info” folder

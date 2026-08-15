@@ -4,47 +4,580 @@
 <meta charset="utf-8" />
 <title>PapaThaiGG Master Checklist</title>
 <style>
-  @page { margin: 0.5in; }
-  body { font-family: Georgia, serif; font-size: 10pt; line-height: 1.3; color: #111; }
-  h1 { font-size: 16pt; margin: 0 0 4px; }
-  h2 { font-size: 12pt; margin: 14px 0 6px; border-bottom: 1px solid #333; page-break-after: avoid; }
-  h3 { font-size: 10.5pt; margin: 8px 0 4px; }
-  .meta { font-size: 9pt; color: #444; margin-bottom: 10px; }
-  ul { margin: 4px 0 8px 16px; padding: 0; }
-  li { margin: 2px 0; }
-  .done { color: #060; }
+  @page { size: letter; margin: 0.45in; }
+  body { font-family: "Segoe UI", Calibri, Georgia, serif; font-size: 9pt; line-height: 1.28; color: #111; max-width: 8in; margin: 0 auto; }
+  h1 { font-size: 16pt; margin: 0 0 6px; color: #0f172a; page-break-after: avoid; }
+  h2 { font-size: 11pt; margin: 12px 0 4px; padding-bottom: 2px; border-bottom: 2px solid #1e3a5f; color: #1e3a5f; page-break-after: avoid; }
+  h3 { font-size: 10pt; margin: 8px 0 3px; color: #243b53; page-break-after: avoid; }
+  ul { margin: 3px 0 6px 16px; padding: 0; }
+  li { margin: 1px 0; }
+  li.done { color: #166534; }
+  li.todo { color: #1a1a1a; }
+  code { font-family: Consolas, monospace; font-size: 8pt; background: #f1f5f9; padding: 0 2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 8pt; margin: 4px 0 8px; }
+  th, td { border: 1px solid #cbd5e1; padding: 3px 5px; vertical-align: top; }
+  th { background: #e2e8f0; }
+  hr { border: none; border-top: 1px solid #cbd5e1; margin: 8px 0; }
+  p { margin: 4px 0; }
 </style>
 </head>
 <body>
-  <h1>PapaThaiGG Master Checklist</h1>
-  <div class="meta">Aug 6, 2026 · Four sections: Website · Pug/Pugsan · Discord · Sal avatars</div>
+<h1>PapaThaiGG Master Checklist</h1>
 
-  <h2>Section 1 — Website (papathaigg.com)</h2>
-  <ul>
-    <li class="done">Mobile hero fix · button padding · GitHub live</li>
-    <li>Meet Pug pages match real capabilities · Pug chat widget later</li>
-  </ul>
+<strong>Owner:</strong> PapaThaiGG (rdongoodman)  
+<strong>Updated:</strong> August 15, 2026 — evening session (Elgato live · Game+Pug OBS · Stream Deck scene buttons working)  
+<strong>Repo:</strong> <code>GitHub/PapaThaiGG/docs/</code>  
+<strong>Master PDF (open first):</strong> Desktop → <code>00 - PUG PROJECT MASTER GUIDE (Sal).pdf</code>  
+<strong>Ordered build steps:</strong> Desktop → <code>PUG_PUGSAN_STEP_BY_STEP_BUILD.pdf</code> · repo <code>docs/PUG_PUGSAN_STEP_BY_STEP_BUILD.html</code>  
+<strong>Also:</strong> <code>Desktop\PapaThaiGG Plans\</code> · repo <code>docs/PUG_PROJECT_MASTER_GUIDE.pdf</code>  
+<strong>Ask Mozart:</strong> *“update master guide PDF”* after big milestones
 
-  <h2>Section 2 — Pug & Pugsan (AI co-host)</h2>
-  <ul>
-    <li class="done">Blender · VRM · Warudo · ALPHA · transparent BG · scene saved · renamed Pug</li>
-    <li>Ollama brain · TTS · OBS layers · chat/game reactions · Pugsan build</li>
-    <li>Walk on/off · “be quiet” command · not 32 Stream Deck buttons forever</li>
-  </ul>
+Four separate tracks: <strong>Website</strong> · <strong>Pug/Pugsan avatars</strong> · <strong>Discord</strong> · <strong>Sal’s personal avatars</strong>
 
-  <h2>Section 3 — Discord</h2>
-  <ul>
-    <li class="done">Arrivals → visa → rules · rank progression · themed channels</li>
-    <li>Audit permissions & leveling (test account) · pinned “how to rank up”</li>
-    <li>Optional: Pug bot channel · Engine Room · rate limits</li>
-  </ul>
+<strong>Philosophy:</strong> Fun first, retired pace, no rush. Profit later → more volunteering + gear + fun.
 
-  <h2>Section 4 — Sal’s personal avatars</h2>
-  <ul>
-    <li>Looks like you · cam/voice driven · separate from Pug</li>
-    <li>Hybrid or full 3D · Ao Nang background · OBS Sal cam layer</li>
-  </ul>
+---
 
-  <p><strong>Next:</strong> Ollama brain · OBS install · safe to close Warudo (scene saved).</p>
+<h2>Dual-PC map (streaming PC = Pug home)</h2>
+
+| | <strong>Gaming PC</strong> | <strong>Streaming PC</strong> |
+|--|----------------|------------------|
+| <strong>Job</strong> | Game only → capture out | <strong>Pug / AI / Warudo / OBS</strong> |
+| <strong>CPU</strong> | i9-12900KF | i9-10900KF |
+| <strong>RAM</strong> | 32 GB DDR5 | 64 GB DDR4 |
+| <strong>GPU</strong> | RTX 3080 Ti | RTX 3080 |
+| <strong>Hostname</strong> | DESKTOP-JCVJ6HR | RANDYS_PC_TH |
+
+<strong>Pug files (streaming PC):</strong> <code>OneDrive\Desktop\App ideas\PTGG\PugAI\</code> · talk via Desktop <strong><code>Talk to Pug.bat</code></strong>
+
+---
+
+<h2>What’s next — do in this order (Aug 15 evening)</h2>
+
+Sal can stop anytime · pick up tomorrow · one step at a time.
+
+<h3>A — Easy hardware (next session — ~30 min total)</h3>
+<ul><li class="todo">1. &#9744; Stream Deck <strong>Switch Profile</strong> button (Default ↔ <strong>PapaThaiGG Stream</strong>)  </li>
+<li class="todo">2. &#9744; <strong>Logitech Brio</strong> plug-in test (optional — Sal rarely on cam)  </li>
+<li class="todo">3. &#9744; <strong>Blue Yeti</strong> quick mic test (USB headset stays main mic)  </li>
+<li class="todo">4. &#9744; <strong>Cable tidy</strong> — gaffer tape / velcro ties on desk + Elgato USB run  </li>
+
+</ul><h3>B — Fun with Pug (Phase C — the real co-host stuff)</h3>
+<ul><li class="todo">5. &#9744; Full-stack <strong>Talk to Pug</strong> test on <strong>Game + Pug</strong> OBS scene (type → Ollama → TTS → Warudo + game visible)  </li>
+<li class="todo">6. &#9744; <strong>Mic talk</strong> — Whisper/STT so you don’t type  </li>
+<li class="todo">7. &#9744; <strong>“Pug, be quiet until I call you back”</strong> — mute flag  </li>
+<li class="todo">8. &#9744; <strong>Chat → Pug</strong> — Twitch/YouTube via Streamer.bot → Ollama → TTS  </li>
+
+</ul><h3>C — Optional polish (whenever — don’t block streaming)</h3>
+<ul><li class="todo">9. &#9744; Rename OBS scenes if still <strong>Scene 1 / Scene 2</strong> → <strong>Game only</strong> / <strong>Game + Pug</strong>  </li>
+<li class="todo">10. &#9744; Crop/Pad Warudo capture edges in OBS  </li>
+<li class="todo">11. &#9744; <strong>Spout2</strong> for Warudo transparency (replace Chroma Key later)  </li>
+<li class="todo">12. &#9744; <strong>Cam+Game+Pug</strong> scene when Brio is ready  </li>
+<li class="todo">13. &#9744; Lock final TTS voice for viewers ( <strong>HFC Male</strong> default in <code>Talk to Pug.bat</code> is OK for now )  </li>
+
+</ul><strong>Key paths (from step-by-step guide):</strong>
+| What | Where |
+|------|--------|
+| ALPHA.vrm | <code>...\PTGG\ALPHA.vrm</code> |
+| Streamer.bot (Phase C) | Desktop → <code>Streaming\Streamer.bot-x64-1.0.4\</code> |
+| Gaming PC archive (old home) | <code>D:\PTGG\</code> — Blender <code>...\Blender Pug and Pugsan avatar builds\Pug 1.blend</code> · Pugsan art under brand build / Mascot Files |
+| Brain choice | <strong>Ollama local</strong> = locked path · Dolphin optional later · cloud APIs only if selling to folks without GPUs |
+
+---
+
+<h2>Brand vision (PapaThaiGG · Pug · Pugsan)</h2>
+
+<strong>PapaThaiGG (Sal):</strong> Retired-pace gaming/stream brand — fun first, Thailand expat vibe, community on Discord + website.
+
+<strong>Pug:</strong> Wholesome AI co-host in the <strong>Android robot</strong> body (ALPHA.vrm). One <strong>Ollama brain</strong> — talks on stream, later in Discord + website chat. Default personality: <strong>sweet, upbeat, loyal</strong>; light humor OK; not mean or irritating.
+
+<strong>Pugsan:</strong> Same brain, <strong>samurai pug</strong> body — second mascot for variety (Phase H).
+
+<strong>Endgame:</strong> Pug/Pugsan live on stream → chat everywhere → remember viewers → welcome-back → optional DMs → sell toolkit to other streamers (low priority, after Sal proves it’s fun).
+
+---
+
+<h2>Endgame (technical)</h2>
+
+<strong>Stream:</strong> Pug live co-host (Ollama + Warudo + TTS + OBS). Sal cam optional — <strong>Game + Pug only</strong> layout OK.
+
+<strong>Everywhere (after stream proves fun):</strong> Same brain on <strong>Discord</strong>, <strong>website chat</strong>, viewer <strong>memory/welcome-back</strong>, optional <strong>DMs</strong>. <strong>Pugsan</strong> second body. <strong>Sell product</strong> to other streamers later (low priority).
+
+<h3>Build order (do not skip)</h3>
+1. <strong>Phase B</strong> — OBS (now) · Warudo scene <strong>Pug (Android)</strong> saved ✓  
+2. <strong>Phase C</strong> — Stream chat → Pug · mute · walk on/off  
+3. <strong>Phase D</strong> — Dual-PC Elgato + Stream Deck — <strong>MOSTLY DONE</strong> ✓ (Aug 15) · one easy hardware item left  
+4. <strong>Phase C</strong> — Smart co-host (chat · mic · mute) — <strong>NEXT</strong> after easy hardware  
+5. <strong>Phase E</strong> — Discord bot  
+6. <strong>Phase F</strong> — Website chat widget  
+7. <strong>Phase G</strong> — Remember viewers · “Where you been?” welcome-back · DMs where allowed  
+8. <strong>Phase H</strong> — Pugsan samurai  
+9. <strong>Phase I</strong> — Product / sell (optional)
+
+<h3>Sal’s extra goals (logged Aug 9)</h3>
+<ul><li class="todo">&#9744; Pug remembers users across stream + Discord + website  </li>
+<li class="todo">&#9744; Welcome back with exact time away (*“30 days, 2 hours, 16 minutes…”*)  </li>
+<li class="todo">&#9744; Global stream shout when returning viewer joins live  </li>
+<li class="todo">&#9744; Private one-on-one messages (Discord DMs, website; Twitch/FB/X limited)  </li>
+<li class="todo">&#9744; Pug + Pugsan both available for chat everywhere  </li>
+<li class="todo">&#9744; 3D on website/Discord = nice-to-have; text/voice first  </li>
+<li class="todo">&#9744; Social media full bots = unlikely · low priority  </li>
+<li class="todo">&#9744; Sell toolkit to gamers/VTubers · one-time or monthly TBD · <strong>after proof on Sal’s stream</strong></li>
+
+</ul><h3>Personality modes (future — logged Aug 9 evening)</h3>
+<ul><li class="done">&#9745; <strong>Default:</strong> wholesome / sweet / hype co-host (done in Modelfile)  </li>
+<li class="done">&#9745; <strong>Nickname list locked</strong> — see <strong>Nickname Bible</strong> section below  </li>
+<li class="todo">&#9744; <strong>Game-aware nicknames:</strong> use secondary names on hype moments when game hooks exist (Phase C)  </li>
+<li class="todo">&#9744; <strong>Modes to add later:</strong> funny · scared · light sarcastic (not irritating) · extra-wholesome · hype beast · etc.  </li>
+<li class="todo">&#9744; <strong>Switch by voice while streaming:</strong> e.g. *“Pug, wholesome mode”* · *“Pug, funny mode”* · *“Pug, snark mode”* (light only)  </li>
+<li class="todo">&#9744; <strong>Switch by Steam Deck:</strong> map modes to buttons on Sal’s <strong>32-button Stream Deck</strong> (one button = one personality)  </li>
+<li class="todo">&#9744; <strong>Implementation idea:</strong> separate Ollama models (<code>Pug-wholesome</code>, <code>Pug-funny</code>, …) <strong>or</strong> one model + system prompt swap in <code>Pug_Brain.py</code>  </li>
+<li class="todo">&#9744; Pugsan can share same mode system when samurai body ships</li>
+
+</ul><h3>Nickname Bible (Pug & Pugsan call Papa — never “Sal”)</h3>
+
+<strong>Primary (most of the time — brand core):</strong> Papa · Papa Thai · Papa T  
+
+<strong>Secondary (hype, wins, funny moments):</strong> PT · Big guy · Boss · Chief · Pops  
+
+<strong>Rare flavor:</strong> Khun Papa (Thai respect — like Kun Randy)  
+
+<strong>Pugsan only — occasional Japanese:</strong> Papa-san (パパさん) · Bossu (ボス) · Chīfu (チーフ) · Aniki (兄貴) · Denka-sama / Honored Papa (殿下様) · Khun Papa (クン・パパ)  
+
+<strong>Never:</strong> Sal · old man · grandpa · geezer · elder · dude · age-mocking insults  
+
+<strong>Game-aware use (Phase C+):</strong> secondary nicknames on big wins/clutches; primary for normal chat.
+
+<h3>Nickname usage percentages (tune later — logged Aug 9 late evening)</h3>
+
+Set target <strong>weights</strong> in Modelfile or <code>Pug_Brain.py</code> so nicknames feel natural, not random:
+
+| Nickname | Suggested starting weight | Notes |
+|----------|---------------------------|--------|
+| <strong>Papa</strong> | ~40% of primary uses | Most common — short and warm |
+| <strong>Papa Thai</strong> | ~35% of primary uses | Brand name — use often |
+| <strong>Papa T</strong> | ~25% of primary uses | Casual hype |
+| <strong>Secondary</strong> (PT · Big guy · Boss · Chief · Pops) | ~15–20% of <strong>all</strong> replies | Hype moments, wins, banter |
+| <strong>Khun Papa</strong> | ~2–5% | Rare Thai flavor |
+| <strong>Pugsan Japanese</strong> | ~5–10% when Pugsan active | Rare · special moments |
+
+<ul><li class="todo">&#9744; Papa + Mozart pick final percentages after more live testing  </li>
+<li class="todo">&#9744; <strong>Percentages shift by game mood</strong> — doing poorly vs doing great (see below)  </li>
+<li class="todo">&#9744; Lock one <strong>TTS voice</strong> for stream (viewers stay consistent) · <strong>not</strong> multiple voices on stream  </li>
+<li class="done">&#9745; <strong>Voice rankings (Aug 15, 2026 — Sal audition):</strong></li>
+  </ul>1. <strong>HFC Male</strong> Piper (US) — <strong>#1</strong>  
+  2. <strong>Joe</strong> Piper (US) — <strong>#2</strong>  
+  3. <strong>Northern English</strong> Piper (GB) — <strong>#3</strong>  
+  4. <strong>Ryan</strong> Edge — <strong>confirmed #4</strong> (Sal remembered why he liked it)  
+  5. <strong>Christopher</strong> Edge  
+  6. <strong>Liam</strong> Edge  
+  7. <strong>Roger</strong> Edge  
+  8. <strong>Guy</strong> Edge  
+  9. <strong>Thomas</strong> Edge  
+  <strong>Dropped:</strong> Alan · John · Lessac · Norman  
+  <strong>Stream lock:</strong> one voice once live (Piper preferred — HFC Male leading)  
+<ul><li class="done">&#9745; <strong>Edge audition bats fixed</strong> — wrong <code>%LOCALAPPDATA\Programs</code> path corrected on Desktop · Roger = <code>en-US-RogerNeural</code> · Thomas = <code>en-GB-ThomasNeural</code> — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>HFC Male</strong> default in <code>Talk to Pug.bat</code> (no env override needed) — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>MediaPipe notes (review later):</strong> <strong>Assets → MediaPipe Tracker</strong> = scene webcam engine · <strong>Characters → Pug → Motion Capture = No</strong> = correct for TTS/audio lip-sync · tracker <strong>Face/Hand/Pendulum = No</strong> + <strong>Show Camera = No</strong> = idle/safe · <strong>Character Freeze = No</strong> (Freeze on Pug freezes the avatar, not the tracker) · deleting tracker asset = <strong>this scene only</strong> (Sal avatar later needs own scene or re-add tracker) · minus/delete may respawn (Warudo blueprint) — OK to leave asset idle · full mocap phase later when corner-cam or gestures wanted  </li>
+<li class="todo">&#9744; <strong>More Piper to try (optional):</strong> southern English · amy · libritts — only if still hunting after Joe vs Northern English  </li>
+<li class="todo">&#9744; <strong>Multilingual (near end — optional / may discard):</strong> Pug/Pugsan reply in viewer language (YouTube/Twitch/Discord/website text) · personal vs global · spoken non-English needs multilingual TTS · integrate with Discord/website translators · Warudo N/A for chat  </li>
+<li class="todo">&#9744; <strong>Friend recordings:</strong> quiet 1–2 min with phone OK · lunch-table chat = lower quality · permission required  </li>
+<li class="todo">&#9744; <strong>Lock voice once streaming starts</strong> — no voice changes unless strong viewer feedback (brand consistency)  </li>
+<li class="todo">&#9744; <strong>Viewer feedback system:</strong> stream polls · website · Discord — “like Pug voice?” yes/no · other mascot feedback  </li>
+<li class="todo">&#9744; <strong>Stand out vs common voices:</strong> avoid overused Edge defaults · avoid ElevenLabs “Josh” presets · pick less-common Piper models  </li>
+<li class="todo">&#9744; <strong>Custom voice path (before paid):</strong> record <strong>British/Canadian expat friends</strong> in Ao Nang (with permission) → clone for Pug/Pugsan  </li>
+<li class="todo">&#9744; <strong>Papa voice clone + British cadence blend</strong> — test Coqui XTTS · free · quality TBD  </li>
+<li class="todo">&#9744; <strong>AI “generate voice from nothing”</strong> — research ElevenLabs custom · cost · one-time vs monthly · only if free paths fail  </li>
+<li class="todo">&#9744; <strong>Fully unique studio voice — LAST RESORT:</strong> pro voice actor or premium AI studio · document cost + licensing  </li>
+<li class="todo">&#9744; <strong>Paid TTS research (later):</strong> ElevenLabs · Play.ht · monthly vs one-time · stream/commercial ToS  </li>
+<li class="todo">&#9744; <strong>Volume tune:</strong> Roger felt loud — <code>PUG_VOICE_VOLUME</code> in Pug_Brain.py (now 0.82)  </li>
+<li class="todo">&#9744; <strong>Pause / hesitancy tune (later):</strong> shorter one-sentence replies · SSML · merge lines · Piper  </li>
+<li class="todo">&#9744; <strong>TTS speed (later):</strong> local Piper · pre-warm · on-screen “Pug is thinking…”  </li>
+<li class="todo">&#9744; <strong>Discord (Phase E):</strong> text first · Pug/Pugsan voice replies later (TTS clips · VC)  </li>
+<li class="todo">&#9744; <strong>Website (Phase F):</strong> text chat first · optional browser voice · Pugsan JP/EN voice modes  </li>
+
+</ul><h3>Game-mood nicknames & lines (future — logged Aug 9 late evening)</h3>
+
+Pug’s <strong>tone and nickname pick</strong> change with how the run is going (via game hooks, your voice, or Stream Deck):
+
+| Game mood | Nickname vibe | Example lines |
+|-----------|---------------|---------------|
+| <strong>Rough night / losing</strong> | Stick to <strong>primary</strong> — Papa, Papa Thai, Papa T · gentle, not mean | *“Papa, what’s happening tonight? We’ll turn it around.”* · *“You got this, Papa T — shake it off.”* |
+| <strong>Crushing it / big win</strong> | More <strong>secondary</strong> + rare flavor · hype energy | *“Boss, that was clean!”* · *“Khun Papa kicks butt!”* · *“Papa-san kicks butt!”* (Pugsan) |
+| <strong>Normal / mid game</strong> | Default percentage table above | Wholesome co-host banter |
+
+<ul><li class="todo">&#9744; Tie mood to game signals (deaths, streak, score) or Papa saying *“rough night”* / *“we’re cooking”*  </li>
+<li class="todo">&#9744; Percentages are <strong>starting guesses</strong> — tune after live streams</li>
+
+</ul><h3>Custom AI voices & “impersonations” (future · legal caution)</h3>
+
+<strong>Idea:</strong> Funny occasional voice styles — accent vibes, character energy, custom cloned voices.
+
+<strong>Legal / platform reality (not legal advice):</strong>
+- <strong>Celebrity impersonations</strong> (Sean Connery, etc.) on a <strong>public stream</strong> = risky — publicity rights, platform rules, monetization issues. <strong>Not recommended</strong> for PapaThaiGG streams.
+- <strong>Safer paths:</strong> original Pug/Pugsan voices · generic accents/archetypes (*“wise mentor”*, *“hype announcer”*) · <strong>your own</strong> voice clone · licensed voice packs where terms allow streaming.
+<ul><li class="todo">&#9744; Research TTS options: Edge TTS · Piper · Coqui · ElevenLabs (check ToS + commercial/stream use)  </li>
+<li class="todo">&#9744; <strong>One default stream voice</strong> for viewers + optional <strong>non-celebrity</strong> style modes via Stream Deck (if legal and ToS-safe)  </li>
+<li class="todo">&#9744; <strong>Skip celebrity impersonations</strong> unless lawyer/licensed — note for future: probably forget this idea for public stream  </li>
+<li class="todo">&#9744; Private offline jokes in bat file only = still gray area — treat as <strong>no</strong> for brand safety  </li>
+<li class="todo">&#9744; <strong>Mixed/original voice design</strong> — blend or generate a unique Pug voice (not copying one celebrity)  </li>
+<li class="todo">&#9744; <strong>Papa voice clone</strong> — optional funny mode · check ToS + stream use · probably not default on stream</li>
+<li class="todo">&#9744; <strong>Pugsan dual voice modes (Phase H):</strong> (1) Japanese-primary — mostly JP, little English · (2) Japanese-English bilingual mix</li>
+<li class="todo">&#9744; <strong>TTS speed:</strong> neural Edge voice has ~1–4s delay (internet) · first reply slower · improve later with local Piper or pre-cache</li>
+
+</ul><h3>VRM gestures, dances & expressions (future — Pug + Pugsan)</h3>
+
+<ul><li class="todo">&#9744; <strong>Warudo animations</strong> — idle · wave · hype dance · sad slump · victory pose · walk on/off  </li>
+<li class="todo">&#9744; Trigger dances/gestures from Stream Deck · game events · chat · TTS timing  </li>
+<li class="todo">&#9744; <strong>Pugsan build:</strong> T-pose art → 3D → rig → <strong>Pugsan.vrm</strong> with same gesture library  </li>
+<li class="todo">&#9744; Lip-sync to TTS (later polish) · eye/mouth expressions in Warudo  </li>
+<li class="todo">&#9744; Custom animation clips for ALPHA + Pugsan bodies in Warudo</li>
+
+</ul><h3>Game awareness — what’s possible (logged Aug 9 evening)</h3>
+
+
+| Level | What happens | Realistic? | When |
+|-------|----------------|------------|------|
+| <strong>Easy</strong> | Pug reacts to <strong>chat</strong>, <strong>your voice</strong>, or <strong>Stream Deck button</strong> you press | ✓ Yes | Phase C |
+| <strong>Medium</strong> | Pug reacts to <strong>game events</strong> via hooks/APIs for specific games you play | ✓ Yes, per-game | Phase C–D |
+| <strong>Hard</strong> | Pug <strong>watches the screen</strong> like a human (AI vision on game capture) | △ Experimental — slow, GPU-heavy, not reliable alone | Future test |
+| <strong>Animations</strong> | Victory dance, sad slump, hype bounce in Warudo | ✓ Yes — <strong>triggered</strong> by any event above | Phase C |
+
+<strong>Honest answer:</strong> Pug won’t silently “see” you lose a fight and react <strong>by magic</strong> on day one. We <strong>build event pipes</strong> (chat → you → hotkey → game hook → vision). Each pipe can fire Ollama + TTS + Warudo animation. <strong>Chat + voice + Steam Deck + game hooks</strong> is the reliable path first.
+
+<h3>Vision experiment — “Pug watch the game” (future · fun to try · not now)</h3>
+
+<ul><li class="todo">&#9744; <strong>Experimental:</strong> AI vision on game capture — Pug/Pugsan “watch” screen and react (slow, GPU-heavy, may not work well — OK to turn off forever if bad)  </li>
+<li class="todo">&#9744; <strong>Steam Deck toggle ON:</strong> before a big fight/group battle — tap button → vision mode starts watching  </li>
+<li class="todo">&#9744; <strong>Steam Deck toggle OFF:</strong> tap same (or second) button → vision mode stops — <strong>not on all the time</strong> (saves GPU)  </li>
+<li class="todo">&#9744; Works <strong>alongside</strong> reliable pipes (chat · mic · game hooks) — not a replacement  </li>
+<li class="todo">&#9744; If too slow or flaky: disable feature, keep the rest — still a fun experiment when time comes  </li>
+<li class="todo">&#9744; Same toggle idea for Pugsan when samurai body ships</li>
+
+</ul>---
+
+<h1>SECTION 1 — Website (papathaigg.com)</h1>
+
+<strong>When to work on this:</strong> After avatar/stream phases prove fun — or small copy fixes anytime. <strong>Do not block Pug build for website polish.</strong>
+
+<strong>Site review (Aug 10, 2026):</strong> Foundation is solid — tactical vibe, good page split, Expat Intel is strongest teaching page. Gaps = brand accuracy copy + more Sal/Thailand depth over time.
+
+<h2>Done</h2>
+<ul><li class="done">&#9745; Mobile hero fix — readable on phones/tablets (Aug 6, 2026)</li>
+<li class="done">&#9745; Button padding / equal sizes for Expat · Field Guide · Meet Pug</li>
+<li class="done">&#9745; Live on GitHub Pages + Cloudflare</li>
+<li class="done">&#9745; Multi-page structure: Live · Discord · Loadout · Expat Intel · Field Guide · Meet Pug</li>
+<li class="done">&#9745; Expat Intel: ping table, visa breakdown, 3km villa case study, real cost numbers</li>
+<li class="done">&#9745; Field Guide hub: Krabi cards + Pug → Pugsan evolution block</li>
+
+</ul><h2>Fix when ready — brand accuracy (small text, big trust)</h2>
+
+Do these before Pug goes public on stream/site — no redesign needed.
+
+<ul><li class="todo">&#9744; <strong>Meet Pug tone:</strong> Change “sarcasm-fueled commentary” → <strong>wholesome, loyal, family-friendly</strong> co-host (match Modelfile)</li>
+<li class="todo">&#9744; <strong>Meet Pug hardware:</strong> Remove “RTX 5090 / The Beast” → <strong>3080 Ti gaming PC + 3080 streaming PC</strong> (dual-PC truth)</li>
+<li class="todo">&#9744; <strong>Homepage specs:</strong> Fix RAM line — <strong>32 GB DDR5 (gaming) + 64 GB DDR4 (streaming)</strong>, not “64GB DDR5” as one box</li>
+<li class="todo">&#9744; <strong>“Under Construction” header:</strong> Soften giant H2 on photos/videos section → small badge e.g. *“Gallery growing — Jan 2026”*; keep fun section names (In-Country Intel · Combat Footage · Base Camp)</li>
+<li class="todo">&#9744; <strong>Meet Pug expectations:</strong> Add honest phased line — *“Live on stream first · Discord & site chat coming soon”* (don’t overpromise before Phase F)</li>
+
+</ul><h2>Add over time — aligned with vision (fun + teach + community)</h2>
+
+Retired pace — one item at a time is fine.
+
+<ul><li class="todo">1. &#9744; <strong>One-sentence mission under hero</strong> — e.g. retired-pace gaming from the Andaman coast · real Thailand intel · zero cash grab · squad welcome</li>
+<li class="todo">2. &#9744; <strong>Light “About Papa” beat</strong> — 35+ years travel · military · worldwide experience · why Ao Nang (short block, not a memoir)</li>
+<li class="todo">3. &#9744; <strong>Field Guide as real chapters</strong> — each Krabi card → its own page over time:</li>
+   </ul>- [ ] Ao Nang day-to-day (markets, scooter, rainy season)
+   - [ ] Railay / Phra Nang (“postcard office” story)
+   - [ ] Island day trips (4 Islands, Hong, etc.)
+   - [ ] Beyond Krabi — Lanta, Phuket, Malaysia runs, wider SE Asia
+<ul><li class="todo">4. &#9744; <strong>Homepage trio clickable</strong> — In-Country Intel → recon · Combat Footage → live/YouTube · Base Camp → Discord</li>
+<li class="todo">5. &#9744; <strong>More Sal voice in copy</strong> — warm, self-deprecating, “building for fun” (like recon Blender joke); balance tactical skin with hangout feel</li>
+<li class="todo">6. &#9744; <strong>Pugsan tease on Meet Pug</strong> — one line: same brain, samurai pug body, joins squad later (Phase H)</li>
+<li class="todo">7. &#9744; <strong>When Pug ships — honest status on site</strong> — online/offline · “talk on stream now” · “site chat soon” · update as features ship</li>
+<li class="todo">8. &#9744; <strong>Optional: “This week at Base Camp”</strong> — one homepage line: what you’re playing · one Thailand tip · stream day (only if it stays fun, not a chore)</li>
+
+</ul><h2>Phase F — Website chat (when avatars prove fun)</h2>
+
+<ul><li class="todo">&#9744; Meet Pug / recon pages match what Pug can <strong>actually</strong> do (update as features ship)</li>
+<li class="todo">&#9744; <strong>Pug chat widget</strong> on Meet Pug — talk to Ollama; show online/offline honestly</li>
+<li class="todo">&#9744; Pugsan page updates when samurai avatar ships</li>
+
+</ul><h2>Optional later (website)</h2>
+
+<ul><li class="todo">&#9744; SEO / industry guides (post-launch)</li>
+<li class="todo">&#9744; Download / stream links hub refresh when going live regularly</li>
+<li class="todo">&#9744; Persistent nav on subpages (nice-to-have)</li>
+
+</ul><h2>Do NOT change (by design)</h2>
+
+- No donation / “buy me a coffee” pressure — not your brand
+- Keep tactical aesthetic — distinctive and on-brand
+- No rush for Pug 3D on web — text/voice first (Phase F)
+- Don’t bloat homepage — mobile readability is good now
+
+---
+
+<h1>SECTION 2 — Pug & Pugsan (independent AI co-host avatars)</h1>
+
+<strong>Not Sal.</strong> One <strong>Ollama brain</strong>, two bodies: <strong>ALPHA robot</strong> + <strong>Pugsan samurai pug</strong>.
+
+<h2>Vision</h2>
+- Independent AI mascot — walks on, talks, reacts, walks off
+- Chat + voice commands + in-game moments (phased)
+- Transparent Warudo layer over game in OBS
+- Same brain later for Discord + website chat
+
+<h2>Done</h2>
+<ul><li class="done">&#9745; Blender 5.2 + VRM · ALPHA.vrm · Warudo scene (gaming PC prototype)</li>
+<li class="done">&#9745; <strong>Streaming PC (Aug 9, 2026):</strong> Ollama · llama3 · custom <strong>Pug</strong> model · Python 3.12</li>
+<li class="done">&#9745; Pug_Brain.py works · <strong>Talk to Pug.bat</strong> on Desktop</li>
+<li class="done">&#9745; Modelfile → <strong>wholesome</strong> personality rebuilt (no snark / no “ugh”) · tested *“Hey, pal”* ✓</li>
+<li class="done">&#9745; VB-Cable installed · OBS installed</li>
+<li class="done">&#9745; Master guide PDF on Desktop + <code>PapaThaiGG Plans\</code></li>
+<li class="done">&#9745; Pugsan reference art in PTGG brand build folders</li>
+<li class="done">&#9745; <strong>Lesson learned:</strong> Windows default output must stay on <strong>USB headset</strong> — not CABLE Input (YouTube + OBS meter fix)</li>
+
+</ul><h2>Phase A — Brain (Ollama + TTS) — DONE on streaming PC</h2>
+<ul><li class="done">&#9745; Pull llama3; custom <strong>Pug</strong> from Modelfile</li>
+<li class="done">&#9745; Wholesome 1–2 sentence replies in Modelfile (+ example messages)</li>
+<li class="done">&#9745; Windows TTS via Pug_Brain.py (David voice · prints “Speaking now…”)</li>
+<li class="done">&#9745; <strong>Hear Pug in headset + OBS meter</strong> — Python → CABLE Input · OBS → CABLE Output · Monitoring Enabled ✓ (Aug 9)</li>
+<li class="done">&#9745; Identity fix — Pug speaks <strong>as Pug</strong>, not as Papa (*“Pug here, ready to stream with you”* ✓)</li>
+<li class="todo">&#9744; Upgrade TTS to nicer single voice (later — one voice for viewers)</li>
+<li class="todo">&#9744; Tune nickname usage percentages (see Nickname Bible)</li>
+<li class="done">&#9745; Test with game open on gaming PC — Elgato + OBS live feed ✓ (Aug 15)</li>
+
+</ul><h2>Phase B — Robot live (Warudo + OBS) — DONE (Aug 9 + Aug 15 refresh)</h2>
+<ul><li class="done">&#9745; Warudo: ALPHA.vrm · <strong>Pug (Android)</strong> · Orbit camera · Focus Character</li>
+<li class="done">&#9745; Transparent background ON · Render Environment OFF</li>
+<li class="done">&#9745; Scene saved: <strong>Pug (Android)</strong></li>
+<li class="done">&#9745; OBS: Window Capture → Warudo · Pug small in corner ✓</li>
+<li class="done">&#9745; OBS: <strong>Pug Voice</strong> — Audio Input Capture → <strong>CABLE Output</strong> ✓</li>
+<li class="done">&#9745; Route TTS: Volume mixer → <strong>Python</strong> → CABLE Input (per-app)</li>
+<li class="done">&#9745; Hear Pug in headset (OBS Monitoring Enabled · USB Audio Device)</li>
+<li class="todo">&#9744; Idle animation picked (optional polish)</li>
+<li class="todo">&#9744; TTS → lip-sync / mouth (later polish)</li>
+<li class="todo">&#9744; Crop/Pad Warudo capture edges (optional polish)</li>
+<li class="todo">&#9744; <strong>MediaPipe Tracker:</strong> not required for TTS Pug — <strong>Show Camera = No</strong> + Face/Hand off · leave asset in scene OK · delete only affects current scene · see MediaPipe notes above  </li>
+<li class="done">&#9745; <strong>Game + Pug</strong> scene — OBS collection <strong>PapaThaiGG Game + Pug</strong> · Elgato game layer + Warudo Pug · voice test ✓ — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; Warudo in OBS: <strong><code>Warudo 0.15.0</code></strong> window · Capture Method <strong>Windows 10</strong> · Chroma Key Sim <strong>1</strong> / Smooth <strong>1</strong> (transparent over game) — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>Game only</strong> scene — Pug source hidden · <strong>Pug Voice</strong> muted · game full screen — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="todo">&#9744; Scene preset still to add: <strong>Cam+Game+Pug</strong> (Brio later)  </li>
+
+</ul><h2>Phase D — Dual-PC Elgato + Stream Deck — MOSTLY DONE (Aug 15)</h2>
+
+<h3>Elgato + OBS — COMPLETED (Aug 15)</h3>
+<ul><li class="done">&#9745; <strong>Elgato 4K X</strong> — USB → streaming PC · gaming GPU <strong>DisplayPort→HDMI</strong> → <strong>HDMI IN</strong> · <strong>Duplicate</strong> display (not Extend) — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; OBS <strong>Gaming PC</strong> source (Video Capture Device · Elgato 4K X) · live gaming desktop/game ✓ — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>NO SIGNAL fix:</strong> gaming monitor sleep dropped Display 2 — set <strong>never sleep</strong> during setup · re-<strong>Duplicate</strong> restores feed — <strong>COMPLETED (Aug 15)</strong>  </li>
+
+</ul><h3>Stream Deck XL — COMPLETED (Aug 15) except Switch Profile</h3>
+<ul><li class="done">&#9745; <strong>Stream Deck XL</strong> — 5 m USB → <strong>streaming PC</strong> · <strong>Stream Deck 7.5.1</strong> installed — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; Profile <strong>PapaThaiGG Stream</strong> created (Default profile left alone) — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>OBS Studio plugin</strong> (Elgato Marketplace) installed · <strong>WebSocket server</strong> enabled in OBS — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; <strong>Button 1</strong> → <strong>Game only</strong> OBS scene — <strong>COMPLETED (Aug 15)</strong> · working ✓  </li>
+<li class="done">&#9745; <strong>Button 2</strong> → <strong>Game + Pug</strong> OBS scene — <strong>COMPLETED (Aug 15)</strong> · working ✓  </li>
+<li class="todo">&#9744; <strong>Switch Profile</strong> button (Default ↔ PapaThaiGG Stream) — <strong>NEXT (easy hardware #1)</strong>  </li>
+<li class="todo">&#9744; Later Stream Deck: Pug mute · personality modes · vision toggle  </li>
+
+</ul><h3>Gaming PC stability (ongoing — not Elgato proven cause)</h3>
+<ul><li class="done">&#9745; USB selective suspend → <strong>Disabled</strong> — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; NVIDIA control panel → <strong>Prefer maximum performance</strong> — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="done">&#9745; Gaming monitor → <strong>100 Hz</strong> — <strong>COMPLETED (Aug 15)</strong>  </li>
+<li class="todo">&#9744; <strong>nvlddmkm.sys</strong> / PAGE_FAULT crashes — watch over next sessions (7+ months history)  </li>
+
+</ul><h3>Optional polish (Phase D leftovers)</h3>
+<ul><li class="todo">&#9744; Cable tidy (gaffer/ties) — <strong>easy hardware #4</strong>  </li>
+<li class="todo">&#9744; <strong>Spout2</strong> for Warudo transparency (replace Chroma Key later) — optional polish  </li>
+
+</ul><h2>Phase C — Smart co-host</h2>
+<ul><li class="todo">&#9744; <strong>Reliable path (main):</strong> chat + Papa mic + Steam Deck + game hooks → Ollama → TTS → Warudo animation</li>
+<li class="todo">&#9744; <strong>Talk to Pug with mic</strong> (Whisper/STT) — no typing</li>
+<li class="todo">&#9744; <strong>Personality modes</strong> — voice command + Stream Deck buttons (see goals above)</li>
+<li class="todo">&#9744; Chat → Ollama → TTS (Twitch/YouTube first)</li>
+<li class="todo">&#9744; <strong>“Pug, be quiet until I call you back”</strong> — mute flag</li>
+<li class="todo">&#9744; Walk on → talk → walk off (game or near Sal cam box)</li>
+<li class="todo">&#9744; Pug <strong>movement</strong> / expressions in Warudo tied to speech</li>
+<li class="todo">&#9744; Game reactions: hotkeys first → game hooks later</li>
+<li class="todo">&#9744; <strong>Vision experiment (optional):</strong> AI watches game capture · Steam Deck ON/OFF toggle · GPU-heavy · fun to try · OK to disable</li>
+<li class="todo">&#9744; Welcome / returning viewer memory in chat bot</li>
+<li class="todo">&#9744; Stream Deck: personality buttons + backup hotkeys (not 32 manual macros forever)</li>
+
+</ul><h2>Phase I — Package for streamers / VTubers to buy (optional · after Sal proves it)</h2>
+
+<strong>Goal:</strong> Turn PapaThaiGG’s working Pug stack into a <strong>product other streamers can buy</strong> — one-time or monthly TBD.
+
+<strong>Already modular (good for packaging later):</strong>
+<ul><li class="done">&#9745; <code>Pug_Brain.py</code> — brain + voice config at top of file</li>
+<li class="done">&#9745; <code>Modelfile</code> — personality (editable text)</li>
+<li class="done">&#9745; <code>Talk to Pug.bat</code> — simple launcher</li>
+<li class="done">&#9745; Checklist + master PDF — setup docs</li>
+<li class="done">&#9745; OBS + VB-Cable routing documented</li>
+
+</ul><strong>Still needed before selling:</strong>
+<ul><li class="todo">&#9744; Pug fun on <strong>Sal’s stream</strong> for weeks (proof first)</li>
+<li class="todo">&#9744; One-click or guided <strong>installer</strong> (Ollama · Python deps · VB-Cable check)</li>
+<li class="todo">&#9744; <strong>Settings UI</strong> or simple config screen (voice · personality · OBS profile)</li>
+<li class="todo">&#9744; <strong>BYO VRM avatar</strong> — buyer brings own body, our brain + voice + OBS template</li>
+<li class="todo">&#9744; License + <strong>Terms of Service</strong> (TTS providers · stream use · no celebrity voices)</li>
+<li class="todo">&#9744; Support docs / video walkthrough</li>
+<li class="todo">&#9744; Pricing: one-time vs monthly · update channel</li>
+<li class="todo">&#9744; See <code>AI_Stream_Cohost_App_Syllabus</code> in PapaThaiGG Plans folder</li>
+
+</ul><h2>Phase H — Pugsan samurai (after Pug is fun on stream)</h2>
+<ul><li class="todo">&#9744; Image → 3D (Tripo or similar) from T-pose art</li>
+<li class="todo">&#9744; Blender rig + mouth shapes → <strong>Pugsan.vrm</strong></li>
+<li class="todo">&#9744; Load in Warudo; swap with robot for variety</li>
+<li class="todo">&#9744; <strong>Do not</strong> block Pug’s first live streams waiting on Pugsan</li>
+
+</ul><h2>Stream layout notes</h2>
+- <strong>Sal cam corner:</strong> you or Sal avatar; <strong>you</strong> toggle on/off for all viewers
+- Viewers <strong>cannot</strong> hide your cam individually on Twitch/YouTube
+- Pug can walk onto game <strong>or</strong> cam box area
+
+---
+
+<h1>SECTION 3 — Discord (PapaThaiGG server)</h1>
+
+<strong>When to work on this:</strong> Phase E — after Pug is fun on stream. Server setup/audit can happen anytime at retired pace.
+
+<strong>Brand goal:</strong> Discord = squad hangout that matches <strong>stream · website · Pug/Pugsan · social links</strong> — fun first, teach Thailand/expat intel, zero cash-grab vibe.
+
+---
+
+<h2>How Mozart helps with Discord (what I can / cannot do)</h2>
+
+<strong>Cursor cannot log into Discord.</strong> No AI (including me) can open your personal Discord account or browse your server on its own. Discord does not allow that — and there is no Discord connection in this project.
+
+<h3>What I <strong>can</strong> do (very helpful — we use this all the time)</h3>
+- Review <strong>screenshots</strong> you paste into Cursor (channels, roles, permissions, welcome flow, pins)
+- Review <strong>copy you paste</strong> (rules, welcome messages, channel topics, bot text)
+- Write <strong>bot code</strong> for Pug (Phase E) — you run it on your PC with your bot token
+- Suggest <strong>channel names, categories, pinned posts, onboarding copy</strong> — PapaThaiGG voice
+- Audit <strong>permissions & rank gates</strong> from screenshots — “who can see what?”
+- Align Discord with <strong>website · stream · Pug/Pugsan story · social links</strong>
+- Build <strong>checklists</strong> like this one — you apply changes in Discord yourself
+
+<h3>What I <strong>cannot</strong> do</h3>
+- Log in as you or browse the server live
+- See messages, members, or settings unless <strong>you share</strong> them
+- Click buttons in Discord or change roles/channels directly
+- Read DMs or private channels you don’t show me
+
+<h3>What <strong>you</strong> do — so I can help Discord kick butt</h3>
+
+When you want a review, send <strong>one or more</strong> of these in Cursor chat:
+
+| Share this | Why it helps |
+|------------|----------------|
+| <strong>Screenshot: full channel list</strong> (left sidebar, categories expanded) | Map structure · spot overload · Pug placement |
+| <strong>Screenshot: Server Settings → Roles</strong> (role list + one role’s permissions) | Rank gates · mod vs member · Pug bot role later |
+| <strong>Screenshot: onboarding path</strong> — <code>#arrivals</code> → visa reaction → <code>#house_rules</code> | Test what recruits actually see |
+| <strong>Screenshot: <code>#social_media_links_website</code></strong> (or equivalent) | Match papathaigg.com + Twitch/YouTube/Kick links |
+| <strong>Screenshot: welcome message</strong> (Carl-bot or other) | Tone check · Pug “coming soon” wording |
+| <strong>Paste: <code>#house_rules</code></strong> text | Family-friendly · English-only · squad vibe |
+| <strong>Paste: pinned “how to rank up”</strong> (if any) | Clarity for new members |
+| <strong>Say what feels off</strong> — e.g. “too many locked channels” or “recruits get lost” | I suggest fixes without guessing |
+
+<strong>Tips for good screenshots:</strong> one topic per screenshot · include channel name in frame · for permissions, show <strong>role name + key toggles</strong> · blur personal info if you want (not required for server structure).
+
+<strong>Easy prompt when ready:</strong> *“Mozart, review my Discord — here are screenshots”* + attach images.
+
+---
+
+<h2>Brand alignment — Discord ↔ everything else</h2>
+
+Use this when auditing so the server feels like one PapaThaiGG world:
+
+<ul><li class="todo">&#9744; <strong>Website:</strong> <code>#social_media_links_website</code> (or pin) lists <strong>papathaigg.com</strong> + same platforms as site footer (Twitch · YouTube · Kick · X · TikTok · Instagram · Facebook · Steam · Discord invite)</li>
+<li class="todo">&#9744; <strong>Stream:</strong> clear <strong>“Watch Live”</strong> path — link to live page or “live now” pin when streaming (manual OK at first)</li>
+<li class="todo">&#9744; <strong>Pug (Phase E):</strong> one home channel (<code>#pug-lounge</code> or Engine Room) · honest status: *“Talk to Pug on stream now · Discord bot coming”* until bot ships</li>
+<li class="todo">&#9744; <strong>Pugsan (Phase H):</strong> tease in same area when samurai body ships — same brain, second mascot</li>
+<li class="todo">&#9744; <strong>Thailand / expat intel:</strong> Field Guide & Expat Intel on site ↔ optional <code>#travel-tips</code> or Beer Garden threads (don’t duplicate whole site — point to pages)</li>
+<li class="todo">&#9744; <strong>Tone:</strong> fun squad · retired pace · teach & entertain · <strong>no donation pressure</strong> · matches website voice</li>
+<li class="todo">&#9744; <strong>Sal vs Pug:</strong> you = PapaThaiGG human · Pug/Pugsan = AI mascots — never confuse in channel descriptions</li>
+
+</ul>---
+
+<h2>What you built (looks great)</h2>
+- Onboarding: <code>#arrivals</code> → <code>#get_your_visa</code> (passport → Recruit) → <code>#house_rules</code>
+- Carl-bot welcomes; social contract; English-only (translators later)
+- Rank progression: Recruit → Scavenger → Vanguard → Ranger → Gladiator → Paladin → Grandmaster
+- Themed categories: Visitor Center, Beer Garden, Muay Thai Ring, Squad Shack, Classified, etc.
+- <code>#social_media_links_website</code> · <code>#the_local_legend</code> · Engine Room · Suggestion box
+
+<h2>Audit — permissions & leveling (when ready, no rush)</h2>
+<ul><li class="todo">&#9744; Walk full onboarding path with a <strong>test account</strong> (fresh login)</li>
+<li class="todo">&#9744; Confirm passport reaction still grants <strong>Recruit</strong></li>
+<li class="todo">&#9744; Confirm Carl-bot welcome + role assignment fire correctly</li>
+<li class="todo">&#9744; Verify <strong>locked channels</strong> match intended ranks (padlocks = correct roles)</li>
+<li class="todo">&#9744; Voice rooms: Front Porch · Island Radio · Elite Lounge · Barracks · Hypogeum · Colosseum — rank gates correct?</li>
+<li class="todo">&#9744; XP / leveling bot (Carl-bot or other): document <strong>how to rank up</strong> in pinned post</li>
+<li class="todo">&#9744; Moderator roles vs rank roles — who can ban, who can see Control Tower</li>
+<li class="todo">&#9744; <code>#house_rules</code> and <code>#arrivals</code> copy still accurate (Pug mention OK as “coming”)</li>
+
+</ul><h2>Optional later (Discord — gentle notes)</h2>
+<ul><li class="todo">&#9744; <strong>Pinned “How to rank up”</strong> in <code>#arrivals</code> or <code>#bulletin_board</code> — what earns XP (chat, voice, posts, images)</li>
+<li class="todo">&#9744; New recruits may feel <strong>channel overload</strong> — OK; onboarding path helps; consider a one-page map image</li>
+<li class="todo">&#9744; <strong><code>#pug-lounge</code></strong> or use <strong>Engine Room</strong> for Pug AI bot chat when built</li>
+<li class="todo">&#9744; <strong>Pug Discord bot</strong> → Ollama in selected channels (e.g. <code>#the_long_bar_general_chat</code>)</li>
+<li class="todo">&#9744; Pug assists vibe per house rules — <strong>not</strong> auto-ban replacement for human mods</li>
+<li class="todo">&#9744; Rate limits so Pug doesn’t spam when always-on</li>
+
+</ul>---
+
+<h1>SECTION 4 — Sal’s personal avatars (you — not Pug)</h1>
+
+<strong>Separate from Pug/Pugsan.</strong> Avatars that look like <strong>you</strong>, driven by <strong>your</strong> webcam/voice — mouth moves when <strong>you</strong> talk, follows <strong>your</strong> movement.
+
+<h2>Vision</h2>
+- Option alongside real webcam: Sal avatar in corner with Ao Nang jungle/window behind you
+- Hybrid (real eyes/mouth + 3D body) <strong>or</strong> full 3D likeness — phased over months
+- Used in OBS <strong>Sal cam box</strong> layer — independent from Pug layer
+
+<h2>Possible stack (from your old roadmaps — pick when ready)</h2>
+- <strong>Hybrid:</strong> Warudo + OBS + BRIO webcam + MediaPipe / Lens Studio mask
+- <strong>Full face:</strong> MetaPerson / FaceBuilder / Blender / MetaHuman (long-term)
+- <strong>Not the same as Pug</strong> — Pug uses Ollama; Sal avatar uses <strong>your</strong> face/body tracking
+
+<h2>To do (later — no rush)</h2>
+<ul><li class="todo">&#9744; Decide: webcam-only for v1 streams vs start Sal avatar path</li>
+<li class="todo">&#9744; BRIO / cam setup for tracking if going hybrid</li>
+<li class="todo">&#9744; Test OBS 3D Transform or Warudo body + face overlay</li>
+<li class="todo">&#9744; Ao Nang window / jungle virtual background for Sal box</li>
+<li class="todo">&#9744; Document in OBS which layer is <strong>Sal</strong> vs <strong>Pug</strong> (never confuse the two)</li>
+
+</ul>---
+
+<h2>Aug 15 evening session — DONE ✓</h2>
+
+1. Elgato 4K X dual-PC capture live · <strong>Duplicate</strong> display rule locked in ✓  
+2. OBS <strong>PapaThaiGG Game + Pug</strong> collection · <strong>Game only</strong> + <strong>Game + Pug</strong> scenes ✓  
+3. Warudo transparent over game (Chroma Key Sim 1 / Smooth 1) ✓  
+4. Stream Deck XL on streaming PC · scene buttons 1 & 2 working ✓  
+5. Voice audition bats fixed · <strong>HFC Male</strong> leading · rankings logged ✓  
+6. Gaming PC stability tweaks (USB suspend off · NVIDIA max perf · 100 Hz) ✓  
+
+<strong>Next session (when ready):</strong> See <strong>What’s next</strong> section at top — easy hardware first, then Phase C fun with Pug.
+
+---
+
+<h2>Notes (Sal edits here)</h2>
+
+- Talk to Pug: Desktop <strong><code>Talk to Pug.bat</code></strong> only (skip Cursor terminal)
+- <strong>USB Audio Device</strong> = Sal’s headset (YouTube + normal sound)
+- <strong>Never</strong> set Windows default output to CABLE Input — only route <strong>Python</strong> there
+- Warudo scenes are per-PC — redo Android on streaming PC
+- Booth ALPHA = no edit/re-export
+- Elgato 4K X live Aug 15 · gaming PC <strong>Duplicate</strong> always for capture · monitor <strong>never sleep</strong> during setup — <strong>COMPLETED (Aug 15)</strong>  
+- Stream Deck XL on streaming desk · USB to <strong>streaming PC</strong> (not gaming PC) · Button 1 = Game only · Button 2 = Game + Pug — <strong>COMPLETED (Aug 15)</strong>  
+- <strong>Default TTS voice:</strong> HFC Male Piper in <code>Talk to Pug.bat</code> — lock for viewers later (optional polish)  
+- Mozart updates master PDF on Desktop + <code>PapaThaiGG Plans\</code> + GitHub <code>docs/</code>
+- <strong>Personality buttons + voice modes</strong> = Phase C (logged above — not forgotten)
+- <strong>Ordered steps companion:</strong> <code>PUG_PUGSAN_STEP_BY_STEP_BUILD</code> (Desktop PDF + repo docs) — safe after deleting old “Cursor work info” folder
+- Ollama local brain = correct MVP path (no paid API required)
+
+
 </body>
 </html>
