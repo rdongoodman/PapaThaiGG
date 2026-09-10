@@ -35,15 +35,15 @@
     var icons = document.createElement('ul');
     icons.className = 'icons';
     icons.innerHTML =
-      '<li><a href="https://www.twitch.tv/papathaigg" target="_blank" rel="noopener" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>' +
-      '<li><a href="https://www.youtube.com/@PapaThaiGG" target="_blank" rel="noopener" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>' +
-      '<li><a href="https://kick.com/papathaigg" target="_blank" rel="noopener" class="icon solid fa-gamepad"><span class="label">Kick</span></a></li>' +
-      '<li><a href="https://x.com/PapaThaiGG" target="_blank" rel="noopener" class="icon brands fa-twitter"><span class="label">X</span></a></li>' +
-      '<li><a href="https://www.tiktok.com/@papathaigaminggg" target="_blank" rel="noopener" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>' +
-      '<li><a href="https://discord.gg/6BMPumRDBy" target="_blank" rel="noopener" class="icon brands fa-discord"><span class="label">Discord</span></a></li>' +
-      '<li><a href="https://steamcommunity.com/id/PapaThaiGG/" target="_blank" rel="noopener" class="icon brands fa-steam"><span class="label">Steam</span></a></li>' +
-      '<li><a href="https://www.instagram.com/papathaigg/" target="_blank" rel="noopener" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>' +
-      '<li><a href="https://www.facebook.com/PapaThaiGG" target="_blank" rel="noopener" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>';
+      '<li><a href="https://www.twitch.tv/papathaigg" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://www.youtube.com/@PapaThaiGG" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://kick.com/papathaigg" target="_blank" rel="noopener" aria-label="Kick"><i class="fas fa-gamepad" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://x.com/PapaThaiGG" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://www.tiktok.com/@papathaigaminggg" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://discord.gg/6BMPumRDBy" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://steamcommunity.com/id/PapaThaiGG/" target="_blank" rel="noopener" aria-label="Steam"><i class="fab fa-steam" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://www.instagram.com/papathaigg/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>' +
+      '<li><a href="https://www.facebook.com/PapaThaiGG" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>';
 
     var copy = document.createElement('ul');
     copy.className = 'copyright';

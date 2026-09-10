@@ -1,152 +1,149 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE2QMECGR9"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-GE2QMECGR9');
-        </script>
-
-        <title>Command Center | PapaThaiGG</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="stylesheet" href="assets/css/main.css?v=13" />
-        <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
-        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-        
-        <style>
-            /* --- FORCE PEPE BACKGROUND --- */
-            /* This ensures the 'Tactical Pepes' are always visible on this page */
-            #live-header {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/pic07.jpg") !important;
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-            }
-
-            #live-header .inner {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding-top: 2em;
-            }
-
-            /* --- INACTIVE BUTTONS --- */
-            .command-center .tactical-btn {
-                background-color: rgba(0, 0, 0, 0.2) !important;
-                border: 1px solid rgba(255, 255, 255, 0.2) !important;
-                backdrop-filter: blur(2px);
-                color: #fff !important; 
-            }
-            
-            /* --- ACTIVE CHANNEL --- */
-            .active-channel {
-                background-color: #ffe66d !important; 
-                color: #ffffff !important; 
-                text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
-                box-shadow: 0 0 20px #ffe66d;
-                font-weight: bold;
-                border: 1px solid #ffe66d !important;
-                opacity: 1 !important;
-            }
-
-            /* --- VIDEO PLAYER --- */
-            .video-container {
-                position: relative;
-                padding-bottom: 56.25%;
-                height: 0;
-                overflow: hidden;
-                border: 2px solid #4dfbfb;
-                border-radius: 8px;
-                background: #000;
-                box-shadow: 0 0 30px rgba(77, 251, 251, 0.3);
-                margin-top: 25px;
-                margin-bottom: 10px !important;
-            }
-            .video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-            /* --- INFO BOX --- */
-            .info-box {
-                display: inline-block;
-                background-color: rgba(0, 0, 0, 0.4); 
-                padding: 4px 20px !important;
-                border-radius: 50px;
-                border: 1px solid rgba(255, 230, 109, 0.4);
-                margin-bottom: 5px;
-            }
-            .info-box p {
-                margin: 0 !important;
-                padding: 2px 0 !important;
-                font-size: 0.8em !important;
-                font-weight: bold;
-                letter-spacing: 1px;
-                color: #ffe66d !important;
-                text-shadow: 2px 2px 4px #000;
-                text-transform: uppercase;
-            }
-
-            /* --- RETURN BUTTON --- */
-            .return-btn {
-                display: inline-block;
-                background-color: rgba(0, 0, 0, 0.6);
-                color: #fff !important;
-                padding: 8px 20px;
-                border-radius: 30px;
-                border: 1px solid rgba(255,255,255,0.3);
-                text-decoration: none;
-                font-size: 0.8em;
-                margin-top: 15px;
-            }
-        </style>
-    </head>
-    <body class="is-preload page-inner" data-page="live">
-        <div data-site-chrome="nav"></div>
-        <section id="live-header">
-            <div class="inner">
-                <h1>Stream <span style="color: #4dfbfb;">Command</span> Center</h1>
-                <div class="command-center">
-                    <button onclick="tuneIn('youtube')" id="btn-youtube" class="tactical-btn active-channel">YouTube</button>
-                    <button onclick="tuneIn('twitch')" id="btn-twitch" class="tactical-btn">Twitch</button>
-                    <button onclick="tuneIn('kick')" id="btn-kick" class="tactical-btn">Kick</button>
-                </div>
-                <div class="video-container">
-                    <iframe id="main-player" src="https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="info-box">
-                    <p><i class="icon solid fa-signal"></i> Signal Status: If offline, check the archives or switch frequencies.</p>
-                </div>
-            </div>
-        </section>
-        <div data-site-chrome="footer"></div>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/site-nav-config.js"></script>
-        <script src="assets/js/site-chrome.js"></script>
-        <script>
-            function tuneIn(platform) {
-                var player = document.getElementById('main-player');
-                document.getElementById('btn-youtube').classList.remove('active-channel');
-                document.getElementById('btn-twitch').classList.remove('active-channel');
-                document.getElementById('btn-kick').classList.remove('active-channel');
-                if (platform === 'youtube') {
-                    player.src = "https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ";
-                    document.getElementById('btn-youtube').classList.add('active-channel');
-                } else if (platform === 'twitch') {
-                    player.src = "https://player.twitch.tv/?channel=papathaigg&parent=papathaigg.com";
-                    document.getElementById('btn-twitch').classList.add('active-channel');
-                } else if (platform === 'kick') {
-                    player.src = "https://player.kick.com/papathaigg";
-                    document.getElementById('btn-kick').classList.add('active-channel');
-                }
-            }
-        </script>
-    </body>
-</html>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE2QMECGR9"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GE2QMECGR9');
+        </script>
+
+        <title>Command Center | PapaThaiGG</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css?v=14" />
+        <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        
+        <style>
+            #live-stage {
+                text-align: center;
+            }
+
+            #live-stage .inner {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            #live-stage h1 {
+                margin-bottom: 0.5em;
+            }
+
+            /* --- INACTIVE BUTTONS --- */
+            #live-stage .command-center .tactical-btn {
+                background-color: rgba(0, 0, 0, 0.2) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                backdrop-filter: blur(2px);
+                color: #fff !important; 
+            }
+            
+            /* --- ACTIVE CHANNEL --- */
+            .active-channel {
+                background-color: #ffe66d !important; 
+                color: #ffffff !important; 
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
+                box-shadow: 0 0 20px #ffe66d;
+                font-weight: bold;
+                border: 1px solid #ffe66d !important;
+                opacity: 1 !important;
+            }
+
+            /* --- VIDEO PLAYER --- */
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                border: 2px solid #4dfbfb;
+                border-radius: 8px;
+                background: #000;
+                box-shadow: 0 0 30px rgba(77, 251, 251, 0.3);
+                margin-top: 25px;
+                margin-bottom: 10px !important;
+            }
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* --- INFO BOX --- */
+            .info-box {
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.4); 
+                padding: 4px 20px !important;
+                border-radius: 50px;
+                border: 1px solid rgba(255, 230, 109, 0.4);
+                margin-bottom: 5px;
+            }
+            .info-box p {
+                margin: 0 !important;
+                padding: 2px 0 !important;
+                font-size: 0.8em !important;
+                font-weight: bold;
+                letter-spacing: 1px;
+                color: #ffe66d !important;
+                text-shadow: 2px 2px 4px #000;
+                text-transform: uppercase;
+            }
+
+            /* Full Pepe lounge — scroll down from player to reveal */
+            .live-pepe-scroll {
+                height: 100vh;
+                min-height: 520px;
+            }
+        </style>
+    </head>
+    <body class="is-preload page-inner" data-page="live">
+        <div data-site-chrome="nav"></div>
+
+        <section id="live-stage">
+            <div class="inner">
+                <h1>Stream <span style="color: #4dfbfb;">Command</span> Center</h1>
+                <div class="command-center">
+                    <button onclick="tuneIn('youtube')" id="btn-youtube" class="tactical-btn active-channel">YouTube</button>
+                    <button onclick="tuneIn('twitch')" id="btn-twitch" class="tactical-btn">Twitch</button>
+                    <button onclick="tuneIn('kick')" id="btn-kick" class="tactical-btn">Kick</button>
+                </div>
+                <div class="video-container">
+                    <iframe id="main-player" src="https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="info-box">
+                    <p><i class="fas fa-signal"></i> Signal Status: If offline, check the archives or switch frequencies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-bg live-pepe-scroll" aria-label="Squad lounge"></section>
+
+        <div data-site-chrome="footer"></div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/site-nav-config.js"></script>
+        <script src="assets/js/site-chrome.js"></script>
+        <script>
+            function tuneIn(platform) {
+                var player = document.getElementById('main-player');
+                document.getElementById('btn-youtube').classList.remove('active-channel');
+                document.getElementById('btn-twitch').classList.remove('active-channel');
+                document.getElementById('btn-kick').classList.remove('active-channel');
+                if (platform === 'youtube') {
+                    player.src = "https://www.youtube.com/embed/live_stream?channel=UCYun_u9uGh8wWfEeMhDmWaQ";
+                    document.getElementById('btn-youtube').classList.add('active-channel');
+                } else if (platform === 'twitch') {
+                    player.src = "https://player.twitch.tv/?channel=papathaigg&parent=papathaigg.com";
+                    document.getElementById('btn-twitch').classList.add('active-channel');
+                } else if (platform === 'kick') {
+                    player.src = "https://player.kick.com/papathaigg";
+                    document.getElementById('btn-kick').classList.add('active-channel');
+                }
+            }
+        </script>
+    </body>
+</html>
+

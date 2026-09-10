@@ -1,5 +1,3 @@
-@import url("fontawesome-all.min.css");
-
 /* --- General Setup --- */
 body { 
     font-family: Arial, sans-serif; 
@@ -148,7 +146,13 @@ ul.actions {
 #footer { background: #121212; padding: 2em; text-align: center; } /* Dark Footer */
 .icons { list-style: none; padding: 0; display: flex; justify-content: center; margin-top: 20px;}
 .icons li { margin: 0 10px; font-size: 1.5em; }
-.copyright { font-size: 0.8em; color: #888; }
+.copyright {
+    font-size: 0.8em;
+    color: #888;
+    list-style: none;
+    padding: 0;
+    margin: 0.75em 0 0;
+}
 
 
 /* --- NUCLEAR FOOTER LINK FIX --- */
@@ -510,6 +514,22 @@ body.page-inner .site-scroll-nav + section {
     text-align: center;
 }
 
+#site-footer .icons a {
+    display: inline-block;
+    font-size: 1.45em;
+    line-height: 1;
+    color: #FFD700 !important;
+    text-decoration: none;
+}
+
+#site-footer .icons a:hover {
+    color: #ffffff !important;
+}
+
+.intel-header .container {
+    text-align: center;
+}
+
 .intel-freshness {
     font-size: 0.85em;
     color: #4dfbfb;
@@ -518,14 +538,26 @@ body.page-inner .site-scroll-nav + section {
 }
 
 .intel-disclaimer {
-    font-size: 0.9em;
-    color: #aaa;
+    font-size: 0.88em;
+    color: #bbb;
     font-style: italic;
-    border-left: 3px solid #ffe66d;
-    padding: 0.75em 1em;
-    margin: 0 0 1.5em 0;
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 0 4px 4px 0;
+    text-align: center;
+    max-width: 36em;
+    margin: 0 auto 1.75em auto;
+    padding: 0 1em;
+    line-height: 1.5;
+}
+
+.live-pepe-scroll {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../images/pic07.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#live-stage {
+    background: #0a0a0a;
+    padding: 2em 16px 2.5em;
 }
 
 @media screen and (max-width: 980px) {
@@ -534,10 +566,9 @@ body.page-inner .site-scroll-nav + section {
         padding: 7px 10px;
     }
 
-    #live-header {
-        min-height: auto !important;
-        height: auto !important;
-        padding-top: 1.5em !important;
-        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 2em) !important;
+    .live-pepe-scroll {
+        height: 85vh !important;
+        min-height: 420px !important;
+        background-attachment: scroll !important;
     }
 }
