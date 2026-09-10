@@ -16,15 +16,11 @@
         <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
         
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css?v=12" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <link rel="stylesheet" href="assets/css/main.css?v=13" />
         
         <style>
-            /* Homepage parallax image bands */
-            .home-parallax-1 {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic02.jpg");
-            }
-
+            /* Homepage parallax image bands (pic02 Railay stays in Thailand section only) */
             .home-parallax-2 {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/pic03.jpg");
             }
@@ -86,7 +82,7 @@
             }
         </style>
     </head>
-    <body class="is-preload">
+    <body class="is-preload" data-page="home">
 
         <section id="header">
             <div class="inner">
@@ -164,7 +160,7 @@
             </div>
         </section>
 
-        <section class="parallax-bg home-parallax-1" aria-hidden="true"></section>
+        <div data-site-chrome="nav"></div>
 
         <section id="one" class="content-section">
             <div class="container">
@@ -174,11 +170,11 @@
                             <header class="major">
                                 <h2 style="color: #ffe66d;">My Story</h2>
                             </header>
-                            <p>Ao Nang, Thailand is now "Base Camp." Located just 1 mile from the world-famous Railay Beach (ranked as the 9th most beautiful beach in the world), this is where the retired expat life meets high-octane gaming.<br /><br />
+                            <p>Ao Nang, Thailand is now "Base Camp" — about a mile from Railay Beach, where expat life meets high-octane gaming.<br /><br />
                             
-                            At 55, after surviving a massive brain tumor that erased a previous career, the objective changed. The focus is now on the true passions: MMOs, open-world, full-loot, no mercy games, FPS grinders, drone photography, and coding.<br /><br />
+                            At 55, after surviving a massive brain tumor that erased a previous career, the objective changed: MMOs, open-world and full-loot grinders, FPS, drone photography, and coding.<br /><br />
                             
-                            Reaction times are rebuilding, but determination is 100%. Whether exploring the Andaman coast or grinding for loot, the squad is always welcome. Let's conquer virtual worlds and explore the real one together.</p>
+                            Reaction times are rebuilding, but determination is 100%. The squad is always welcome — virtual worlds and the real one.</p>
                         </div>
                     </div>
                     <div class="col-6 col-12-medium">
@@ -239,7 +235,8 @@
         <section id="three" class="content-section style-alt">
             <div class="container">
                 <header class="major">
-                    <h2 style="color: #4dfbfb;">Photos & Videos "Under Construction. Bear with me."</h2>
+                    <h2 style="color: #4dfbfb;">Photos &amp; Videos</h2>
+                    <p style="color: #888; font-size: 0.95em;">More clips and galleries coming — check back.</p>
                 </header>
                 <div class="row">
                     <div class="col-4 col-12-medium">
@@ -261,26 +258,11 @@
             </div>
         </section>
 
-        <section id="footer">
-            <ul class="icons">
-                <li><a href="https://www.twitch.tv/papathaigg" target="_blank" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
-                <li><a href="https://www.youtube.com/@PapaThaiGG" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                <li><a href="https://kick.com/papathaigg" target="_blank" class="icon solid fa-gamepad"><span class="label">Kick</span></a></li> 
-                
-                <li><a href="https://x.com/PapaThaiGG" target="_blank" class="icon brands fa-twitter"><span class="label">X</span></a></li>
-                <li><a href="https://www.tiktok.com/@papathaigaminggg" target="_blank" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
-                
-                <li><a href="https://discord.gg/6BMPumRDBy" target="_blank" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-                <li><a href="https://steamcommunity.com/id/PapaThaiGG/" target="_blank" class="icon brands fa-steam"><span class="label">Steam</span></a></li>
-                <li><a href="https://www.instagram.com/papathaigg/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="https://www.facebook.com/PapaThaiGG" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            </ul>
-            <ul class="copyright" style="list-style: none !important; padding: 0; margin: 0;">
-                <li>&copy; PapaThaiGG</li>
-            </ul>
-        </section>
+        <div data-site-chrome="footer"></div>
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/site-nav-config.js"></script>
+        <script src="assets/js/site-chrome.js"></script>
     </body>
 </html>

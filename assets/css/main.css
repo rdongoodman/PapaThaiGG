@@ -1,3 +1,5 @@
+@import url("fontawesome-all.min.css");
+
 /* --- General Setup --- */
 body { 
     font-family: Arial, sans-serif; 
@@ -425,18 +427,20 @@ html, body {
 
 /* --- LIVE COMMAND CENTER BACKGROUND --- */
 #live-header {
-    height: 100vh;
+    min-height: 70vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #000;
-    /* Using absolute path to guarantee it loads live */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/pic07.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
+    padding: 2em 16px calc(env(safe-area-inset-bottom, 0px) + 2em);
+    box-sizing: border-box;
 }
 
 /* --- PIXEL LEAK SEAL (New Fix) --- */
@@ -444,4 +448,96 @@ html, body {
 html {
     background-color: #121212 !important;
     min-height: 100%;
+}
+
+/* --- Shared scrolling nav (not sticky — scrolls with page) --- */
+.site-scroll-nav {
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 2px solid #4dfbfb;
+    padding: calc(env(safe-area-inset-top, 0px) + 12px) 16px 12px;
+    text-align: center;
+}
+
+.site-scroll-nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.site-scroll-nav a {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 0.72em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.55);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.site-scroll-nav a:hover {
+    border-color: #ffe66d;
+    color: #ffe66d !important;
+}
+
+.site-scroll-nav a.is-active {
+    border-color: #4dfbfb;
+    color: #4dfbfb !important;
+    box-shadow: 0 0 12px rgba(77, 251, 251, 0.25);
+}
+
+/* Inner pages: respect notch / home bar */
+body.page-inner {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+body.page-inner .gear-header,
+body.page-inner .intel-header,
+body.page-inner .site-scroll-nav + section {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 0.5em);
+}
+
+#site-footer {
+    background: #121212;
+    padding: 2em 16px calc(env(safe-area-inset-bottom, 0px) + 2em);
+    text-align: center;
+}
+
+.intel-freshness {
+    font-size: 0.85em;
+    color: #4dfbfb;
+    letter-spacing: 0.05em;
+    margin-top: 0.5em;
+}
+
+.intel-disclaimer {
+    font-size: 0.9em;
+    color: #aaa;
+    font-style: italic;
+    border-left: 3px solid #ffe66d;
+    padding: 0.75em 1em;
+    margin: 0 0 1.5em 0;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 0 4px 4px 0;
+}
+
+@media screen and (max-width: 980px) {
+    .site-scroll-nav a {
+        font-size: 0.65em;
+        padding: 7px 10px;
+    }
+
+    #live-header {
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 1.5em !important;
+        padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 2em) !important;
+    }
 }
