@@ -3,10 +3,11 @@
   if (!config || !config.links) return;
 
   var active = document.body.getAttribute('data-page') || '';
+  var isHome = active === 'home';
 
   function buildNav() {
     var nav = document.createElement('nav');
-    nav.className = 'site-scroll-nav';
+    nav.className = isHome ? 'site-scroll-nav site-scroll-nav--hero' : 'site-scroll-nav';
     nav.setAttribute('aria-label', 'Site sections');
 
     var inner = document.createElement('div');
@@ -16,8 +17,11 @@
       var a = document.createElement('a');
       a.href = link.href;
       a.textContent = link.label;
+      if (isHome) {
+        a.className = 'site-nav-hero-link nav-accent-' + (link.accent || 'white');
+      }
       if (link.id === active) {
-        a.className = 'is-active';
+        a.classList.add('is-active');
         a.setAttribute('aria-current', 'page');
       }
       inner.appendChild(a);

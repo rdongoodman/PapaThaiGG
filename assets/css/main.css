@@ -497,6 +497,56 @@ html {
     box-shadow: 0 0 12px rgba(77, 251, 251, 0.25);
 }
 
+/* Homepage only — transparent strip, hero-matching tactical buttons */
+.site-scroll-nav--hero {
+    background: transparent;
+    border-bottom: none;
+    margin-top: -11vh;
+    padding: 0 16px 2.25em;
+    position: relative;
+    z-index: 3;
+}
+
+.site-scroll-nav--hero .site-scroll-nav-inner {
+    gap: 12px 15px;
+}
+
+.site-scroll-nav--hero .site-nav-hero-link {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.site-scroll-nav--hero .site-nav-hero-link:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.site-scroll-nav--hero .nav-accent-teal {
+    border-color: #4dfbfb !important;
+    color: #4dfbfb !important;
+}
+
+.site-scroll-nav--hero .nav-accent-gold {
+    border-color: #ffe66d !important;
+    color: #ffe66d !important;
+}
+
+.site-scroll-nav--hero .site-nav-hero-link.is-active {
+    box-shadow: 0 0 14px rgba(77, 251, 251, 0.35);
+}
+
 /* Inner pages: respect notch / home bar */
 body.page-inner {
     padding-left: env(safe-area-inset-left, 0px);
@@ -602,6 +652,24 @@ body.page-inner .site-scroll-nav + section {
     .site-scroll-nav a {
         font-size: 0.65em;
         padding: 7px 10px;
+    }
+
+    .site-scroll-nav--hero {
+        margin-top: -6vh;
+        padding-bottom: 1.75em;
+    }
+
+    .site-scroll-nav--hero .site-nav-hero-link {
+        font-size: 0.68em;
+        padding: 11px 18px;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .site-scroll-nav--hero .site-scroll-nav-inner {
+        flex-direction: column;
+        align-items: center;
     }
 
     .live-pepe-scroll {
