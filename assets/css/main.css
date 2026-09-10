@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6, strong {
 /* Container & Grid System */
 .container { width: 80%; margin: 0 auto; padding: 3em 0; }
 .row { display: flex; flex-wrap: wrap; }
+.col-12 { flex: 0 0 100%; max-width: 100%; padding: 1em; box-sizing: border-box; }
 .col-6 { flex: 0 0 50%; padding: 1em; box-sizing: border-box; }
 .col-4 { flex: 0 0 33.33%; padding: 1em; box-sizing: border-box; }
 .image.fit img { width: 100%; border-radius: 4px; } 
@@ -204,7 +205,7 @@ html, body {
 /* 3. MOBILE / TABLET TWEAKS — keep desktop look; fix clipping & crowding */
 @media screen and (max-width: 980px) {
     
-    .col-6, .col-4 { flex: 0 0 100%; }
+    .col-12, .col-6, .col-4 { flex: 0 0 100%; max-width: 100%; }
     
     /* Hero: grow with content instead of locking to 100vh + PC offset */
     #header {
@@ -528,6 +529,43 @@ body.page-inner .site-scroll-nav + section {
 
 .intel-header .container {
     text-align: center;
+}
+
+/* Expat Intel — centered panel on all screen sizes */
+.intel-body .container {
+    max-width: 920px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+}
+
+.intel-body .stat-grid {
+    max-width: 880px;
+    margin: 0 auto 2em;
+}
+
+.intel-body header.major {
+    text-align: center;
+}
+
+.intel-body header.major h2 {
+    color: #4dfbfb;
+}
+
+.intel-body .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.intel-body .tvc-card {
+    justify-content: center;
+    text-align: center;
+}
+
+.intel-body .case-study,
+.intel-body .table-wrapper {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .intel-freshness {
