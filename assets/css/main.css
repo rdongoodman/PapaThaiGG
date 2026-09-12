@@ -39,9 +39,47 @@ h1, h2, h3, h4, h5, h6, strong {
     padding-bottom: 25vh; /* Moves content up on PC */
 }
 
-/* Lifts the text block higher on PC */
+/* Lifts the text block higher on tall PC windows */
 #header .inner {
     transform: translateY(-20vh);
+}
+
+/* Landscape tablet / short window: that PC offset hides the greeting */
+@media screen and (max-height: 860px) {
+    #header {
+        height: auto !important;
+        min-height: 100vh !important;
+        min-height: 100svh !important;
+        padding-top: 20px !important;
+        padding-bottom: 28px !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        background-attachment: scroll !important;
+        background-position: center top !important;
+        box-sizing: border-box !important;
+    }
+
+    #header .inner {
+        transform: none !important;
+    }
+
+    #header h1 {
+        font-size: 2.15em !important;
+        margin-bottom: 0.3em !important;
+    }
+
+    #header .inner > p {
+        margin-bottom: 1.1em !important;
+        font-size: 1.25em !important;
+    }
+
+    .command-center {
+        margin-top: 0.75em !important;
+    }
+
+    .pug-container > p {
+        display: none !important;
+    }
 }
 
 /* 1. The Greeting (Hi, and Sawasdee Krap) - Pure White */
